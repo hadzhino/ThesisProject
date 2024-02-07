@@ -5,12 +5,1184 @@
       "PackagePath": "staticwebassets\\PureSound.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\.DS_Store",
+      "PackagePath": "staticwebassets\\css\\musico-master\\.DS_Store"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\css\\normalize.min.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\css\\normalize.min.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\img\\logo.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\index.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\js\\custom.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\js\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\js\\jquery-1.11.0.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\js\\jquery-1.11.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\js\\jquery.nav.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\js\\jquery.nav.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shAutoloader.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shAutoloader.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushAS3.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushAS3.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushAppleScript.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushAppleScript.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushBash.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushBash.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushCSharp.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushCSharp.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushColdFusion.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushColdFusion.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushCpp.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushCpp.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushCss.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushCss.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushDelphi.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushDelphi.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushDiff.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushDiff.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushErlang.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushErlang.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushGroovy.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushGroovy.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushJScript.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushJScript.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushJava.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushJava.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushJavaFX.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushJavaFX.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPerl.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPerl.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPhp.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPhp.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPlain.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPlain.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPowerShell.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPowerShell.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPython.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushPython.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushRuby.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushRuby.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushSass.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushSass.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushScala.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushScala.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushSql.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushSql.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushVb.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushVb.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushXml.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shBrushXml.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shLegacy.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\scripts\\shLegacy.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCore.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCore.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreDefault.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreDefault.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreDjango.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreDjango.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreEclipse.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreEclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreEmacs.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreEmacs.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreFadeToGrey.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreFadeToGrey.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreMDUltra.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreMDUltra.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreMidnight.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreMidnight.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreRDark.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shCoreRDark.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeDefault.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeDefault.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeDjango.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeDjango.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeEclipse.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeEclipse.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeEmacs.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeEmacs.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeFadeToGrey.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeFadeToGrey.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeMDUltra.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeMDUltra.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeMidnight.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeMidnight.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeRDark.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\221 Musico doc\\syntax-highlighter\\styles\\shThemeRDark.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\about.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\blog.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\blog.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\contact.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\contact.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\contact_process.php",
+      "PackagePath": "staticwebassets\\css\\musico-master\\contact_process.php"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\animate.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\audioplayer.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\audioplayer.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\flaticon.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\font-awesome.min.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\font-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\gijgo.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\gijgo.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\magnific-popup.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\owl.carousel.min.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\owl.carousel.min.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\slick.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\slicknav.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\slicknav.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\style.map",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\style.map"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\theme-default.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\theme-default.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\theme-default.map",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\theme-default.map"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\elements.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\elements.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\Flaticon.woff2",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\Flaticon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\flaticon.css",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\fontawesome-webfont.woff2",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\fontawesome-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\gijgo-material.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\gijgo-material.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\gijgo-material.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\gijgo-material.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\gijgo-material.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\gijgo-material.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\gijgo-material.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\gijgo-material.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\themify.eot",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\themify.eot"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\themify.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\themify.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\css\\musico-master\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\about\\about_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\about\\about_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\about\\signature.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\about\\signature.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\about\\singer.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\about\\singer.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\about_banner.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\about_banner.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\about_bg.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\about_bg.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\banner.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\banner.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\bradcam_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\bradcam_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\bradcam_2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\bradcam_2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\bradcam_3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\bradcam_3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\banner\\contact.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\banner\\contact.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\author.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\author.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\blog_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\blog_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\blog_2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\blog_2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\blog_3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\blog_3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\blog_4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\blog_4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\learn_about_bg.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\learn_about_bg.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\single_blog_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\single_blog_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\single_blog_2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\single_blog_2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\single_blog_3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\single_blog_3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\single_blog_4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\single_blog_4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\single_blog_5.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\single_blog_5.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\blog\\slide_thumb_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\blog\\slide_thumb_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\comment\\comment_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\comment\\comment_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\comment\\comment_2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\comment\\comment_2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\comment\\comment_3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\comment\\comment_3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\department\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\department\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\department\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\department\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\department\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\department\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\department\\4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\department\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\department\\5.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\department\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\department\\6.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\department\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\a.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\a2.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\a2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\d.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\disabled-check.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\disabled-check.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\disabled-radio.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\disabled-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f1.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f2.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f3.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f4.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f5.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f6.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f7.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\f8.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\f8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g1.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g2.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g3.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g4.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g5.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g6.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g7.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\g8.jpg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\g8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\primary-check.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\primary-check.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\primary-radio.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\primary-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\success-check.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\success-check.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\elements\\success-radio.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\elements\\success-radio.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\5.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\6.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\7.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\8.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\experts\\9.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\experts\\9.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\favicon.ico",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\footer_logo.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\footer_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\5.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\add.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\add.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\details_img_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\details_img_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\details_img_2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\details_img_2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\gallery\\overlay.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\gallery\\overlay.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\logo.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\music_man\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\music_man\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\music_man\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\music_man\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\music_man\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\music_man\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\music_man\\4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\music_man\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\music_man\\5.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\music_man\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\music_man\\6.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\music_man\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\offers\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\offers\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\offers\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\offers\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\offers\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\offers\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\next.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_10.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_10.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_5.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_5.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_6.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_6.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_7.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_7.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_8.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_8.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\post_9.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\post_9.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\post\\preview.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\post\\preview.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\rooms\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\rooms\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\rooms\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\rooms\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\rooms\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\rooms\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\rooms\\4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\rooms\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\Rectangle 15.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\Rectangle 15.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\bar-chart.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\bar-chart.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\bar-chart.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\bar-chart.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\case.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\case.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\check.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\check.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\controls.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\controls.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\controls.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\controls.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\legal-paper.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\legal-paper.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\puzzle.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\puzzle.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\puzzle.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\puzzle.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\svg_icon\\survey.svg",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\svg_icon\\survey.svg"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\testmonial\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\testmonial\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\video\\1.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\video\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\video\\2.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\video\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\video\\3.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\video\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\img\\video\\4.png",
+      "PackagePath": "staticwebassets\\css\\musico-master\\img\\video\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\index.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\ajax-form.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\ajax-form.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\audioplayer.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\audioplayer.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\contact.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\contact.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\gijgo.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\gijgo.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\imagesloaded.pkgd.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\imagesloaded.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\isotope.pkgd.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\isotope.pkgd.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.ajaxchimp.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.ajaxchimp.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.counterup.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.counterup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.form.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.form.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.scrollUp.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.scrollUp.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.slicknav.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.slicknav.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\mail-script.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\mail-script.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\main.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\main.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\nice-select.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\owl.carousel.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\owl.carousel.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\plugins.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\popper.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\scrollIt.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\scrollIt.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\vendor\\jquery-1.12.4.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\vendor\\jquery-1.12.4.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\vendor\\modernizr-3.5.0.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\vendor\\modernizr-3.5.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\waypoints.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\waypoints.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\css\\musico-master\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\main.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\main.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\readme.txt",
+      "PackagePath": "staticwebassets\\css\\musico-master\\readme.txt"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_about.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_about.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_blog.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_blog.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_blog_part.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_blog_part.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_bradcam.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_bradcam.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_btn.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_btn.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_contact.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_counter.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_counter.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_department.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_department.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_elements.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_elements.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_emergency_contact.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_emergency_contact.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_experts.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_experts.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_extend.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_extend.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_footer.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_gallery.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_gallery.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_header.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_mixins.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_music_area.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_music_area.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_offers.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_offers.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_responsive.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_responsive.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_section_title.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_section_title.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_service.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_service.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_slick-nav.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_slick-nav.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_slider.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_slider.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_tesmonial.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_tesmonial.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_varriable.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_varriable.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\_video.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\_video.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\scss\\theme-default.scss",
+      "PackagePath": "staticwebassets\\css\\musico-master\\scss\\theme-default.scss"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\single-blog.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\single-blog.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\track.html",
+      "PackagePath": "staticwebassets\\css\\musico-master\\track.html"
+    },
+    {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
     },
     {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\site.js",
