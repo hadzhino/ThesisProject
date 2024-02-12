@@ -4,10 +4,11 @@ namespace PureSound.Data.Entities
 {
     public class Article
     {
-        [Key]public Guid Id { get; set; }
-        [Required]public string Title { get; set; }
-        [Required]public string Content { get; set; }
+        [Key] public Guid Id { get; set; }
+        [Required] public string Title { get; set; }
+        [Required] public string Content { get; set; }
+        [Required] public string ImageURL { get; set; }
         public DateTime Date { get; set; }
-        public List<Comment> Comments { get; set; } = new List<Comment>();
+        public HashSet<Comment> Comments { get; set; } = new HashSet<Comment>();
     }
 }

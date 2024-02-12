@@ -196,10 +196,6 @@ namespace PureSound.Data.Migrations
                     b.Property<Guid>("GenreId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ImageURL")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -368,6 +364,43 @@ namespace PureSound.Data.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Genres");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("7efa939d-decc-460c-816e-817e6e7b8ac9"),
+                            Name = "Rap"
+                        },
+                        new
+                        {
+                            Id = new Guid("0675396b-e41f-4661-a6ae-7c463e7417ca"),
+                            Name = "Drill"
+                        },
+                        new
+                        {
+                            Id = new Guid("515d031a-21e8-40f2-80d1-be7fd313b9f1"),
+                            Name = "Raeggeton"
+                        },
+                        new
+                        {
+                            Id = new Guid("9fa39d78-4c44-4917-88bf-73b0fe9707a8"),
+                            Name = "House"
+                        },
+                        new
+                        {
+                            Id = new Guid("ebe5cff3-abf4-4cea-80a1-7058adc0c52d"),
+                            Name = "R&B"
+                        },
+                        new
+                        {
+                            Id = new Guid("c69dd0ba-55cc-401c-8506-f2c85a637707"),
+                            Name = "Techno"
+                        },
+                        new
+                        {
+                            Id = new Guid("dced16b8-f532-4d06-8f84-0bf2d060e578"),
+                            Name = "Phonk"
+                        });
                 });
 
             modelBuilder.Entity("PureSound.Data.Entities.Song", b =>
@@ -481,7 +514,7 @@ namespace PureSound.Data.Migrations
             modelBuilder.Entity("PureSound.Data.Account.User", b =>
                 {
                     b.HasOne("PureSound.Data.Entities.Genre", "FavGenre")
-                        .WithMany()
+                        .WithMany("Users")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -586,6 +619,8 @@ namespace PureSound.Data.Migrations
                     b.Navigation("Artists");
 
                     b.Navigation("Songs");
+
+                    b.Navigation("Users");
                 });
 #pragma warning restore 612, 618
         }

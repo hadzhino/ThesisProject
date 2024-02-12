@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using PureSound.Data.Account;
+using System.ComponentModel.DataAnnotations;
 
 namespace PureSound.Data.Entities
 {
@@ -6,7 +7,8 @@ namespace PureSound.Data.Entities
     {
         [Key] public Guid Id { get; set; }
         [Required] public string Name { get; set; }
-        public List<Song> Songs { get; set; } = new List<Song>();
-        public List<Artist> Artists { get; set; } = new List<Artist>();
+        public HashSet<Song> Songs { get; set; } = new HashSet<Song>();
+        public HashSet<Artist> Artists { get; set; } = new HashSet<Artist>();
+        public HashSet<User> Users { get; set; } = new HashSet<User>();
     }
 }

@@ -9,7 +9,7 @@ namespace PureSound.Data.Entities
         [Required] public int Year { get; set; }
         public Guid ArtistId { get; set; }
         public Artist Artist { get; set; }
-        [Required] public List<Song> Songs { get; set; } = new List<Song>();
+        [Required] public HashSet<Song> Songs { get; set; } = new HashSet<Song>();
         [Required]public string ImageURL { get; set; }
     }
 }

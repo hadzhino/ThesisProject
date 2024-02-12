@@ -43,6 +43,10 @@ namespace PureSound.Data
                 .HasForeignKey(a => a.GenreId);
 
             builder.Entity<Genre>()
+                .HasMany(g => g.Users)
+                .WithOne(g => g.FavGenre)
+                .HasForeignKey(g => g.GenreId);
+            builder.Entity<Genre>()
                 .HasMany(g => g.Songs)
                 .WithOne(g => g.Genre)
                 .HasForeignKey(g => g.GenreId);
@@ -50,6 +54,43 @@ namespace PureSound.Data
                 .HasMany(g => g.Artists)
                 .WithOne(g => g.MainGenre)
                 .HasForeignKey(g => g.GenreId);
+            builder.Entity<Genre>()
+                .HasData(new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Rap"
+                },
+                new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Drill"
+                },
+                new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Raeggeton"
+                },
+                new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "House"
+                },
+                new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "R&B"
+                },
+                new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Techno"
+                },
+                new Genre
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Phonk"
+                }
+                );
 
             builder.Entity<Song>()
                 .HasMany(s => s.Artists)
@@ -67,6 +108,7 @@ namespace PureSound.Data
                 .HasOne(c => c.User)
                 .WithMany(c => c.Comments)
                 .HasForeignKey(c => c.UserId);
+
 
             base.OnModelCreating(builder);
         }

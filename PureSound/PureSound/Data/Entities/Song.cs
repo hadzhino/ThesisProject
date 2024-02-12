@@ -6,7 +6,7 @@ namespace PureSound.Data.Entities
     {
         [Key] public Guid Id { get; set; }
         [Required][StringLength(maximumLength: 50)] public string Title { get; set; }
-        public List<Artist> Artists { get; set; } = new List<Artist>();
+        public HashSet<Artist> Artists { get; set; } = new HashSet<Artist>();
         public string Lyrics { get; set; }
         [Required] public int Year { get; set; }
         public Guid GenreId { get; set; }
