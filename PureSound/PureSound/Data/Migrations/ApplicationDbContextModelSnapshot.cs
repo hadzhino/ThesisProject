@@ -284,6 +284,10 @@ namespace PureSound.Data.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ImageURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -368,37 +372,37 @@ namespace PureSound.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7efa939d-decc-460c-816e-817e6e7b8ac9"),
+                            Id = new Guid("b34c5b71-3b39-48c9-9b44-f4402abe902b"),
                             Name = "Rap"
                         },
                         new
                         {
-                            Id = new Guid("0675396b-e41f-4661-a6ae-7c463e7417ca"),
+                            Id = new Guid("36242320-4e9c-4bbd-aaad-e60d92d7faa4"),
                             Name = "Drill"
                         },
                         new
                         {
-                            Id = new Guid("515d031a-21e8-40f2-80d1-be7fd313b9f1"),
+                            Id = new Guid("85dc5376-82e8-444c-ab62-a824e03c22b9"),
                             Name = "Raeggeton"
                         },
                         new
                         {
-                            Id = new Guid("9fa39d78-4c44-4917-88bf-73b0fe9707a8"),
+                            Id = new Guid("08a8e265-7f09-412d-99f7-42688f92bf8a"),
                             Name = "House"
                         },
                         new
                         {
-                            Id = new Guid("ebe5cff3-abf4-4cea-80a1-7058adc0c52d"),
+                            Id = new Guid("6a4fb472-555e-4025-bf69-483ddf94e8ff"),
                             Name = "R&B"
                         },
                         new
                         {
-                            Id = new Guid("c69dd0ba-55cc-401c-8506-f2c85a637707"),
+                            Id = new Guid("656f1bee-cf96-4a32-a22b-1caafa693582"),
                             Name = "Techno"
                         },
                         new
                         {
-                            Id = new Guid("dced16b8-f532-4d06-8f84-0bf2d060e578"),
+                            Id = new Guid("2a26f158-5ce3-4cb8-90af-03109d138671"),
                             Name = "Phonk"
                         });
                 });
