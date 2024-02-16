@@ -20,12 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/FavouriteArtists.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGYXZvdXJpdGVBcnRpc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/FavouriteTracks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGYXZvdXJpdGVUcmFja3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/MyProfile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeVByb2ZpbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/ProfilePhoto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlUGhvdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/Register.cshtml]

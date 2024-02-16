@@ -7,7 +7,7 @@ namespace PureSound.Models.Account
     {
         [Required]
         [StringLength(20, MinimumLength = 5)]
-        public string Username { get; set; } = null!;
+        public string UserName { get; set; } = null!;
         [Required]
         [EmailAddress]
         [StringLength(60, MinimumLength = 10)]

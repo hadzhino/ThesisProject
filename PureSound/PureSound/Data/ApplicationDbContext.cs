@@ -45,7 +45,7 @@ namespace PureSound.Data
             builder.Entity<Genre>()
                 .HasMany(g => g.Users)
                 .WithOne(g => g.FavGenre)
-                .HasForeignKey(g => g.GenreId);
+                .HasForeignKey(g => g.FavGenreId);
             builder.Entity<Genre>()
                 .HasMany(g => g.Songs)
                 .WithOne(g => g.Genre)
@@ -109,6 +109,13 @@ namespace PureSound.Data
                 .WithMany(c => c.Comments)
                 .HasForeignKey(c => c.UserId);
 
+            builder.Entity<User>()
+                .HasOne(u => u.FavGenre)
+                .WithMany(u => u.Users)
+                .HasForeignKey(u => u.FavGenreId);
+            builder.Entity<User>()
+                .Property(u => u.ImageUrl)
+                .HasDefaultValue("~/img/profilePhoto.png");
 
             base.OnModelCreating(builder);
         }

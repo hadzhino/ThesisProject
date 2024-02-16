@@ -2257,6 +2257,30 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\Codehim - Free Web Design Code & Scripts.url",
+      "PackagePath": "staticwebassets\\css\\user-profile-page-template-in-html-css\\Codehim - Free Web Design Code & Scripts.url"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\css\\demo.css",
+      "PackagePath": "staticwebassets\\css\\user-profile-page-template-in-html-css\\css\\demo.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\user-profile-page-template-in-html-css\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\index.html",
+      "PackagePath": "staticwebassets\\css\\user-profile-page-template-in-html-css\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\info.txt",
+      "PackagePath": "staticwebassets\\css\\user-profile-page-template-in-html-css\\info.txt"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\js\\script.js",
+      "PackagePath": "staticwebassets\\css\\user-profile-page-template-in-html-css\\js\\script.js"
+    },
+    {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -2267,6 +2291,10 @@
     {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\img\\logo.png",
       "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\img\\profilePhoto.png",
+      "PackagePath": "staticwebassets\\img\\profilePhoto.png"
     },
     {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\site.js",

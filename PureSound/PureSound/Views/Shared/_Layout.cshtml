@@ -47,14 +47,17 @@
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
-                                                <li>
-                                                    <a href="#">pages <i class="ti-angle-down"></i></a>
-                                                    <ul class="submenu">
-                                                        <li><a href="Artists.cshtml">Artists</a></li>
-                                                        <li><a href="Albums.cshtml">Albums</a></li>
-                                                        <li><a href="Tracks.cshtml">Tracks</a></li>
-                                                    </ul>
-                                                </li>
+                                                @if (this.User.Identity.IsAuthenticated)
+                                                {
+                                                    <li>
+                                                        <a href="#">pages <i class="ti-angle-down"></i></a>
+                                                        <ul class="submenu">
+                                                            <li><a href="Artists.cshtml">Artists</a></li>
+                                                            <li><a href="Albums.cshtml">Albums</a></li>
+                                                            <li><a href="Tracks.cshtml">Tracks</a></li>
+                                                        </ul>
+                                                    </li>
+                                                }
                                                 <li>
                                                     <a href="#"> Profile <i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
@@ -161,10 +164,13 @@
                         <div class="footer_links">
                             <ul>
                                 <li><a asp-controller="Home" asp-action="Index">home</a></li>
-                                <li><a href="#">tracks</a></li>
-                                <li><a href="#">albums</a></li>
-                                <li><a href="#">artists</a></li>
-                                <li><a href="#">blog</a></li>
+                                @if (this.User.Identity.IsAuthenticated)
+                                {
+                                    <li><a href="#">tracks</a></li>
+                                    <li><a href="#">albums</a></li>
+                                    <li><a href="#">artists</a></li>
+                                }
+                                <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                             </ul>
                         </div>
                     </div>

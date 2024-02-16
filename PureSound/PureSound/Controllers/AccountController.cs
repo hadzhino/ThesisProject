@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using PureSound.Data;
 using PureSound.Data.Account;
+using PureSound.Data.Entities;
 using PureSound.Models.Account;
 
 namespace PureSound.Controllers
@@ -48,12 +49,14 @@ namespace PureSound.Controllers
             var user = new User()
             {
                 Email = model.Email,
-                UserName = model.Username,
-                GenreId = model.GenreId
+                UserName = model.UserName,
+                FavGenreId = model.GenreId,
+                FavGenre = context.Genres.Where(x => x.Id == model.GenreId).FirstOrDefault()!
             };
             var result = await userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
+                await userManager.AddToRoleAsync(user, "USER");
                 return RedirectToAction("Login", "Account");
             }
             foreach (var item in result.Errors)
@@ -79,7 +82,7 @@ namespace PureSound.Controllers
             {
                 return View(model);
             }
-            var user = await userManager.FindByNameAsync(model.Username);
+            var user = await userManager.FindByNameAsync(model.UserName);
             if (user != null)
             {
                 var result = await signInManager.PasswordSignInAsync(user, model.Password, false, false);
@@ -98,30 +101,53 @@ namespace PureSound.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        public async Task<IActionResult> CreateRoles()
+        [HttpGet]
+        public async Task<IActionResult> MyProfile()
         {
-            await roleManager.CreateAsync(new IdentityRole("Admin"));
-            await roleManager.CreateAsync(new IdentityRole("User"));
-
-            return RedirectToAction("Index", "Home");
-        }
-
-        public async Task<IActionResult> GiveRoles()
-        {
-            string usernameAdmin = "Hadzhinho";
-            var admin = await userManager.FindByNameAsync(usernameAdmin);
-            await userManager.AddToRoleAsync(admin!, "Admin");
-
-            var user = userManager.GetUserAsync(this.User);
-            await userManager.AddToRoleAsync(await user, "User");
-
-            return RedirectToAction("Index", "Home");
+            var user = await userManager.GetUserAsync(this.User);
+            user!.FavGenre = context.Genres.FirstOrDefault(x => x.Id == user.FavGenreId)!;
+            return View(user);
         }
 
         [HttpGet]
-        public IActionResult MyProfile()
+        public IActionResult ProfilePhoto()
         {
             return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ProfilePhoto(ProfilePhotoVM model)
+        {
+            var user = await userManager.GetUserAsync(this.User);
+            user!.ImageUrl = model.ImageUrl;
+            await context.SaveChangesAsync();
+            return RedirectToAction("MyProfile", "Account");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FavouriteArtists()
+        {
+            var user = await userManager.GetUserAsync(this.User);
+            var favArtists = user!.FavArtists.ToList();
+            return View(favArtists);
+        }
+        [HttpGet]
+        public async Task<IActionResult> FavouriteTracks()
+        {
+            var user = await userManager.GetUserAsync(this.User);
+            var favTracks = user!.FavSongs.ToList();
+            return View(favTracks);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> DeleteProfile(Guid id)
+        {
+            var user = await userManager.FindByIdAsync(id.ToString());
+            if (user != null)
+            {
+                context.Users.Remove(user!);
+                await context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index", "Home");
         }
     }
 }
