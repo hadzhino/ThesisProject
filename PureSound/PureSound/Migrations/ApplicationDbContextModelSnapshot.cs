@@ -62,6 +62,20 @@ namespace PureSound.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "91dba846-9346-4180-926b-822a512114a8",
+                            Name = "Administrator",
+                            NormalizedName = "ADMINISTRATOR"
+                        },
+                        new
+                        {
+                            Id = "59becd7f-9fa3-4daf-99f6-f52f5568dcc6",
+                            Name = "User",
+                            NormalizedName = "USER"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -151,6 +165,13 @@ namespace PureSound.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "389e650a-775f-4d7b-a9ac-30cfd960fa37",
+                            RoleId = "91dba846-9346-4180-926b-822a512114a8"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -200,7 +221,7 @@ namespace PureSound.Migrations
                         .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)")
-                        .HasDefaultValue("https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png");
+                        .HasDefaultValue("~/img/profilePhoto.png");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -248,6 +269,25 @@ namespace PureSound.Migrations
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "389e650a-775f-4d7b-a9ac-30cfd960fa37",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "c26ce763-bebd-43d3-992f-a28f696e7191",
+                            Email = "etaleksander411@gmail.com",
+                            EmailConfirmed = false,
+                            FavGenreId = new Guid("48d67181-5732-47a0-892b-6577fc688e00"),
+                            LockoutEnabled = false,
+                            NormalizedEmail = "ETALEKSANDER411@GMAIL.COM",
+                            NormalizedUserName = "ADMIN",
+                            PasswordHash = "AQAAAAIAAYagAAAAEL34rcBD+gOUdB5G8GjJIL+GE1KQnNZOMs++1ULDDCAv182wIZ8JC7ntJFR2aBMQyA==",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "6f906573-0b55-4b1d-8191-38ba4d2e8663",
+                            TwoFactorEnabled = false,
+                            UserName = "Admin"
+                        });
                 });
 
             modelBuilder.Entity("PureSound.Data.Entities.Album", b =>
@@ -378,38 +418,43 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9cccf3bc-71ec-4022-9f07-d244f5d359aa"),
+                            Id = new Guid("28dcc6c4-87fa-4e8a-b3aa-84157feeec92"),
                             Name = "Rap"
                         },
                         new
                         {
-                            Id = new Guid("e83c3a00-22a8-4498-ae90-645d93f9f0a3"),
+                            Id = new Guid("049e459b-f2e0-45ee-8dc3-fc77468679ce"),
                             Name = "Drill"
                         },
                         new
                         {
-                            Id = new Guid("50486c19-dea7-4b63-8f9a-1650ec822a04"),
+                            Id = new Guid("dce6eb70-5289-48f7-924b-a5262aa1d437"),
                             Name = "Raeggeton"
                         },
                         new
                         {
-                            Id = new Guid("013f1bbb-d827-4822-9090-22ebc6463f3b"),
+                            Id = new Guid("27caa3e3-6aae-4f03-a264-3fb6142a5b5a"),
                             Name = "House"
                         },
                         new
                         {
-                            Id = new Guid("410dd3cc-8c08-4b51-af78-2f5041f0dde7"),
+                            Id = new Guid("30ee93d8-fa92-40ee-8efb-886085f750a5"),
                             Name = "R&B"
                         },
                         new
                         {
-                            Id = new Guid("6aa11502-59bd-435a-be68-480708980da0"),
+                            Id = new Guid("02591455-3e87-4124-9638-9eeb6be0e2c2"),
                             Name = "Techno"
                         },
                         new
                         {
-                            Id = new Guid("aaa241ed-9756-401a-b586-6231bd0d7259"),
+                            Id = new Guid("1d97ffc4-4a21-4be9-9e84-eb5adbb8cd17"),
                             Name = "Phonk"
+                        },
+                        new
+                        {
+                            Id = new Guid("48d67181-5732-47a0-892b-6577fc688e00"),
+                            Name = "None"
                         });
                 });
 

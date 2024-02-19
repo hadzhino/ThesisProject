@@ -1,31 +1,29 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>PureSound</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+﻿
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>PureSound</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
-    <!-- Place favicon.ico in the root directory -->
-    <!-- CSS here -->
-    <link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/animate.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/slick.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/style.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
-</head>
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+
 <body>
     <form>
         <header>
@@ -37,7 +35,7 @@
                                 <div class="col-xl-3 col-lg-2">
                                     <div class="logo">
                                         <a asp-controller="Home" asp-action="Index">
-                                            <img src="~/img/logo.png" style="height:40px; width:150px">
+                                            <img src="~/img/logo.png" style="height:40px; width:160px">
                                         </a>
                                     </div>
                                 </div>
@@ -46,6 +44,10 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
+                                                @if (this.User.IsInRole("Administrator") == true)
+                                                {
+                                                    <li><a asp-controller="Account" asp-action="Admin">admin</a></li>
+                                                }
                                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                                                 @if (this.User.Identity.IsAuthenticated)
                                                 {
@@ -80,8 +82,8 @@
                                 <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                                     <div class="social_icon">
                                         <ul>
-                                            <li><a href="https://www.facebook.com/profile.php?id=100007847444057&locale=bg_BG"> <i class="fa fa-facebook"></i> </a></li>
-                                            <li><a href="https://www.instagram.com/hadzhinho/"> <i class="fa fa-instagram"></i> </a></li>
+                                            <li><a href="https://www.facebook.com/profile.php?id=100007847444057&locale=bg_BG"> <i class="fa fa-facebook" style="margin-top:10px"></i> </a></li>
+                                            <li><a href="https://www.instagram.com/hadzhinho/"> <i class="fa fa-instagram" style="margin-top:10px"></i> </a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -135,12 +137,12 @@
                                 <ul>
                                     <li>
                                         <a href="https://www.facebook.com/profile.php?id=100007847444057&locale=bg_BG">
-                                            <i class=" fa fa-facebook "></i>
+                                            <i class=" fa fa-facebook" style="margin-top:10px"></i>
                                         </a>
                                     </li>
                                     <li>
                                         <a href="https://www.instagram.com/hadzhinho/">
-                                            <i class="fa fa-instagram"></i>
+                                            <i class="fa fa-instagram" style="margin-top:10px"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -222,4 +224,3 @@
         });
     </script>
 </body>
-</html>

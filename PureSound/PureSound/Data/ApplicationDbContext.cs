@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using PureSound.Data.Account;
+using PureSound.Data.Configurations;
 using PureSound.Data.Entities;
 
 namespace PureSound.Data
@@ -89,6 +90,11 @@ namespace PureSound.Data
                 {
                     Id = Guid.NewGuid(),
                     Name = "Phonk"
+                },
+                new Genre
+                {
+                    Id = Guid.Parse("48d67181-5732-47a0-892b-6577fc688e00"),
+                    Name = "None"
                 }
                 );
 
@@ -116,6 +122,10 @@ namespace PureSound.Data
             builder.Entity<User>()
                 .Property(u => u.ImageUrl)
                 .HasDefaultValue("~/img/profilePhoto.png");
+
+            builder.ApplyConfiguration(new RoleConfiguration());
+            builder.ApplyConfiguration(new UserConfiguration());
+            builder.ApplyConfiguration(new UserRoleConfiguration());
 
             base.OnModelCreating(builder);
         }

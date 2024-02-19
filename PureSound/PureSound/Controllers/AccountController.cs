@@ -149,5 +149,15 @@ namespace PureSound.Controllers
             }
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpGet]
+        public IActionResult Admin()
+        {
+            return View();
+        }
+        //[HttpPost]
+        //public async Task<IActionResult> Admin()
+        //{ 
+        //}
     }
 }
