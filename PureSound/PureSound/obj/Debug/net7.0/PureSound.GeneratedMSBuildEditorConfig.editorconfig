@@ -20,8 +20,12 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/Admin.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBZG1pbi5jc2h0bWw=
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/AllEntities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBbGxFbnRpdGllcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/AllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBbGxVc2Vycy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/FavouriteArtists.cshtml]
@@ -58,6 +62,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/Albums.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWxidW1zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/Artists.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQXJ0aXN0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/Tracks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcVHJhY2tzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Shared/Error.cshtml]

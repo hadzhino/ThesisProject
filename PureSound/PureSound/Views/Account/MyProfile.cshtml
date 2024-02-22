@@ -14,27 +14,66 @@
         <div class="content">
             <div class="content__cover">
                 <div class="content__avatar">
-                    <img src="@Model.ImageUrl" style="height: 194.4px; width:194.4px; border-radius:194.4px; position: center" /><span></span>
+                    <img src="@Model.ImageUrl" style="height: 194.4px; width:194.4px; border-radius:194.4px; position: center" /><span><br /></span>
                     <div>
-                        <a asp-controller="Account" asp-action="ProfilePhoto" style="text-align:center; color: blue; margin-left:50px">Change Photo</a>
+                        @*<a class="link"  style="text-align:center; color: blue; margin-left:50px"   >Change Photo</a>*@
+
+                        <button type="button" class="btn btn-sm btn-default" style="margin-left:45px" onclick="ShowModal()">Change Photo</button>
+
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        ...
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="content__bull"></div>
             </div>
             <div class="content__actions">
-                <a asp-controller="Account" asp-action="FavouriteArtists" asp-route-id="@Model.Id">
-                    <span style="margin-right:0px">Your favourite artists</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
-                        <img src="https://clipart-library.com/img/989086.png" style="height:25px; width:25px; margin-left:15px; margin-right:65px">
-                    </svg>
-                </a>
-                <a asp-controller="Account" asp-action="FavouriteTracks" asp-route-id="@Model.Id">
-                    <svg xmlns="http://www.w3.org/2000/svg" style="height:40px;width:40px">
-                        <img src="https://cdn.pixabay.com/photo/2016/03/23/17/26/music-note-1275177_960_720.png" style="height:25px; width:25px; margin-right:65px; margin-left:15px ">
-                    </svg><span style="margin-left:0px">Your favourite tracks</span>
-                </a>
+                @if (this.User.IsInRole("Administrator"))
+                {
+                    <a asp-controller="Account" asp-action="AllUsers">
+                        <span style="margin-left:65px">All Users</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" style="height:30px; width:30px; margin-left:15px; margin-right:65px">
+                        </svg>
+                    </a>
+                    <a asp-controller="Account" asp-action="AllEntities">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="height:40px;width:40px">
+                            <img src="https://cdn.iconscout.com/icon/free/png-256/free-list-1440384-1216344.png" style="height:30px; width:30px; margin-right:55px; margin-left:15px ">
+                        </svg><span style="margin-right:60px">All Entities</span>
+                    </a>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="FavouriteArtists" asp-route-id="@Model.Id">
+                        <span style="margin-right:0px">Your favourite artists</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
+                            <img src="https://clipart-library.com/img/989086.png" style="height:25px; width:25px; margin-left:15px; margin-right:65px">
+                        </svg>
+                    </a>
+                    <a asp-controller="Account" asp-action="FavouriteTracks" asp-route-id="@Model.Id">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="height:40px;width:40px">
+                            <img src="https://cdn.pixabay.com/photo/2016/03/23/17/26/music-note-1275177_960_720.png" style="height:25px; width:25px; margin-right:65px; margin-left:15px ">
+                        </svg><span style="margin-left:0px">Your favourite tracks</span>
+                    </a>
+                }
             </div>
-            <span></span><span></span><span></span>
+            <span></span><span></span><span></span><span><br /></span><span><br /></span>
             <div class="content__title">
                 <h1>@Model.UserName</h1>
             </div>
@@ -55,7 +94,6 @@
                     <li><span>@Model.FavSongs.Count</span>Favourite Tracks</li>
                     <li><span>@Model.FavArtists.Count</span>Favourite Artists</li>
                     <li><span>@Model.Comments.Count</span>Comments</li>
-                    <button asp-controller="Account" asp-action="DeleteProfile" asp-route-id="@Model.Id" class="btn btn-danger">Delete Profile</button>
                 }
             </ul>
 
@@ -87,7 +125,12 @@
         </div>
     </div>
 </main>
+<script type="text/javascript">
+    function ShowModal() {
 
+        $("#exampleModal").modal('show');
+    }
+</script>
 <!-- Script JS -->
 <script src="~/css/user-profile-page-template-in-html-css/js/script.js"></script>
 <script src="~/js/site.js"></script>

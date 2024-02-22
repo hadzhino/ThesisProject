@@ -9,6 +9,7 @@
 <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
 <!-- Place favicon.ico in the root directory -->
 <!-- CSS here -->
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
 <link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
 <link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
 <link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
@@ -44,19 +45,15 @@
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
                                             <ul id="navigation">
-                                                @if (this.User.IsInRole("Administrator") == true)
-                                                {
-                                                    <li><a asp-controller="Account" asp-action="Admin">admin</a></li>
-                                                }
                                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                                                 @if (this.User.Identity.IsAuthenticated)
                                                 {
                                                     <li>
                                                         <a href="#">pages <i class="ti-angle-down"></i></a>
                                                         <ul class="submenu">
-                                                            <li><a href="Artists.cshtml">Artists</a></li>
-                                                            <li><a href="Albums.cshtml">Albums</a></li>
-                                                            <li><a href="Tracks.cshtml">Tracks</a></li>
+                                                            <li><a asp-controller="Pages" asp-action="Artists">Artists</a></li>
+                                                            <li><a asp-controller="Pages" asp-action="Albums">Albums</a></li>
+                                                            <li><a asp-controller="Pages" asp-action="Tracks">Tracks</a></li>
                                                         </ul>
                                                     </li>
                                                 }
@@ -168,9 +165,9 @@
                                 <li><a asp-controller="Home" asp-action="Index">home</a></li>
                                 @if (this.User.Identity.IsAuthenticated)
                                 {
-                                    <li><a href="#">tracks</a></li>
-                                    <li><a href="#">albums</a></li>
-                                    <li><a href="#">artists</a></li>
+                                    <li><a asp-controller="Pages" asp-action="Tracks">tracks</a></li>
+                                    <li><a asp-controller="Pages" asp-action="Albums">albums</a></li>
+                                    <li><a asp-controller="Pages" asp-action="Artists">artists</a></li>
                                 }
                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                             </ul>
@@ -183,14 +180,16 @@
     <!--/ footer end  -->
     <!-- link that opens popup -->
     <!-- JS here -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous">
-    </script>
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    @*    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">
+    </script>*@
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    @*<script src="~/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/ajax-form.js"></script>
@@ -206,21 +205,14 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/gijgo.min.js"></script>
-    <script src="js/slick.min.js"></script>
+    <script src="js/slick.min.js"></script>*@
     <!--contact js-->
     <script src="js/contact.js"></script>
     <script src="js/jquery.ajaxchimp.min.js"></script>
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
+    <script src="~/js/site.js"></script>
 
     <script src="js/main.js"></script>
-
-    <script>
-        $(function () {
-            $('audio').audioPlayer({
-
-            });
-        });
-    </script>
 </body>

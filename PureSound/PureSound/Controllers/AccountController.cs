@@ -138,26 +138,21 @@ namespace PureSound.Controllers
             return View(favTracks);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> DeleteProfile(Guid id)
+        [HttpGet]
+        public async Task<IActionResult> AllUsers()
         {
-            var user = await userManager.FindByIdAsync(id.ToString());
-            if (user != null)
-            {
-                context.Users.Remove(user!);
-                await context.SaveChangesAsync();
-            }
-            return RedirectToAction("Index", "Home");
+            var users = await context.Users.ToListAsync();
+            return View(users);
         }
 
         [HttpGet]
-        public IActionResult Admin()
+        public async Task<IActionResult> AllEntities()
         {
+            var artists = await context.Artists.ToListAsync();
+            var songs = await context.Songs.ToListAsync();
+            var albums = await context.Albums.ToListAsync();
+
             return View();
         }
-        //[HttpPost]
-        //public async Task<IActionResult> Admin()
-        //{ 
-        //}
     }
 }
