@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "12dTL7IwilcIesKGnYYO7Z12dyxQZ5i472Lp6UzlMDU=",
+  "Hash": "jTz1E5PEOTZR7CRBrO6liwq2xOTMmjuYgCOZTw/qwgs=",
   "Source": "PureSound",
   "BasePath": "_content/PureSound",
   "Mode": "Default",
@@ -10691,6 +10691,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\user-profile-page-template-in-html-css\\css\\style.css"
+    },
+    {
+      "Identity": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\css\\StyleSheet.css",
+      "SourceId": "PureSound",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\",
+      "BasePath": "_content/PureSound",
+      "RelativePath": "css/user-profile-page-template-in-html-css/css/StyleSheet.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\user-profile-page-template-in-html-css\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\index.html",

@@ -20,3 +20,7 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.modal-backdrop {
+    opacity: 0.5 !important;
+}

@@ -6,6 +6,7 @@
 $(document).ready(function () {
     $('#exampleModal').on('shown.bs.modal', function () {
         $('#exampleInput').trigger('focus');
-        console.log(1);
     });
 });
+$('#exampleModal').appendTo("body").modal('show');
+$('.modal-backdrop').removeClass('modal-backdrop');
