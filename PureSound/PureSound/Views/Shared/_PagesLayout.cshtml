@@ -1,0 +1,181 @@
+﻿<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/css/util.css">
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/css/main.css">
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+<body>
+    <div>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-md-6">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                About
+                            </h3>
+                            <p class="sub_text">PureSound is a school project which targets music listeners and people interested in the sphere.</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-md-5 offset-xl-1">
+                        <div class="footer_widget">
+                            <h3 class="footer_title">
+                                Contact Me
+                            </h3>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        etaleksander411@gmail.com
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        +359 89 53 40 446
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="socail_links">
+                                <ul>
+                                    <li>
+                                        <a href="https://www.facebook.com/profile.php?id=100007847444057&locale=bg_BG">
+                                            <i class=" fa fa-facebook" style="margin-top:10px"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/hadzhinho/">
+                                            <i class="fa fa-instagram" style="margin-top:10px"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copy-right_text">
+            <div class="container">
+                <div class="footer_border"></div>
+                <div class="row">
+                    <div class="col-xl-7 col-md-6">
+                        <p class="copy_right">
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                        </p>
+                    </div>
+                    <div class="col-xl-5 col-md-6">
+                        <div class="footer_links">
+                            <ul>
+                                <li><a asp-controller="Home" asp-action="Index">home</a></li>
+                                @if (this.User.Identity.IsAuthenticated)
+                                {
+                                    <li><a asp-controller="Pages" asp-action="Tracks">tracks</a></li>
+                                    <li><a asp-controller="Pages" asp-action="Artists">artists</a></li>
+                                }
+                                <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--/ footer end  -->
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    @*    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">
+    </script>*@
+    <script src="~/css/user-profile-page-template-in-html-css/css/StyleSheet.css"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js"></script>
+    <script src="~/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/audioplayer.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/countdowntime/countdowntime.js"></script>
+    <!--===============================================================================================-->
+</body>

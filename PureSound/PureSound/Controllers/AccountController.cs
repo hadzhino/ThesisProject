@@ -146,13 +146,11 @@ namespace PureSound.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> AllEntities()
+        public async Task<IActionResult> AllEntities()  
         {
-            var artists = await context.Artists.ToListAsync();
-            var songs = await context.Songs.ToListAsync();
-            var albums = await context.Albums.ToListAsync();
-
-            return View();
+            var entities = await context.Artists.Include(x => x.ArtistSongs)!.ThenInclude(x => x.Song).ToListAsync();
+            ViewBag.Entities = entities;
+            return View(entities);
         }
     }
 }

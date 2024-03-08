@@ -24,6 +24,8 @@
 <link rel="stylesheet" href="~/css/musico-master/css/slick.css">
 <link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
 <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
 
 <body>
     <form>
@@ -52,7 +54,6 @@
                                                         <a href="#">pages <i class="ti-angle-down"></i></a>
                                                         <ul class="submenu">
                                                             <li><a asp-controller="Pages" asp-action="Artists">Artists</a></li>
-                                                            <li><a asp-controller="Pages" asp-action="Albums">Albums</a></li>
                                                             <li><a asp-controller="Pages" asp-action="Tracks">Tracks</a></li>
                                                         </ul>
                                                     </li>
@@ -101,7 +102,7 @@
         </main>
     </div>
 
-    <footer class="footer" >
+    <footer class="footer">
         <div class="footer_top">
             <div class="container">
                 <div class="row">
@@ -166,7 +167,6 @@
                                 @if (this.User.Identity.IsAuthenticated)
                                 {
                                     <li><a asp-controller="Pages" asp-action="Tracks">tracks</a></li>
-                                    <li><a asp-controller="Pages" asp-action="Albums">albums</a></li>
                                     <li><a asp-controller="Pages" asp-action="Artists">artists</a></li>
                                 }
                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>

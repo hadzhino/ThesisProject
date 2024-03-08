@@ -1,0 +1,193 @@
+﻿@using PureSound.Data.Entities;
+@model PureSound.Models.ViewModels.ArtistVM
+@{
+    Layout = "~/Views/Shared/_PagesLayout.cshtml";
+}
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>@Model.Username</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+
+
+<form>
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="header_bottom_border">
+                        <div class="row align-items-center">
+                            <div class="col-xl-3 col-lg-2">
+                                <div class="logo">
+                                    <a asp-controller="Home" asp-action="Index">
+                                        <img src="~/img/logo.png" style="height:40px; width:160px">
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-6 col-lg-7">
+                                <div class="main-menu  d-none d-lg-block">
+                                    <nav>
+                                        <ul id="navigation">
+                                            <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
+                                            @if (this.User.Identity.IsAuthenticated)
+                                            {
+                                                <li>
+                                                    <a href="#">pages <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        <li><a asp-controller="Pages" asp-action="Artists">Artists</a></li>
+                                                        <li><a asp-controller="Pages" asp-action="Tracks">Tracks</a></li>
+                                                    </ul>
+                                                </li>
+                                            }
+                                            <li>
+                                                <a href="#"> Profile <i class="ti-angle-down"></i></a>
+                                                <ul class="submenu">
+                                                    @if (!User.Identity!.IsAuthenticated)
+                                                    {
+                                                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Login">Login</a></li>
+                                                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Register">Register</a></li>
+                                                    }
+                                                    else
+                                                    {
+                                                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="MyProfile">My Profile</a></li>
+                                                        <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                                    }
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+</form>
+
+<body>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="d-flex align-items-center slider_bg_1 overlay2" style="height:110px">
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <!-- music_area  -->
+    <div class="music_area music_gallery" style="margin-right:0px">
+        <div class="container">
+            <div class="image" style="margin-left:460px; margin-right:0px">
+                <img src=@Model.ImageURL style="height:200px; width:200px; border-radius:200px" />
+            </div>
+            <div class="row">
+                <div class="col-xl-12" style="margin-top:30px">
+                    <div class="section_title text-center mb-65">
+                        <h1>
+                            @Model.Username
+                        </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="table">
+                <div class="row align-items-center justify-content-center mb-20">
+                    <h4>Tracks</h4>
+                </div>
+                
+                @if (Model.ArtistsSongs.Count !=0)
+                {
+                    @foreach (var item in ViewBag.Songs)
+                    {
+                        <a asp-controller="Pages" asp-action="EachTrack" asp-route-id="@item.Id">
+                            <div class="row align-items-center justify-content-center mb-20">
+                                <div class="col-xl-10">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-9 col-md-9">
+                                            <div class="music_field">
+                                                <div class="thumb">
+                                                    <img src=@item.ImageURL style="height:50px;width:50px">
+                                                </div>
+                                                <div class="track_name">
+                                                    <div class="name">
+                                                        <h6>@item.Title</h6>
+                                                        <p>@item.Year</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+    <!-- music_area end  -->
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous">
+    </script>
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/audioplayer.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+        $(function () {
+            $('audio').audioPlayer({
+
+            });
+        });
+    </script>
+</body>

@@ -5,12 +5,12 @@ namespace PureSound.Models.ViewModels
 {
     public class AddTrackVM
     {
-        [Required][StringLength(maximumLength: 50)] public string Title { get; set; }
-        public HashSet<Artist> Artists { get; set; } = new HashSet<Artist>();
-        public string Lyrics { get; set; }
-        [Required] public int Year { get; set; }
+        public string Title { get; set; }
+        public HashSet<ArtistsSong>? ArtistsSong { get; set; } = new HashSet<ArtistsSong>();
+        public HashSet<Guid>? ArtistsIds { get; set; } = new HashSet<Guid>();
+        public string? Lyrics { get; set; }
+        public int Year { get; set; }
         public Guid GenreId { get; set; }
-        public Guid AlbumId { get; set; }
-        [Required] public string ImageURL { get; set; }
+        public string? ImageURL { get; set; }
     }
 }

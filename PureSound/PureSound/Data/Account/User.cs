@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using PureSound.Data.Entities;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PureSound.Data.Account

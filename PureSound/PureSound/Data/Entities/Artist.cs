@@ -7,10 +7,9 @@ namespace PureSound.Data.Entities
         [Key] public Guid Id { get; set; }
         [Required] public string Username { get; set; }
         [Required] public int Age { get; set; }
-        public HashSet<Song> Songs { get; set; } = new HashSet<Song>();
-        public HashSet<Album> Albums { get; set; } = new HashSet<Album>();
+        public HashSet<ArtistsSong>? ArtistSongs { get; set; } = new HashSet<ArtistsSong>();
         public Guid GenreId { get; set; }
-        public Genre MainGenre { get; set; }
-        [Required]public string ImageURL { get; set; }
+        public Genre Genre { get; set; }
+        public string? ImageURL { get; set; }
     }
 }

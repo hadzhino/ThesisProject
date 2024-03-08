@@ -7,8 +7,8 @@ namespace PureSound.Models.ViewModels
     {
         public string Title { get; set; }
         public string Content { get; set; }
-        public string ImageURL { get; set; }
+        public string? ImageURL { get; set; }
         public DateTime Date { get; set; }
-        public HashSet<Comment> Comments { get; set; } = new HashSet<Comment>();
+        public HashSet<Comment>? Comments { get; set; } = new HashSet<Comment>();
     }
 }
