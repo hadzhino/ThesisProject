@@ -12,5 +12,6 @@ namespace PureSound.Models.ViewModels
         public int Year { get; set; }
         public Guid GenreId { get; set; }
         public string? ImageURL { get; set; }
+        public string YouTubeURL { get; set; }
     }
 }

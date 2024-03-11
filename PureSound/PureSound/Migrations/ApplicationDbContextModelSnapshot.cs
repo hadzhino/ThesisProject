@@ -260,16 +260,16 @@ namespace PureSound.Migrations
                         {
                             Id = "389e650a-775f-4d7b-a9ac-30cfd960fa37",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "edcd08ae-da1b-4c0d-a162-e62436983e7e",
+                            ConcurrencyStamp = "3a7ceec7-6827-4b97-a4a4-587a3f55b694",
                             Email = "etaleksander411@gmail.com",
                             EmailConfirmed = false,
                             FavGenreId = new Guid("48d67181-5732-47a0-892b-6577fc688e00"),
                             LockoutEnabled = false,
                             NormalizedEmail = "ETALEKSANDER411@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEO9aTlAC2BteoryHdx3UvsxD+fV651qHytblS5yzSs7zUQEk3Ma9Ccp5L4If8DrYug==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECqWHFpFSsVI+6d2xQXIfoSWhxObVRzFgfaaAMNMZoBnMSzhyzBjUdJ918lJFYhMtw==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "289f7bed-76f5-4d89-8576-1b87679ca2cb",
+                            SecurityStamp = "d3b6e9fa-6039-438b-bc81-9c73899a395a",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -395,37 +395,37 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("79b5fd87-f093-42c9-a4bd-718286656313"),
+                            Id = new Guid("52b8a98e-afeb-405d-b214-7543c6b006f7"),
                             Name = "Rap"
                         },
                         new
                         {
-                            Id = new Guid("581caa98-6599-4c16-bd33-f85da1796ee6"),
+                            Id = new Guid("6bf466b7-512f-46d9-9cba-8a8012c228b8"),
                             Name = "Drill"
                         },
                         new
                         {
-                            Id = new Guid("22b20e46-5a2c-4920-aafe-eedbba7dddb8"),
+                            Id = new Guid("ac1c7c48-04d0-4b79-a937-469b6a73e6fb"),
                             Name = "Raeggeton"
                         },
                         new
                         {
-                            Id = new Guid("d76af082-a6fd-4f95-a0a9-3f40e7a907c9"),
+                            Id = new Guid("d1b3a112-6195-440c-98aa-d83829bf34fd"),
                             Name = "House"
                         },
                         new
                         {
-                            Id = new Guid("09dab45f-02ab-40c7-8245-ca2dbf06c9db"),
+                            Id = new Guid("c385e5a4-40c4-43db-b5c4-884c0dd605f8"),
                             Name = "R&B"
                         },
                         new
                         {
-                            Id = new Guid("f26acc40-6557-4349-aafb-2fc0aa6a986b"),
+                            Id = new Guid("99150c74-af93-4ad6-9f20-7d95c875d6ff"),
                             Name = "Techno"
                         },
                         new
                         {
-                            Id = new Guid("717741a4-3b4d-43a4-a402-4bd18f2788c8"),
+                            Id = new Guid("5bbf1760-bac7-4b61-b4a3-e4f663644682"),
                             Name = "Phonk"
                         },
                         new
@@ -459,6 +459,10 @@ namespace PureSound.Migrations
 
                     b.Property<int>("Year")
                         .HasColumnType("int");
+
+                    b.Property<string>("YouTubeURL")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -555,7 +559,7 @@ namespace PureSound.Migrations
                         .IsRequired();
 
                     b.HasOne("PureSound.Data.Entities.Song", "Song")
-                        .WithMany("ArtistSong")
+                        .WithMany("ArtistSongs")
                         .HasForeignKey("SongId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -629,7 +633,7 @@ namespace PureSound.Migrations
 
             modelBuilder.Entity("PureSound.Data.Entities.Song", b =>
                 {
-                    b.Navigation("ArtistSong");
+                    b.Navigation("ArtistSongs");
                 });
 #pragma warning restore 612, 618
         }

@@ -7,12 +7,12 @@ namespace PureSound.Models.ViewModels
     {
         public Guid Id { get; set; }
         public string? Title { get; set; }
-        public HashSet<ArtistsSong> ArtistsSong { get; set; } = new HashSet<ArtistsSong>();
-        public HashSet<string> ArtistsNames { get; set; } = new HashSet<string>();
+        public HashSet<ArtistsSong> ArtistSongs { get; set; } = new HashSet<ArtistsSong>();
         public string? Lyrics { get; set; }
         public int Year { get; set; }
         public Guid GenreId { get; set; }
         public Genre Genre { get; set; }
         public string? ImageURL { get; set; }
+        public string YouTubeURL { get; set; }
     }
 }

@@ -138,12 +138,13 @@
                             <div class="col-xl-9 col-md-9">
                                 <div class="music_field">
                                     <div class="thumb">
-                                        <img src=@item.ImageURL style="height:100px;width:80px">
+                                        <img src=@item.ImageURL style="height:100px;width:140px">
                                     </div>
                                     <div class="track_name">
                                         <div class="name">
-                                            <h4>@item.Title</h4>
-                                            <p>@item.Year</p>
+                                            <h4>@string.Join(" & ", ViewBag.Artists) - @item.Title</h4>
+                                            <p>@item.Genre.Name</p>
+                                            <p style="margin-top:-10px">@item.Year</p>
                                         </div>
                                     </div>
                                 </div>

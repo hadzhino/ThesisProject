@@ -29,7 +29,7 @@ namespace PureSound.Controllers
         [HttpGet]
         public async Task<IActionResult> Artists()
         {
-            var artists = await context.Artists.Include(a => a.ArtistSongs).ThenInclude(x => x.Song).ToListAsync();
+            var artists = await context.Artists.Include(a => a.ArtistSongs)!.ThenInclude(x => x.Song).ToListAsync();
             return View(artists);
         }
 
@@ -37,6 +37,20 @@ namespace PureSound.Controllers
         public async Task<IActionResult> Tracks()
         {
             var tracks = await context.Songs.ToListAsync();
+
+            foreach (var track in tracks)
+            {
+                var artistsIds = context.ArtistsSongs.Where(x => x.SongId == track.Id).Select(x => x.ArtistId).ToList();
+                var artists = new List<Artist>();
+                foreach (var item in artistsIds)
+                {
+                    var artist = context.Artists.Include(x => x.Genre).FirstOrDefault(x => x.Id == item);
+                    artists.Add(artist!);
+                }
+                var artistsNames = artists.Select(x => x.Username).ToList();
+                ViewBag.Artists = artistsNames;
+            }
+
             return View(tracks);
         }
 
@@ -83,11 +97,12 @@ namespace PureSound.Controllers
                 Year = model.Year,
                 ImageURL = model.ImageURL,
                 GenreId = model.GenreId,
+                YouTubeURL = model.YouTubeURL,
                 Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!
             };
             await context.Songs.AddAsync(track);
 
-            foreach (var item in model.ArtistsIds)
+            foreach (var item in model.ArtistsIds!)
             {
                 var artistSong = new ArtistsSong()
                 {
@@ -104,51 +119,13 @@ namespace PureSound.Controllers
             return RedirectToAction("Tracks", "Pages");
         }
 
-        [HttpPost]
-        public async Task<IActionResult> DeleteArtist(Guid id)
-        {
-            var artist = await context.Artists.FirstOrDefaultAsync(x => x.Id == id);
-            if (artist != null)
-            {
-                context.Artists.Remove(artist);
-
-                await context.SaveChangesAsync();
-                return RedirectToAction("Artists", "Pages");
-            }
-            return RedirectToAction("Artists", "Pages");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> DeleteTrack(Guid id)
-        {
-            var track = context.Songs.FirstOrDefault(x => x.Id == id);
-            if (track != null)
-            {
-                return await Task.Run(() => View("DeleteTrack", track));
-            }
-            return RedirectToAction("Tracks", "Pages");
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> DeleteTrack(DeleteTrackVM model)
-        {
-            var track = await context.Songs.FindAsync(model.Id);
-            if (track != null)
-            {
-                context.Songs.Remove(track);
-
-                await context.SaveChangesAsync();
-                return RedirectToAction("Tracks", "Pages");
-            }
-            return RedirectToAction("Tracks", "Pages");
-        }
-
+        
 
         [HttpPost]
         public async Task<IActionResult> SerachArtist(string search)
         {
             ViewBag.Search = search;
-            var artists = await context.Artists.Include(a => a.ArtistSongs).ThenInclude(x => x.Song).ToListAsync();
+            var artists = await context.Artists.Include(a => a.ArtistSongs)!.ThenInclude(x => x.Song).ToListAsync();
             var artist = artists.FirstOrDefault();
             if (search != null)
             {
@@ -183,8 +160,16 @@ namespace PureSound.Controllers
         [HttpGet]
         public async Task<IActionResult> EachArtist(Guid id)
         {
-            ViewBag.Songs = context.Songs.Include(x=>x.ArtistSong).ThenInclude(x=>x.Artist).Where(x=>x.Id == x.ArtistSong.FirstOrDefault(x=>x.ArtistId == id).Id);
-            var artist = await context.Artists.Include(x => x.ArtistSongs)!.ThenInclude(x => x.Song).FirstOrDefaultAsync(x => x.Id == id);
+            var songsIds = context.ArtistsSongs.Where(x=>x.ArtistId == id).Select(x=>x.SongId).ToList();
+            var songs = new List<Song>();
+            foreach (var item in songsIds)
+            {
+                var song = context.Songs.Include(x=>x.Genre).FirstOrDefault(x=>x.Id == item);
+                songs.Add(song!);
+            }
+            ViewBag.Songs = songs;
+
+            var artist = await context.Artists.Include(x=>x.Genre).Include(x => x.ArtistSongs)!.ThenInclude(x => x.Song).FirstOrDefaultAsync(x => x.Id == id);
             if (artist != null)
             {
                 var vm = new ArtistVM()
@@ -206,16 +191,42 @@ namespace PureSound.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> EachTrack(TrackVM model)
+        public async Task<IActionResult> EachTrack(Guid id)
         {
-            var track = await context.Songs.FirstOrDefaultAsync(x => x.Id == model.Id);
+            var artistsIds = context.ArtistsSongs.Where(x => x.SongId == id).Select(x => x.ArtistId).ToList();
+            var artists = new List<Artist>();
+            foreach (var item in artistsIds)
+            {
+                var artist = context.Artists.Include(x => x.Genre).FirstOrDefault(x => x.Id == item);
+                artists.Add(artist!);
+            }
+            var artistsNames = artists.Select(x=>x.Username).ToList();
+            ViewBag.Artists = artistsNames;
+
+            var track = await context.Songs
+                .Include(x=>x.Genre)
+                .Include(x=>x.ArtistSongs)!
+                .ThenInclude(x=>x.Artist)
+                .FirstOrDefaultAsync(x => x.Id == id);
             if (track != null)
             {
-                return View(track);
+                var vm = new TrackVM()
+                {
+                    Id = track.Id,
+                    Title = track.Title,
+                    ImageURL = track.ImageURL,
+                    Year = track.Year,
+                    Genre = track.Genre,
+                    GenreId = track.GenreId,
+                    ArtistSongs = track.ArtistSongs!,
+                    Lyrics = track.Lyrics,
+                    YouTubeURL = track.YouTubeURL
+                };
+                return View(vm);
             }
             else
             {
-                return RedirectToAction("Tracks");
+                return RedirectToAction("Tracks", "Pages");
             }
         }
     }

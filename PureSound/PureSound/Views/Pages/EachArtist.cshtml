@@ -2,6 +2,7 @@
 @model PureSound.Models.ViewModels.ArtistVM
 @{
     Layout = "~/Views/Shared/_PagesLayout.cshtml";
+    List<Song> songs = ViewBag.Songs;
 }
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -52,7 +53,7 @@
                                     <nav>
                                         <ul id="navigation">
                                             <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
-                                            @if (this.User.Identity.IsAuthenticated)
+                                            @if (this.User.Identity!.IsAuthenticated)
                                             {
                                                 <li>
                                                     <a href="#">pages <i class="ti-angle-down"></i></a>
@@ -112,37 +113,48 @@
                     </div>
                 </div>
             </div>
-            <div class="table">
-                <div class="row align-items-center justify-content-center mb-20">
-                    <h4>Tracks</h4>
+            <div style="margin-top:-60px" class="row">
+                <div class="col-xl-12" style="margin-top:30px">
+                    <div class="section_title text-center mb-65">
+                        <hr style="margin-left:430px; width:250px;" />
+                        <br />
+                        <h4>Main Genre: @Model.Genre.Name</h4>
+                        <h4>Age: @Model.Age</h4>
+                        <br />
+                        <hr style="margin-left:430px; width:250px;" />
+                    </div>
                 </div>
-                
-                @if (Model.ArtistsSongs.Count !=0)
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <h2 style="color:dimgray">Tracks</h2>
+            </div>
+            <div style="margin: 100px">
+                @foreach (var item in songs)
                 {
-                    @foreach (var item in ViewBag.Songs)
-                    {
-                        <a asp-controller="Pages" asp-action="EachTrack" asp-route-id="@item.Id">
-                            <div class="row align-items-center justify-content-center mb-20">
-                                <div class="col-xl-10">
-                                    <div class="row align-items-center">
-                                        <div class="col-xl-9 col-md-9">
-                                            <div class="music_field">
-                                                <div class="thumb">
-                                                    <img src=@item.ImageURL style="height:50px;width:50px">
-                                                </div>
-                                                <div class="track_name">
-                                                    <div class="name">
-                                                        <h6>@item.Title</h6>
-                                                        <p>@item.Year</p>
-                                                    </div>
-                                                </div>
+
+                    <div class="row align-items-center justify-content-center mb-20">
+                        <div class="col-xl-10">
+                            <div class="row align-items-center">
+                                <div class="col-xl-9 col-md-9">
+                                    <div class="music_field">
+                                        <div class="thumb">
+                                            <img src=@item.ImageURL style="height:150px;width:220px">
+                                        </div>
+                                        <div class="track_name">
+                                            <div class="name">
+                                                <a asp-controller="Pages" asp-action="EachTrack" asp-route-id="@item.Id">
+                                                    <h4 style="color:black">@item.Title</h4>
+                                                </a>
+                                                <br>
+                                                <p>@item.Genre.Name</p>
+                                                <p>@item.Year</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </a>
-                    }
+                        </div>
+                    </div>
                 }
             </div>
         </div>
