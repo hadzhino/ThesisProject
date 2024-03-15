@@ -7,7 +7,7 @@ namespace PureSound.Models.ViewModels
     {
         public Guid Id { get; set; }
         public string? Title { get; set; }
-        public HashSet<ArtistsSong> ArtistSongs { get; set; } = new HashSet<ArtistsSong>();
+        public HashSet<ArtistTrack> ArtistTrack { get; set; } = new HashSet<ArtistTrack>();
         public string? Lyrics { get; set; }
         public int Year { get; set; }
         public Guid GenreId { get; set; }

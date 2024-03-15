@@ -123,34 +123,6 @@ namespace PureSound.Controllers
             return RedirectToAction("MyProfile", "Account");
         }
 
-        [HttpGet]
-        public async Task<IActionResult> FavouriteArtists()
-        {
-            var user = await userManager.GetUserAsync(this.User);
-            var favArtists = user!.FavArtists.ToList();
-            return View(favArtists);
-        }
-        [HttpGet]
-        public async Task<IActionResult> FavouriteTracks()
-        {
-            var user = await userManager.GetUserAsync(this.User);
-            var favTracks = user!.FavSongs.ToList();
-            return View(favTracks);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> AllUsers()
-        {
-            var users = await context.Users.ToListAsync();
-            return View(users);
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> AllEntities()  
-        {
-            var entities = await context.Artists.Include(x => x.ArtistSongs)!.ThenInclude(x => x.Song).ToListAsync();
-            ViewBag.Entities = entities;
-            return View(entities);
-        }
+        
     }
 }

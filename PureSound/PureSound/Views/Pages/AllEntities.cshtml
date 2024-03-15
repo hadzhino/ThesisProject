@@ -1,0 +1,127 @@
+﻿@using PureSound.Data.Entities;
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    List<Artist> artists = ViewBag.Artists;
+    List<Track> tracks = ViewBag.Tracks;
+}
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Tracks</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+<!-- slider_area_start -->
+<div class="slider_area">
+    <div class="d-flex align-items-center slider_bg_1 overlay2" style="height:110px">
+    </div>
+</div>
+<!-- slider_area_end -->
+<!-- music_area  -->
+<div class="music_area music_gallery">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="section_title text-center mb-65">
+                    <h3 style="margin-top: -50px">
+                        All Entities
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table class="table" style="border:0px">
+        <tr>
+            <th colspan="1">
+                <h3 style="margin-left:300px">Artists</h3>
+            </th>
+            <th colspan="1">
+                <h3 style="margin-left:300px">Tracks</h3>
+            </th>
+        </tr>
+        <tr>
+            <td>
+                @foreach (var item in artists)
+                {
+
+                    <div class="row align-items-center justify-content-center mb-20">
+                        <div class="col-xl-10">
+                            <div class="row align-items-center">
+                                <div class="col-xl-9 col-md-9">
+                                    <div class="music_field">
+                                        <div class="thumb">
+                                            <img src=@item.ImageURL style="height:70px;width:70px; border-radius:70px">
+                                        </div>
+                                        <div class="track_name">
+                                            <div class="name">
+                                                <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@item.Username</a>
+                                                <p>Main Genre: @item.Genre.Name</p>
+                                                <p style="margin-top:-20px">Age: @item.Age</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+            </td>
+            <td>
+                @foreach (var item in tracks)
+                {
+                    <div class="row align-items-center justify-content-center mb-20">
+                        <div class="col-xl-10">
+                            <div class="row align-items-center">
+                                <div class="col-xl-9 col-md-9">
+                                    <div class="music_field">
+                                        <div class="thumb">
+                                            <img src=@item.ImageURL style="height:70px;width: 110px">
+                                        </div>
+                                        <div class="track_name">
+                                            <div class="name">
+                                                <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@item.Title</a>
+                                                <p>@item.Genre.Name</p>
+                                                <p style="margin-top:-20px">@item.Year</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- music_area end  -->
+<!-- link that opens popup -->
+<!-- JS here -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous">
+</script>
+<script src="~/css/StyleSheet.css"></script>
+<script src="~/css/site.css"></script>

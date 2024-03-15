@@ -27,207 +27,21 @@ namespace PureSound.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Artists()
+        public async Task<IActionResult> AllEntities()
         {
-            var artists = await context.Artists.Include(a => a.ArtistSongs)!.ThenInclude(x => x.Song).ToListAsync();
-            return View(artists);
-        }
+            var artists = await context.Artists.Include(a => a.ArtistTrack)!.ThenInclude(x => x.Track).ToListAsync();
+            var tracks = await context.Tracks.Include(x => x.Genre).Include(x => x.ArtistTrack)!.ThenInclude(x => x.Artist).ToListAsync();
+            ViewBag.Artists = artists;
+            ViewBag.Tracks = tracks;
 
-        [HttpGet]
-        public async Task<IActionResult> Tracks()
-        {
-            var tracks = await context.Songs.ToListAsync();
-
-            foreach (var track in tracks)
-            {
-                var artistsIds = context.ArtistsSongs.Where(x => x.SongId == track.Id).Select(x => x.ArtistId).ToList();
-                var artists = new List<Artist>();
-                foreach (var item in artistsIds)
-                {
-                    var artist = context.Artists.Include(x => x.Genre).FirstOrDefault(x => x.Id == item);
-                    artists.Add(artist!);
-                }
-                var artistsNames = artists.Select(x => x.Username).ToList();
-                ViewBag.Artists = artistsNames;
-            }
-
-            return View(tracks);
-        }
-
-
-        [HttpGet]
-        public IActionResult AddArtist()
-        {
-            ViewBag.GenreId = new SelectList(context.Genres.ToList(), "Id", "Name");
             return View();
         }
-        [HttpPost]
-        public async Task<IActionResult> AddArtist(AddArtistVM model)
-        {
-            var artist = new Artist()
-            {
-                Id = Guid.NewGuid(),
-                Username = model.Username,
-                Age = model.Age,
-                GenreId = model.GenreId,
-                ImageURL = model.ImageURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!,
-            };
-            await context.Artists.AddAsync(artist);
-            await context.SaveChangesAsync();
-            return RedirectToAction("Artists", "Pages");
-        }
 
         [HttpGet]
-        public IActionResult AddTrack()
+        public async Task<IActionResult> AllUsers()
         {
-            ViewBag.GenreId = new SelectList(context.Genres.ToList(), "Id", "Name");
-            ViewBag.Artists = new SelectList(context.Artists.ToList(), "Id", "Username");
-            return View();
-        }
-        [HttpPost]
-        public async Task<IActionResult> AddTrack(AddTrackVM model)
-        {
-
-            var track = new Song()
-            {
-                Id = Guid.NewGuid(),
-                Title = model.Title,
-                Lyrics = model.Lyrics,
-                Year = model.Year,
-                ImageURL = model.ImageURL,
-                GenreId = model.GenreId,
-                YouTubeURL = model.YouTubeURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!
-            };
-            await context.Songs.AddAsync(track);
-
-            foreach (var item in model.ArtistsIds!)
-            {
-                var artistSong = new ArtistsSong()
-                {
-                    Id = Guid.NewGuid(),
-                    ArtistId = item,
-                    SongId = track.Id
-                };
-                await context.ArtistsSongs.AddAsync(artistSong);
-                await context.SaveChangesAsync();
-            }
-
-            await context.SaveChangesAsync();
-
-            return RedirectToAction("Tracks", "Pages");
-        }
-
-        
-
-        [HttpPost]
-        public async Task<IActionResult> SerachArtist(string search)
-        {
-            ViewBag.Search = search;
-            var artists = await context.Artists.Include(a => a.ArtistSongs)!.ThenInclude(x => x.Song).ToListAsync();
-            var artist = artists.FirstOrDefault();
-            if (search != null)
-            {
-                artist = artists.FirstOrDefault(a => a.Username.Contains(search));
-                return RedirectToAction("EachArtist", "Pages");
-            }
-            else
-            {
-                return RedirectToAction("Artists");
-            }
-
-        }
-
-
-        [HttpPost]
-        public async Task<IActionResult> SerachTrack(string search)
-        {
-            ViewBag.Search = search;
-            var tracks = await context.Songs.ToListAsync();
-            var track = tracks.FirstOrDefault();
-            if (search != null)
-            {
-                track = tracks.FirstOrDefault(a => a.Title!.Contains(search));
-                return RedirectToAction("EachTrack", "Pages");
-            }
-            else
-            {
-                return RedirectToAction("Tracks");
-            }
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> EachArtist(Guid id)
-        {
-            var songsIds = context.ArtistsSongs.Where(x=>x.ArtistId == id).Select(x=>x.SongId).ToList();
-            var songs = new List<Song>();
-            foreach (var item in songsIds)
-            {
-                var song = context.Songs.Include(x=>x.Genre).FirstOrDefault(x=>x.Id == item);
-                songs.Add(song!);
-            }
-            ViewBag.Songs = songs;
-
-            var artist = await context.Artists.Include(x=>x.Genre).Include(x => x.ArtistSongs)!.ThenInclude(x => x.Song).FirstOrDefaultAsync(x => x.Id == id);
-            if (artist != null)
-            {
-                var vm = new ArtistVM()
-                {
-                    Id = artist.Id,
-                    Username = artist.Username,
-                    ImageURL = artist.ImageURL,
-                    Age = artist.Age,
-                    Genre = artist.Genre,
-                    GenreId = artist.GenreId,
-                    ArtistsSongs = artist.ArtistSongs
-                };
-                return View(vm);
-            }
-            else
-            {
-                return RedirectToAction("Artists", "Pages");
-            }
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> EachTrack(Guid id)
-        {
-            var artistsIds = context.ArtistsSongs.Where(x => x.SongId == id).Select(x => x.ArtistId).ToList();
-            var artists = new List<Artist>();
-            foreach (var item in artistsIds)
-            {
-                var artist = context.Artists.Include(x => x.Genre).FirstOrDefault(x => x.Id == item);
-                artists.Add(artist!);
-            }
-            var artistsNames = artists.Select(x=>x.Username).ToList();
-            ViewBag.Artists = artistsNames;
-
-            var track = await context.Songs
-                .Include(x=>x.Genre)
-                .Include(x=>x.ArtistSongs)!
-                .ThenInclude(x=>x.Artist)
-                .FirstOrDefaultAsync(x => x.Id == id);
-            if (track != null)
-            {
-                var vm = new TrackVM()
-                {
-                    Id = track.Id,
-                    Title = track.Title,
-                    ImageURL = track.ImageURL,
-                    Year = track.Year,
-                    Genre = track.Genre,
-                    GenreId = track.GenreId,
-                    ArtistSongs = track.ArtistSongs!,
-                    Lyrics = track.Lyrics,
-                    YouTubeURL = track.YouTubeURL
-                };
-                return View(vm);
-            }
-            else
-            {
-                return RedirectToAction("Tracks", "Pages");
-            }
+            var users = await context.Users.Include(x => x.FavGenre).Include(x => x.FavArtists).Include(x => x.FavSongs).ToListAsync();
+            return View(users);
         }
     }
 }

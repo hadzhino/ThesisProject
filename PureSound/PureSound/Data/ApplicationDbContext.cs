@@ -16,9 +16,9 @@ namespace PureSound.Data
         public DbSet<Artist> Artists { get; set; }
         public DbSet<Article> Articles { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Song> Songs { get; set; }
+        public DbSet<Track> Tracks { get; set; }
         public DbSet<Genre> Genres { get; set; }
-        public DbSet<ArtistsSong> ArtistsSongs { get; set; }
+        public DbSet<ArtistTrack> ArtistTrack { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -32,7 +32,7 @@ namespace PureSound.Data
                 .WithOne(g => g.FavGenre)
                 .HasForeignKey(g => g.FavGenreId);
             builder.Entity<Genre>()
-                .HasMany(g => g.Songs)
+                .HasMany(g => g.Tracks)
                 .WithOne(g => g.Genre)
                 .HasForeignKey(g => g.GenreId);
             builder.Entity<Genre>()
@@ -82,9 +82,9 @@ namespace PureSound.Data
                 }
                 );
 
-            builder.Entity<Song>()
+            builder.Entity<Track>()
                 .HasOne(s => s.Genre)
-                .WithMany(s => s.Songs)
+                .WithMany(s => s.Tracks)
                 .HasForeignKey(s => s.GenreId);
 
             builder.Entity<Comment>()

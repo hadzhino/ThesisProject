@@ -28,13 +28,13 @@
             <div class="content__actions">
                 @if (this.User.IsInRole("Administrator"))
                 {
-                    <a asp-controller="Account" asp-action="AllUsers">
+                    <a asp-controller="Pages" asp-action="AllUsers">
                         <span style="margin-left:65px">All Users</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                             <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png" style="height:30px; width:30px; margin-left:15px; margin-right:65px">
                         </svg>
                     </a>
-                    <a asp-controller="Account" asp-action="AllEntities">
+                    <a asp-controller="Pages" asp-action="AllEntities">
                         <svg xmlns="http://www.w3.org/2000/svg" style="height:40px;width:40px">
                             <img src="https://cdn.iconscout.com/icon/free/png-256/free-list-1440384-1216344.png" style="height:30px; width:30px; margin-right:55px; margin-left:15px ">
                         </svg><span style="margin-right:60px">All Entities</span>
@@ -42,13 +42,13 @@
                 }
                 else
                 {
-                    <a asp-controller="Account" asp-action="FavouriteArtists" asp-route-id="@Model.Id">
+                    <a asp-controller="Pages" asp-action="FavouriteArtists" asp-route-id="@Model.Id">
                         <span style="margin-right:0px">Your favourite artists</span>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                             <img src="https://clipart-library.com/img/989086.png" style="height:25px; width:25px; margin-left:15px; margin-right:65px">
                         </svg>
                     </a>
-                    <a asp-controller="Account" asp-action="FavouriteTracks" asp-route-id="@Model.Id">
+                    <a asp-controller="Pages" asp-action="FavouriteTracks" asp-route-id="@Model.Id">
                         <svg xmlns="http://www.w3.org/2000/svg" style="height:40px;width:40px">
                             <img src="https://cdn.pixabay.com/photo/2016/03/23/17/26/music-note-1275177_960_720.png" style="height:25px; width:25px; margin-right:65px; margin-left:15px ">
                         </svg><span style="margin-left:0px">Your favourite tracks</span>

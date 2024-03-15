@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using PureSound.Contracts;
 using PureSound.Data;
 using PureSound.Data.Account;
+using PureSound.Services;
 
 namespace PureSound
 {
@@ -30,6 +32,8 @@ namespace PureSound
             });
 
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<ITrackService, TrackService>();
+            builder.Services.AddScoped<IArtistService, ArtistService>();
 
             var app = builder.Build();
 

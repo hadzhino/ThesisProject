@@ -114,8 +114,8 @@
                                 <li><a asp-controller="Home" asp-action="Index">home</a></li>
                                 @if (this.User.Identity.IsAuthenticated)
                                 {
-                                    <li><a asp-controller="Pages" asp-action="Tracks">tracks</a></li>
-                                    <li><a asp-controller="Pages" asp-action="Artists">artists</a></li>
+                                    <li><a asp-controller="Tracks" asp-action="Tracks">tracks</a></li>
+                                    <li><a asp-controller="Artists" asp-action="Artists">artists</a></li>
                                 }
                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                             </ul>

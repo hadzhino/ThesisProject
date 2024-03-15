@@ -20,14 +20,6 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/AllEntities.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBbGxFbnRpdGllcy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/AllUsers.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBbGxVc2Vycy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/FavouriteArtists.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGYXZvdXJpdGVBcnRpc3RzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -44,12 +36,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNeVByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/ProfilePhoto.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlUGhvdG8uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Artists/AddArtist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xBZGRBcnRpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Artists/Artists.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xBcnRpc3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Artists/EachArtist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aXN0c1xFYWNoQXJ0aXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Blog/Index.cshtml]
@@ -64,28 +64,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/AddArtist.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWRkQXJ0aXN0LmNzaHRtbA==
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/AllEntities.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWxsRW50aXRpZXMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/AddTrack.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWRkVHJhY2suY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/Artists.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQXJ0aXN0cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/EachArtist.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRWFjaEFydGlzdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/EachTrack.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcRWFjaFRyYWNrLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/Tracks.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcVHJhY2tzLmNzaHRtbA==
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Pages/AllUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWxsVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Shared/Error.cshtml]
@@ -106,6 +90,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Tracks/AddTrack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXEFkZFRyYWNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Tracks/EachTrack.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXEVhY2hUcmFjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/Tracks/Tracks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhY2tzXFRyYWNrcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/etale/OneDrive/Работен плот/ThesisProject/ThesisProject/PureSound/PureSound/Views/_ViewImports.cshtml]

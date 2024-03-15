@@ -22,7 +22,7 @@ body {
 }
 
 .modal-backdrop {
-    opacity: 0.5 !important;
+    z-index: 3;
 }
 
 
