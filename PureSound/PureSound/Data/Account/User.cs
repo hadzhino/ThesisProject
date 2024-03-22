@@ -10,8 +10,8 @@ namespace PureSound.Data.Account
         [ForeignKey(nameof(Genre))]
         public Guid FavGenreId { get; set; }
         public Genre FavGenre { get; set; }
-        public HashSet<Track> FavSongs { get; set; } = new HashSet<Track>();
-        public HashSet<Artist> FavArtists { get; set; } = new HashSet<Artist>();
+        public HashSet<FavouriteTracks> FavouriteTracks { get; set; } = new HashSet<FavouriteTracks>();
+        public HashSet<FavouriteArtists> FavouriteArtists { get; set; } = new HashSet<FavouriteArtists>();
         public HashSet<Comment> Comments { get; set; } = new HashSet<Comment>();
     }
 }

@@ -70,6 +70,11 @@
                         <select asp-for="GenreId" asp-items="@ViewBag.GenreId" class="input100" placeholder="Genre"></select>
                         <span class="focus-input100"></span>
                     </div>
+                    <div class="wrap-input100 validate-input" data-validate="Region">
+                        <label class="form-label" style="position:center">Genre</label>
+                        <select asp-for="RegionId" asp-items="@ViewBag.RegionId" class="input100" placeholder="Region"></select>
+                        <span class="focus-input100"></span>
+                    </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter Image URL">
                         <input asp-for="ImageURL" class="input100" placeholder="Image URL">
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>

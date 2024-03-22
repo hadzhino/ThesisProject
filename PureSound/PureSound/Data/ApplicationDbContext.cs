@@ -18,7 +18,10 @@ namespace PureSound.Data
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Track> Tracks { get; set; }
         public DbSet<Genre> Genres { get; set; }
+        public DbSet<Region> Regions { get; set; }
         public DbSet<ArtistTrack> ArtistTrack { get; set; }
+        public DbSet<FavouriteArtists> FavouriteArtists { get; set; }
+        public DbSet<FavouriteTracks> FavouriteTracks { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -26,6 +29,10 @@ namespace PureSound.Data
                 .HasOne(a => a.Genre)
                 .WithMany(a => a.Artists)
                 .HasForeignKey(a => a.GenreId);
+            builder.Entity<Artist>()
+                .HasOne(a => a.Region)
+                .WithMany(a => a.Artists)
+                .HasForeignKey(a => a.RegionId);
 
             builder.Entity<Genre>()
                 .HasMany(g => g.Users)
@@ -99,6 +106,75 @@ namespace PureSound.Data
             builder.Entity<User>()
                 .Property(u => u.ImageUrl)
                 .HasDefaultValue("~/img/profilePhoto.png");
+
+            builder.Entity<Region>()
+                .HasData(new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "West Coast (NORTH AMERICA)"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "East Coast (NORTH AMERICA)"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "South America"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Latin America"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Africa"
+                },
+                new Region
+                {
+                    Id= Guid.NewGuid(),
+                    Name = "Middle East (ASIA)"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "West Europe"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "East Europe"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Balkans (EUROPE)"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Oceania"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "East Asia"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "Middle Asia"
+                },
+                new Region
+                {
+                    Id = Guid.NewGuid(),
+                    Name = "West Asia"
+                }
+
+                );
 
             builder.ApplyConfiguration(new RoleConfiguration());
             builder.ApplyConfiguration(new UserConfiguration());

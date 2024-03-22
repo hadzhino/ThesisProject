@@ -9,5 +9,7 @@ namespace PureSound.Models.ViewModels
         [Required] public int Age { get; set; }
         public Guid GenreId { get; set; }
         public string? ImageURL { get; set; }
+        public Guid RegionId { get; set; }
+        public Region Region { get; set; }
     }
 }

@@ -31,7 +31,8 @@ namespace PureSound.Services
                     ArtistTrack = t.ArtistTrack,
                     GenreId = t.GenreId,
                     Genre = t.Genre,
-                    Lyrics = t.Lyrics
+                    Lyrics = t.Lyrics,
+                    FavoriteTracks = t.FavoriteTracks,
                 };
                 result.Add(tNew);
             }
@@ -56,7 +57,10 @@ namespace PureSound.Services
                         GenreId = artist.GenreId,
                         ImageURL = artist.ImageURL,
                         Genre = context.Genres.FirstOrDefault(x => x.Id == artist.GenreId)!,
-                        ArtistTrack = artist.ArtistTrack
+                        ArtistTrack = artist.ArtistTrack,
+                        FavoriteArtists = artist.FavoriteArtists,
+                        RegionId = artist.RegionId,
+                        Region = context.Regions.FirstOrDefault(x => x.Id == artist.RegionId)!
                     };
                     artists.Add(artistVM!);
                 }
@@ -153,7 +157,8 @@ namespace PureSound.Services
                     GenreId = track.GenreId,
                     ArtistTrack = track.ArtistTrack!,
                     Lyrics = track.Lyrics,
-                    YouTubeURL = track.YouTubeURL
+                    YouTubeURL = track.YouTubeURL,
+                    FavoriteTracks = track.FavoriteTracks
                 };
             }
             return vm;

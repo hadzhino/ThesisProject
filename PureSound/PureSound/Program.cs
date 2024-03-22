@@ -34,6 +34,7 @@ namespace PureSound
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<ITrackService, TrackService>();
             builder.Services.AddScoped<IArtistService, ArtistService>();
+            builder.Services.AddScoped<IPageService, PageService>();
 
             var app = builder.Build();
 

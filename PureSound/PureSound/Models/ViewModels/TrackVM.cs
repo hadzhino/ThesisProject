@@ -14,5 +14,6 @@ namespace PureSound.Models.ViewModels
         public Genre Genre { get; set; }
         public string? ImageURL { get; set; }
         public string YouTubeURL { get; set; }
+        public HashSet<FavouriteTracks> FavoriteTracks { get; set;} = new HashSet<FavouriteTracks>();
     }
 }

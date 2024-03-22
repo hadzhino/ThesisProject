@@ -42,7 +42,6 @@ namespace PureSound.Controllers
             var toReturn = await trackService.SortTracksAsync(sortOption);
 
             return View(toReturn);
-            //return View(toReturn);
         }
 
         [HttpGet]

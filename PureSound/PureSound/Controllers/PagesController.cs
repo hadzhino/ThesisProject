@@ -8,6 +8,7 @@ using PureSound.Models.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using PureSound.Data.Entities;
 using PureSound.Services;
+using PureSound.Contracts;
 
 namespace PureSound.Controllers
 {
@@ -15,23 +16,19 @@ namespace PureSound.Controllers
     public class PagesController : Controller
     {
         private readonly ApplicationDbContext context;
-        private readonly SignInManager<User> signInManager;
-        private readonly UserManager<User> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly IPageService pageService;
 
-        public PagesController(SignInManager<User> _signInManager, UserManager<User> _userManager, ApplicationDbContext _context, RoleManager<IdentityRole> _roleManager)
+        public PagesController(IPageService _pageService, ApplicationDbContext _context)
         {
-            this.signInManager = _signInManager;
-            this.userManager = _userManager;
+            this.pageService = _pageService;
             this.context = _context;
-            this.roleManager = _roleManager;
         }
 
         [HttpGet]
         public async Task<IActionResult> AllEntities()
         {
-            var artists = await context.Artists.Include(a => a.ArtistTrack)!.ThenInclude(x => x.Track).ToListAsync();
-            var tracks = await context.Tracks.Include(x => x.Genre).Include(x => x.ArtistTrack)!.ThenInclude(x => x.Artist).ToListAsync();
+            var artists = await pageService.GetAllArtistsAsync();
+            var tracks = await pageService.GetAllTracksAsync();
 
             foreach (var track in tracks)
             {
@@ -89,7 +86,7 @@ namespace PureSound.Controllers
         [HttpGet]
         public async Task<IActionResult> AllUsers()
         {
-            var users = await context.Users.Include(x => x.FavGenre).Include(x => x.FavArtists).Include(x => x.FavSongs).ToListAsync();
+            var users = pageService.GetAllUsersAsync();
             return View(users);
         }
     }

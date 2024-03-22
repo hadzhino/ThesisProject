@@ -16,7 +16,7 @@ namespace PureSound.Services
 
         public async Task<ArtistVM> GetArtistByIdAsync(Guid id)
         {
-            var artist = await context.Artists.Include(x => x.Genre).Include(x => x.ArtistTrack)!.ThenInclude(x => x.Track).FirstOrDefaultAsync(x => x.Id == id);
+            var artist = await context.Artists.Include(x => x.Region).Include(x => x.Genre).Include(x => x.ArtistTrack)!.ThenInclude(x => x.Track).FirstOrDefaultAsync(x => x.Id == id);
 
             var vm = new ArtistVM()
             {
@@ -25,14 +25,18 @@ namespace PureSound.Services
                 Age = artist.Age,
                 GenreId = artist.GenreId,
                 ImageURL = artist.ImageURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == artist.GenreId)!
+                Genre = context.Genres.FirstOrDefault(x => x.Id == artist.GenreId)!,
+                Region = artist.Region,
+                RegionId = artist.RegionId,
+                FavoriteArtists = artist.FavoriteArtists,
+                ArtistTrack = artist.ArtistTrack
             };
 
             return vm;
         }
         public async Task<List<ArtistVM>> GetAllArtistsAsync()
         {
-            var artists = await context.Artists.Include(a => a.ArtistTrack)!.ThenInclude(x => x.Track).ToListAsync();
+            var artists = await context.Artists.Include(x => x.Genre).Include(x => x.Region).Include(a => a.ArtistTrack)!.ThenInclude(x => x.Track).ToListAsync();
 
             var result = new List<ArtistVM>();
             foreach (var a in artists)
@@ -45,7 +49,10 @@ namespace PureSound.Services
                     GenreId = a.GenreId,
                     ImageURL = a.ImageURL,
                     Genre = context.Genres.FirstOrDefault(x => x.Id == a.GenreId)!,
-                    ArtistTrack = a.ArtistTrack
+                    ArtistTrack = a.ArtistTrack,
+                    Region = context.Regions.FirstOrDefault(x => x.Id == a.RegionId),
+                    RegionId = a.RegionId,
+                    FavoriteArtists = a.FavoriteArtists
                 };
                 result.Add(tNew);
             }
@@ -82,7 +89,9 @@ namespace PureSound.Services
                 Age = model.Age,
                 GenreId = model.GenreId,
                 ImageURL = model.ImageURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!
+                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!,
+                RegionId = model.RegionId,
+                Region = context.Regions.FirstOrDefault(x => x.Id == model.RegionId)!
             };
             await context.Artists.AddAsync(artist);
             await context.SaveChangesAsync();
@@ -100,7 +109,10 @@ namespace PureSound.Services
                     GenreId = vm.GenreId,
                     ImageURL = vm.ImageURL,
                     Genre = context.Genres.FirstOrDefault(x => x.Id == vm.GenreId)!,
-                    ArtistTrack = vm.ArtistTrack
+                    ArtistTrack = vm.ArtistTrack,
+                    RegionId = vm.RegionId,
+                    Region = context.Regions.FirstOrDefault(x => x.Id == vm.RegionId)!,
+                    FavoriteArtists = vm.FavoriteArtists
                 };
 
                 context.Artists.Remove(artist);

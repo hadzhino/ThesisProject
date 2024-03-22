@@ -1,4 +1,5 @@
-﻿using PureSound.Data.Entities;
+﻿using Microsoft.Identity.Client;
+using PureSound.Data.Entities;
 using System.ComponentModel.DataAnnotations;
 
 namespace PureSound.Models.ViewModels
@@ -12,5 +13,8 @@ namespace PureSound.Models.ViewModels
         public Guid GenreId { get; set; }
         public Genre Genre { get; set; }
         public string? ImageURL { get; set; }
+        public Guid RegionId { get; set; }
+        public Region Region { get; set; }
+        public HashSet<FavouriteArtists>? FavoriteArtists { get;set; } = new HashSet<FavouriteArtists>();
     }
 }

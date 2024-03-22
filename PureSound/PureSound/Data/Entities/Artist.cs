@@ -11,5 +11,8 @@ namespace PureSound.Data.Entities
         public Guid GenreId { get; set; }
         public Genre Genre { get; set; }
         public string? ImageURL { get; set; }
+        public Guid RegionId { get; set; }
+        public Region Region { get; set; }
+        public HashSet<FavouriteArtists> FavoriteArtists { get;set; } = new HashSet<FavouriteArtists>();
     }
 }

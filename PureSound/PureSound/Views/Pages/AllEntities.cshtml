@@ -79,7 +79,7 @@
                                                                 <div class="name">
                                                                     <a asp-controller="Artists" asp-action="EachArtist" asp-route-id="@item.Id" style="color:black">@item.Username</a>
                                                                     <p>Main Genre: @item.Genre.Name</p>
-                                                                    <p style="margin-top:-20px">Age: @item.Age</p>
+                                                                    <p style="margin-top:-20px">Region: @item.Region.Name</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -121,13 +121,13 @@
                                                     <div class="col-xl-9 col-md-9">
                                                         <div class="music_field">
                                                             <div class="thumb">
-                                                                <img src=@item.ImageURL style="height:70px;width: 110px">
+                                                                <img src=@item.ImageURL style="height:70px;width: 110px; margin-top:15px">
                                                             </div>
                                                             <div class="track_name">
                                                                 <div class="name">
                                                                     <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@string.Join(" & ", ViewBag.ArtistsNames) - @item.Title</a>
                                                                     <p>Genre: @item.Genre.Name</p>
-                                                                    <p style="margin-top:-20px">Year: @item.Year</p>
+                                                                    <p style="margin-top:-20px; margin-left:160px">Year: @item.Year</p>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -139,7 +139,7 @@
                                     <td style="height:10px; width:10px">
                                         <div>
                                             <form method="post" asp-controller="Tracks" asp-action="DeleteTrack" asp-route-id="@item.Id">
-                                                <button style="margin-top:20px" type="submit" class="btn btn-danger">Delete</button>
+                                                <button style="margin-top:30px" type="submit" class="btn btn-danger">Delete</button>
                                             </form>
                                         </div>
                                     </td>

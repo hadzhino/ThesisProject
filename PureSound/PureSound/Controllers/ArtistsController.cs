@@ -36,6 +36,7 @@ namespace PureSound.Controllers
         public IActionResult AddArtist()
         {
             ViewBag.GenreId = new SelectList(context.Genres.ToList(), "Id", "Name");
+            ViewBag.RegionId = new SelectList(context.Regions.ToList(), "Id", "Name");
             return View();
         }
         [HttpPost]

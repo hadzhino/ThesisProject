@@ -1,5 +1,5 @@
-﻿@using PureSound.Data.Account
-@model List<User>
+﻿@using PureSound.Models.ViewModels;
+@model List<UserVM>
 @{
     Layout = Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -64,12 +64,12 @@
                             </div>
                             <div class="track_name">
                                 <div class="name">
-                                    <h4 style="color:black">@item.UserName</h4>
+                                    <h4 style="color:black">@item.Username</h4>
                                     <p>Email: @item.Email</p>
                                     <br>
                                     <p style="margin-top:-20px; margin-left:100px">Preffered Genre: @item.FavGenre.Name</p>
-                                    <p style="margin-top:-20px; margin-left:100px">Favourite Artists: @item.FavArtists.Count</p>
-                                    <p style="margin-top:-20px; margin-left:100px">Favourite Tracks: @item.FavSongs.Count</p>
+                                    <p style="margin-top:-20px; margin-left:100px">Favourite Artists: @item.FavouriteArtists.Count</p>
+                                    <p style="margin-top:-20px; margin-left:100px">Favourite Tracks: @item.FavouriteTracks.Count</p>
                                     <p style="margin-top:-20px; margin-left:100px">Comments: @item.Comments.Count</p>
                                     <hr style="width: 300px">
                                     <br>
