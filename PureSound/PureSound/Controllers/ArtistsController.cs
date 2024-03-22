@@ -49,7 +49,7 @@ namespace PureSound.Controllers
             try
             {
                 await artistService.AddArtistAsync(model);
-                return RedirectToAction("Tracks", "Tracks");
+                return RedirectToAction("Artists", "Artists");
             }
             catch (Exception)
             {
@@ -62,25 +62,7 @@ namespace PureSound.Controllers
         public async Task<IActionResult> DeleteArtist(Guid id)
         {
             await artistService.DeleteArtistAsync(id);
-            return RedirectToAction("Artists", "Artists");
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> SerachArtist(string search)
-        {
-            ViewBag.Search = search;
-            var artists = await context.Artists.Include(a => a.ArtistTrack)!.ThenInclude(x => x.Track).ToListAsync();
-            var artist = artists.FirstOrDefault();
-            if (search != null)
-            {
-                artist = artists.FirstOrDefault(a => a.Username.Contains(search));
-                return RedirectToAction("EachArtist", "Artists");
-            }
-            else
-            {
-                return RedirectToAction("Artists", "Artists");
-            }
-
+            return RedirectToAction("AllEntities", "Pages");
         }
 
         [HttpGet]

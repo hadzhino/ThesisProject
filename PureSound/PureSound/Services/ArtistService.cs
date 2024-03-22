@@ -67,7 +67,7 @@ namespace PureSound.Services
                     artists = artists.OrderBy(x => x.Genre.Name).ToList();
                     break;
                 default:
-                    artists = artists.OrderBy(x => x.Username).ToList();
+                    artists = artists.OrderByDescending(x => x.Username).ToList();
                     break;
             }
 
@@ -89,26 +89,32 @@ namespace PureSound.Services
         }
         public async Task DeleteArtistAsync(Guid id)
         {
-            var vm = await GetArtistByIdAsync(id);
-            var artist = new Artist()
+            var vm = await context.Artists.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id);
+            if (vm != null)
             {
-                Id = vm.Id,
-                Username = vm.Username,
-                Age = vm.Age,
-                GenreId = vm.GenreId,
-                ImageURL = vm.ImageURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == vm.GenreId)!
-            };
-            context.Artists.Remove(artist);
-            await context.SaveChangesAsync();
+                var artist = new Artist()
+                {
+                    Id = vm.Id,
+                    Username = vm.Username,
+                    Age = vm.Age,
+                    GenreId = vm.GenreId,
+                    ImageURL = vm.ImageURL,
+                    Genre = context.Genres.FirstOrDefault(x => x.Id == vm.GenreId)!,
+                    ArtistTrack = vm.ArtistTrack
+                };
+
+                context.Artists.Remove(artist);
+                await context.SaveChangesAsync();
+
+            }
         }
         public async Task<List<Track>> GetArtistsTracksAsync(Guid id)
         {
-            var songsIds = context.ArtistTrack.Where(x => x.ArtistId == id).Select(x => x.TrackId).ToList();
+            var songsIds = await context.ArtistTrack.Where(x => x.ArtistId == id).Select(x => x.TrackId).ToListAsync();
             var songs = new List<Track>();
             foreach (var item in songsIds)
             {
-                var song = context.Tracks.Include(x => x.Genre).FirstOrDefault(x => x.Id == item);
+                var song = await context.Tracks.Include(x => x.Genre).FirstOrDefaultAsync(x => x.Id == item);
                 songs.Add(song!);
             }
 

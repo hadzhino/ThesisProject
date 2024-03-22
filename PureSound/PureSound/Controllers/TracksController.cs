@@ -23,7 +23,7 @@ namespace PureSound.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Tracks( string sortOption /*, [FromQuery] TrackQueryVM model*/)
+        public async Task<IActionResult> Tracks( string sortOption)
         {
             var tracks = await trackService.GetAllTracksAsync();
 
@@ -41,8 +41,8 @@ namespace PureSound.Controllers
             }
             var toReturn = await trackService.SortTracksAsync(sortOption);
 
-            //return View(model.Tracks);
             return View(toReturn);
+            //return View(toReturn);
         }
 
         [HttpGet]
@@ -76,24 +76,7 @@ namespace PureSound.Controllers
         public async Task<IActionResult> DeleteTrack(Guid id)
         {
             await trackService.DeleteTrackAsync(id);
-            return RedirectToAction("Tracks", "Tracks");
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> SearchTrack(string search)
-        {
-            ViewBag.Search = search;
-
-            if (!string.IsNullOrEmpty(search))
-            {
-                var tracks = await context.Tracks.Where(t => t.Title.Contains(search)).ToListAsync();
-                return View("Tracks", tracks);
-            }
-            else
-            {
-                var tracks = await context.Tracks.ToListAsync();
-                return View("Tracks", tracks);
-            }
+            return RedirectToAction("AllEntities", "Pages");
         }
 
         [HttpGet]

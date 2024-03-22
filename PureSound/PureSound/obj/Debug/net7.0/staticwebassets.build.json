@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v6WavrnWIX23Mz3WkL5Mjk5bJluWPpKrY1L+soYNCN0=",
+  "Hash": "+9AJoLmLtIrpqLSTFZW5f+kXnn+2mbXoB6PqpiJ6DHc=",
   "Source": "PureSound",
   "BasePath": "_content/PureSound",
   "Mode": "Default",
@@ -10742,23 +10742,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
-    },
-    {
-      "Identity": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\StyleSheet.css",
-      "SourceId": "PureSound",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\",
-      "BasePath": "_content/PureSound",
-      "RelativePath": "css/StyleSheet.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\StyleSheet.css"
     },
     {
       "Identity": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\user-profile-page-template-in-html-css\\Codehim - Free Web Design Code & Scripts.url",

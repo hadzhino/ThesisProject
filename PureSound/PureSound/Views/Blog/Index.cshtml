@@ -1,9 +1,12 @@
 ﻿@using PureSound.Data.Entities;
 @model List<Article>
+@{
+    Layout = "~/Views/Shared/_PagesLayout.cshtml";
+}
 
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>PureSound</title>
+<title>Blog</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -26,212 +29,127 @@
 <link rel="stylesheet" href="~/css/musico-master/css/style.css">
 <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
 
+
+
 <body>
-    <!-- slider_area_start -->
-    <div class="slider_area">
-        <div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="slider_text text-center ">
-                            <h3>PureSound</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- slider_area_end -->
-    <!-- music_area  -->
-    <div class="music_area music_gallery">
+    <section class="blog_area section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-xl-12">
-                    <div class="section_title text-center mb-65">
-                        <h3>Latest Tracks</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="thumb">
-                                    <img src="img/music_man/1.png" alt="">
-                                </div>
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
+                <div class="col-lg-8 mb-5 mb-lg-0">
+                    <div class="blog_left_sidebar">
+                        <article class="blog_item" style="margin-bottom: 150px">
+                            <div class="blog_item_img">
+                                <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
+                                <a href="#" class="blog_item_date">
+                                    <h3>15</h3>
+                                    <p>Jan</p>
+                                </a>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-md-3">
-                            <div class="music_btn">
-                                <a href="#" class="boxed-btn">buy albam</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="thumb">
-                                    <img src="img/music_man/2.png" alt="">
-                                </div>
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
+                            <div class="blog_details">
+                                <a class="d-inline-block" href="single-blog.html">
+                                    <h2>Google inks pact for new 35-storey office</h2>
+                                </a>
+                                <p>
+                                    That dominion stars lights dominion divide years for fourth have don't stars is that
+                                    he earth it first without heaven in place seed it second morning saying.
+                                </p>
+                                <ul class="blog-info-link">
+                                    <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
+                                    <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                </ul>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-md-3">
-                            <div class="music_btn">
-                                <a href="#" class="boxed-btn">buy albam</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </article>
 
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="thumb">
-                                    <img src="img/music_man/3.png" alt="">
-                                </div>
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-3">
-                            <div class="music_btn">
-                                <a href="#" class="boxed-btn">buy albam</a>
-                            </div>
-                        </div>
+                        <nav class="blog-pagination justify-content-center d-flex">
+                            <ul class="pagination">
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Previous">
+                                        <i class="ti-angle-left"></i>
+                                    </a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link">1</a>
+                                </li>
+                                <li class="page-item active">
+                                    <a href="#" class="page-link">2</a>
+                                </li>
+                                <li class="page-item">
+                                    <a href="#" class="page-link" aria-label="Next">
+                                        <i class="ti-angle-right"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="thumb">
-                                    <img src="img/music_man/3.png" alt="">
-                                </div>
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
+                <div class="col-lg-4">
+                    <div class="blog_right_sidebar">
+                        <aside class="single_sidebar_widget search_widget">
+                            <form action="#">
+                                <div class="form-group">
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder='Search Keyword'
+                                               onfocus="this.placeholder = ''"
+                                               onblur="this.placeholder = 'Search Keyword'">
+                                        <div class="input-group-append">
+                                            <button class="btn" type="button"><i class="ti-search"></i></button>
+                                        </div>
                                     </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
+                                </div>
+                                <button class="button rounded-0 primary-bg text-white w-100 btn_1 boxed-btn"
+                                        type="submit">
+                                    Search
+                                </button>
+                            </form>
+                        </aside>
+
+                        <aside class="single_sidebar_widget post_category_widget">
+                            <h4 class="widget_title">Top Artists</h4>
+                            <ul class="list cat-list">
+                                <li>
+                                    <a href="#" class="d-flex">
+                                        <p>Resaurant food</p>
+                                        <p>(37)</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </aside>
+
+                        <aside class="single_sidebar_widget popular_post_widget">
+                            <h3 class="widget_title">Recent Post</h3>
+                            <div class="media post_item">
+                                <img src="img/post/post_1.png" alt="post">
+                                <div class="media-body">
+                                    <a href="single-blog.html">
+                                        <h3>From life was you fish...</h3>
+                                    </a>
+                                    <p>January 12, 2019</p>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-3 col-md-3">
-                            <div class="music_btn">
-                                <a href="#" class="boxed-btn">buy albam</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-center mb-20">
-                <div class="col-xl-10">
-                    <div class="row align-items-center">
-                        <div class="col-xl-9 col-md-9">
-                            <div class="music_field">
-                                <div class="thumb">
-                                    <img src="img/music_man/3.png" alt="">
-                                </div>
-                                <div class="audio_name">
-                                    <div class="name">
-                                        <h4>Frando Kally</h4>
-                                        <p>10 November, 2019</p>
-                                    </div>
-                                    <audio preload="auto" controls>
-                                        <source src="https://www.w3schools.com/html/horse.mp3">
-                                    </audio>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-md-3">
-                            <div class="music_btn">
-                                <a href="#" class="boxed-btn">buy albam</a>
-                            </div>
-                        </div>
+                            
+                        </aside>
+                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- music_area end  -->
-    <!-- link that opens popup -->
-    <!-- JS here -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous">
-    </script>
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/isotope.pkgd.min.js"></script>
-    <script src="js/ajax-form.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/audioplayer.js"></script>
-    <script src="js/scrollIt.js"></script>
-    <script src="js/jquery.scrollUp.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/nice-select.min.js"></script>
-    <script src="js/jquery.slicknav.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/gijgo.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <!--contact js-->
-    <script src="js/contact.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/jquery.form.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/mail-script.js"></script>
+    </section>
 
-    <script src="js/main.js"></script>
-
+    <script src="~/css/musico-master/js/main.js"></script>
     <script>
-        $(function () {
-            $('audio').audioPlayer({
+        $('#datepicker').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
+        });
+        $('#datepicker2').datepicker({
+            iconsLibrary: 'fontawesome',
+            icons: {
+                rightIcon: '<span class="fa fa-caret-down"></span>'
+            }
 
-            });
         });
     </script>
 </body>

@@ -89,7 +89,6 @@ namespace PureSound.Services
                     tracks = tracks.OrderBy(x => x.Title).ToList();
                     break;
             }
-
             return tracks;
         }
         public async Task AddTrackAsync(AddTrackVM model)
@@ -125,6 +124,11 @@ namespace PureSound.Services
         {
             var track = await context.Tracks.Include(x => x.ArtistTrack).ThenInclude(x => x.Artist).FirstOrDefaultAsync(x => x.Id == id);
             context.Tracks.Remove(track);
+            var at = await context.ArtistTrack.Where(x => x.TrackId == track.Id).ToListAsync();
+            foreach (var item in at)
+            {
+                context.ArtistTrack.Remove(item);
+            }
             await context.SaveChangesAsync();
         }
         public async Task<TrackVM> EachTrackAsync(Guid id)

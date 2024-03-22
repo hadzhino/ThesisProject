@@ -1,20 +1,19 @@
-﻿@using PureSound.Data.Entities;
+﻿@using PureSound.Models.ViewModels;
+@using PureSound.Data.Entities;
 @{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    List<Artist> artists = ViewBag.Artists;
-    List<Track> tracks = ViewBag.Tracks;
+    Layout = "~/Views/Shared/_PagesLayout.cshtml";
+    List<ArtistVM> artists = ViewBag.Artists;
+    List<TrackVM> tracks = ViewBag.Tracks;
 }
 
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Tracks</title>
+<title>All Entities</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="manifest" href="site.webmanifest">
 <link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
-<!-- Place favicon.ico in the root directory -->
-<!-- CSS here -->
 <link rel="stylesheet" href="~/css/musico-master/css/style.css">
 <link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
 <link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
@@ -32,96 +31,131 @@
 <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
 <link rel="stylesheet" href="~/css/StyleSheet.css">
-<!-- slider_area_start -->
-<div class="slider_area">
-    <div class="d-flex align-items-center slider_bg_1 overlay2" style="height:110px">
+
+<body>
+    <div class="slider_area">
+        <div class="d-flex align-items-center slider_bg_1 overlay2" style="height:110px">
+        </div>
     </div>
-</div>
-<!-- slider_area_end -->
-<!-- music_area  -->
-<div class="music_area music_gallery">
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-12">
-                <div class="section_title text-center mb-65">
-                    <h3 style="margin-top: -50px">
-                        All Entities
-                    </h3>
+
+    <div class="music_area music_gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h3 style="margin-top: -50px">
+                            All Entities
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h4 style="margin-left:225px">Artists</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in artists)
+                            {
+                                <tr>
+                                    <td style="margin-right:-30px">
+                                        <div class="row align-items-center justify-content-center mb-20">
+                                            <div class="col-xl-10">
+                                                <div class="row align-items-center">
+                                                    <div class="col-xl-9 col-md-9">
+                                                        <div class="music_field">
+                                                            <div class="thumb">
+                                                                <img src=@item.ImageURL style="height:70px;width:70px; border-radius:70px">
+                                                            </div>
+                                                            <div class="track_name">
+                                                                <div class="name">
+                                                                    <a asp-controller="Artists" asp-action="EachArtist" asp-route-id="@item.Id" style="color:black">@item.Username</a>
+                                                                    <p>Main Genre: @item.Genre.Name</p>
+                                                                    <p style="margin-top:-20px">Age: @item.Age</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="height:10px; width:10px">
+                                        <div>
+                                            <form method="post" asp-controller="Artists" asp-action="DeleteArtist" asp-route-id="@item.Id">
+                                                <button style="margin-top:20px" type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>
+                                    <h4 style="margin-left:225px">Tracks</h4>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in tracks)
+                            {
+                                <tr>
+                                    <td style="margin-right:-30px">
+                                        <div class="row align-items-center justify-content-center mb-20">
+                                            <div class="col-xl-10">
+                                                <div class="row align-items-center">
+                                                    <div class="col-xl-9 col-md-9">
+                                                        <div class="music_field">
+                                                            <div class="thumb">
+                                                                <img src=@item.ImageURL style="height:70px;width: 110px">
+                                                            </div>
+                                                            <div class="track_name">
+                                                                <div class="name">
+                                                                    <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@string.Join(" & ", ViewBag.ArtistsNames) - @item.Title</a>
+                                                                    <p>Genre: @item.Genre.Name</p>
+                                                                    <p style="margin-top:-20px">Year: @item.Year</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td style="height:10px; width:10px">
+                                        <div>
+                                            <form method="post" asp-controller="Tracks" asp-action="DeleteTrack" asp-route-id="@item.Id">
+                                                <button style="margin-top:20px" type="submit" class="btn btn-danger">Delete</button>
+                                            </form>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-    <table class="table" style="border:0px">
-        <tr>
-            <th colspan="1">
-                <h3 style="margin-left:300px">Artists</h3>
-            </th>
-            <th colspan="1">
-                <h3 style="margin-left:300px">Tracks</h3>
-            </th>
-        </tr>
-        <tr>
-            <td>
-                @foreach (var item in artists)
-                {
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous">
+    </script>
+    <script src="~/css/StyleSheet.css"></script>
+    <script src="~/css/site.css"></script>
+</body>
 
-                    <div class="row align-items-center justify-content-center mb-20">
-                        <div class="col-xl-10">
-                            <div class="row align-items-center">
-                                <div class="col-xl-9 col-md-9">
-                                    <div class="music_field">
-                                        <div class="thumb">
-                                            <img src=@item.ImageURL style="height:70px;width:70px; border-radius:70px">
-                                        </div>
-                                        <div class="track_name">
-                                            <div class="name">
-                                                <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@item.Username</a>
-                                                <p>Main Genre: @item.Genre.Name</p>
-                                                <p style="margin-top:-20px">Age: @item.Age</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                }
-            </td>
-            <td>
-                @foreach (var item in tracks)
-                {
-                    <div class="row align-items-center justify-content-center mb-20">
-                        <div class="col-xl-10">
-                            <div class="row align-items-center">
-                                <div class="col-xl-9 col-md-9">
-                                    <div class="music_field">
-                                        <div class="thumb">
-                                            <img src=@item.ImageURL style="height:70px;width: 110px">
-                                        </div>
-                                        <div class="track_name">
-                                            <div class="name">
-                                                <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@item.Title</a>
-                                                <p>@item.Genre.Name</p>
-                                                <p style="margin-top:-20px">@item.Year</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                }
-            </td>
-        </tr>
-    </table>
-</div>
-<!-- music_area end  -->
-<!-- link that opens popup -->
-<!-- JS here -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous">
-</script>
-<script src="~/css/StyleSheet.css"></script>
-<script src="~/css/site.css"></script>
