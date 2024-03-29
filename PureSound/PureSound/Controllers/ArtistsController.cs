@@ -16,11 +16,13 @@ namespace PureSound.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IArtistService artistService;
+        private readonly UserManager<User> userManager;
 
-        public ArtistsController(IArtistService _artistService, ApplicationDbContext _context)
+        public ArtistsController(IArtistService _artistService, ApplicationDbContext _context, UserManager<User> _userManager)
         {
             this.artistService = _artistService;
             this.context = _context;
+            this.userManager = _userManager;
         }
         [HttpGet]
         public async Task<IActionResult> Artists(string sortOption)
@@ -70,6 +72,8 @@ namespace PureSound.Controllers
         public async Task<IActionResult> EachArtist(Guid id)
         {
             ViewBag.Songs = await artistService.GetArtistsTracksAsync(id);
+            var user = userManager.GetUserId(this.User);
+            ViewBag.UserId = Guid.Parse(user!);
 
             var artist = await artistService.GetArtistByIdAsync(id);
             if (artist != null)
@@ -80,6 +84,54 @@ namespace PureSound.Controllers
             {
                 return RedirectToAction("Artists", "Artists");
             }
+        }
+        [HttpPost]
+        public async Task AddToFavourite( Guid id)
+        {
+            var userId = userManager.GetUserId(this.User);
+            var artist = await context.Artists.FindAsync(id);
+
+            await artistService.AddToFavouriteAsync(Guid.Parse(userId!), artist!.Id);
+            var artistvm = new ArtistVM()
+            {
+                Id = artist.Id,
+                Username = artist.Username,
+                Age = artist.Age,
+                ArtistTrack = artist.ArtistTrack,
+                FavoriteArtists = artist.FavoriteArtists,
+                Genre = artist.Genre,
+                GenreId = artist.GenreId,
+                ImageURL = artist.ImageURL,
+                IsLikedByCurrentUser = true,
+                Region = artist.Region,
+                RegionId = artist.RegionId
+            };
+            
+        }
+
+        [HttpPost]
+        public async Task RemoveFromFavourite(Guid id)
+        {
+            var userId = userManager.GetUserId(this.User);
+            var artist = await context.Artists.FindAsync(id);
+
+            await artistService.RemoveFromFavouriteAsync(Guid.Parse(userId!), artist!.Id);
+
+            var artistvm = new ArtistVM()
+            {
+                Id = artist.Id,
+                Username = artist.Username,
+                Age = artist.Age,
+                ArtistTrack = artist.ArtistTrack,
+                FavoriteArtists = artist.FavoriteArtists,
+                Genre = artist.Genre,
+                GenreId = artist.GenreId,
+                ImageURL = artist.ImageURL,
+                IsLikedByCurrentUser = false,
+                Region = artist.Region,
+                RegionId = artist.RegionId
+            };
+            
         }
     }
 }

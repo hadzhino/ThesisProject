@@ -42,10 +42,11 @@
                                         </a>
                                     </div>
                                 </div>
-
+                                
                                 <div class="col-xl-6 col-lg-7">
                                     <div class="main-menu  d-none d-lg-block">
                                         <nav>
+                                            <partial name="_LoginPartial" />
                                             <ul id="navigation">
                                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
                                                 @if (this.User.Identity.IsAuthenticated)
@@ -210,7 +211,7 @@
     <script src="~/css/musico-master/js/gijgo.min.js"></script>
     <script src="~/css/musico-master/js/slick.min.js"></script>
     <!--contact js-->
-    <script src="~/css/musico-master/js/contact.js"></script>
+    @*<script src="~/css/musico-master/js/contact.js"></script>*@
     <script src="~/css/musico-master/js/jquery.ajaxchimp.min.js"></script>
     <script src="~/css/musico-master/js/jquery.form.js"></script>
     <script src="~/css/musico-master/js/jquery.validate.min.js"></script>

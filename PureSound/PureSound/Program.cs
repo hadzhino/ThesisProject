@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PureSound.Contracts;
 using PureSound.Data;
@@ -35,6 +36,12 @@ namespace PureSound
             builder.Services.AddScoped<ITrackService, TrackService>();
             builder.Services.AddScoped<IArtistService, ArtistService>();
             builder.Services.AddScoped<IPageService, PageService>();
+            builder.Services.AddScoped<IBlogService, BlogService>();
+
+            builder.Services.AddControllersWithViews(options =>
+            {
+                options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
+            });
 
             var app = builder.Build();
 

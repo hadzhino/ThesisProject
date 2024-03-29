@@ -106,6 +106,14 @@ namespace PureSound.Controllers
         {
             var user = await userManager.GetUserAsync(this.User);
             user!.FavGenre = context.Genres.FirstOrDefault(x => x.Id == user.FavGenreId)!;
+
+            var favArtCount = await context.FavouriteArtists.Where(x=>x.UserId == Guid.Parse(user.Id)).ToListAsync();
+            var favTrCount = await context.FavouriteTracks.Where(x => x.UserId == Guid.Parse(user.Id)).ToListAsync();
+            var comm = await context.Comments.Where(x => x.UserId == user.Id).ToListAsync();
+            ViewBag.ArtistsCount = favArtCount.Count;
+            ViewBag.TracksCount = favTrCount.Count;
+            ViewBag.CommentsCount = comm.Count;
+
             return View(user);
         }
 
@@ -123,6 +131,6 @@ namespace PureSound.Controllers
             return RedirectToAction("MyProfile", "Account");
         }
 
-        
+
     }
 }

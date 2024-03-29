@@ -25,4 +25,22 @@ body {
     z-index: 3;
 }
 
+.theme-orange {
+    background-color: orange;
+    color: white;
+}
 
+.theme-purple {
+    background-color: purple;
+    color: white;
+}
+
+.theme-green {
+    background-color: green;
+    color: white;
+}
+
+.theme-blue {
+    background-color: blue;
+    color: white;
+}

@@ -17,11 +17,13 @@ namespace PureSound.Controllers
     {
         private readonly ApplicationDbContext context;
         private readonly IPageService pageService;
+        private readonly UserManager<User> userManager;
 
-        public PagesController(IPageService _pageService, ApplicationDbContext _context)
+        public PagesController(IPageService _pageService, ApplicationDbContext _context, UserManager<User> _userManager)
         {
             this.pageService = _pageService;
             this.context = _context;
+            this.userManager = _userManager;
         }
 
         [HttpGet]
@@ -86,8 +88,65 @@ namespace PureSound.Controllers
         [HttpGet]
         public async Task<IActionResult> AllUsers()
         {
-            var users = pageService.GetAllUsersAsync();
+            var users = await pageService.GetAllUsersAsync();
             return View(users);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FavouriteArtists()
+        {
+            var userId = userManager.GetUserId(this.User);
+            var forView = await pageService.FavouriteArtistsAsync(Guid.Parse(userId!));
+            return View(forView);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> FavouriteTracks()
+        {
+            var userId = userManager.GetUserId(this.User);
+            var forView = await pageService.FavouriteTracksAsync(Guid.Parse(userId!));
+
+            return View(forView);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AddRemoveFavorite(Guid artistId, bool isFavorite)
+        {
+            // Get the current user
+            var user = await userManager.GetUserAsync(User);
+
+            // Get the artist
+            var artist = await context.Artists.FindAsync(artistId);
+
+            if (artist == null || user == null)
+            {
+                return Json(new { success = false });
+            }
+
+            // Check if the user already has this artist in favorites
+            var favorite = await context.FavouriteArtists.FirstOrDefaultAsync(f => f.ArtistId == artistId && f.UserId == Guid.Parse(user.Id));
+
+            if (isFavorite)
+            {
+                // Add the artist to favorites if not already added
+                if (favorite == null)
+                {
+                    favorite = new FavouriteArtists { UserId = Guid.Parse(user.Id), ArtistId = artistId };
+                    context.FavouriteArtists.Add(favorite);
+                    await context.SaveChangesAsync();
+                }
+            }
+            else
+            {
+                // Remove the artist from favorites if already added
+                if (favorite != null)
+                {
+                    context.FavouriteArtists.Remove(favorite);
+                    await context.SaveChangesAsync();
+                }
+            }
+
+            return Json(new { success = true });
         }
     }
 }

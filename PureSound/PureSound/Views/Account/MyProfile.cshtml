@@ -2,22 +2,84 @@
 @using PureSound.Data.Entities;
 @model User
 @{
-
+    Layout = "~/Views/Shared/_PagesLayout.cshtml";
 }
+<title>MyProfile</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="author" content="CodeHim">
 <link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
 
 <body>
+    <form>
+        <header>
+            <div class="header-area ">
+                <div id="sticky-header" class="main-header-area">
+                    <div class="container-fluid">
+                        <div class="header_bottom_border">
+                            <div class="row align-items-center">
+                                <div class="col-xl-3 col-lg-2">
+                                    <div class="logo">
+                                        <a asp-controller="Home" asp-action="Index">
+                                            <img src="~/img/logo.png" style="height:40px; width:160px; margin-top: -10px">
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-xl-6 col-lg-7">
+                                    <div class="main-menu  d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
+                                                @if (this.User.Identity.IsAuthenticated)
+                                                {
+                                                    <li>
+                                                        <a href="#">pages <i class="ti-angle-down"></i></a>
+                                                        <ul class="submenu">
+                                                            <li><a asp-controller="Artists" asp-action="Artists">Artists</a></li>
+                                                            <li><a asp-controller="Tracks" asp-action="Tracks">Tracks</a></li>
+                                                        </ul>
+                                                    </li>
+                                                }
+                                                <li>
+                                                    <a href="#"> Profile <i class="ti-angle-down"></i></a>
+                                                    <ul class="submenu">
+                                                        @if (!User.Identity!.IsAuthenticated)
+                                                        {
+                                                            <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Login">Login</a></li>
+                                                            <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Register">Register</a></li>
+                                                        }
+                                                        else
+                                                        {
+                                                            <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="MyProfile">My Profile</a></li>
+                                                            <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a></li>
+                                                        }
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mobile_menu d-block d-lg-none"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+    </form>
+
     <main class="cd__main">
         <div class="profile-page">
             <div class="content">
                 <div class="content__cover">
                     <div class="content__avatar">
                         <img src="@Model.ImageUrl" style="height: 194.4px; width:194.4px; border-radius:194.4px; position: center" /><span><br /></span>
-                        <div>
-                            <button type="button" class="btn btn-sm btn-default" style="margin-left:45px" data-bs-toggle="modal" data-bs-target="#exampleModal">Change Photo</button>
+                        <div style="display: flex; justify-content:center" class="content__actions">
+                            <button type="button" class="genric-btn  radius"  data-bs-toggle="modal" data-bs-target="#exampleModal">Change Photo</button>
                         </div>
                     </div>
                     <div class="content__bull"></div>
@@ -70,9 +132,9 @@
 
                     @if (this.User.IsInRole("Administrator") == false)
                     {
-                        <li><span>@Model.FavouriteTracks.Count</span>Favourite Tracks</li>
-                        <li><span>@Model.FavouriteArtists.Count</span>Favourite Artists</li>
-                        <li><span>@Model.Comments.Count</span>Comments</li>
+                        <li><span>@ViewBag.TracksCount</span>Favourite Tracks</li>
+                        <li><span>@ViewBag.ArtistsCount</span>Favourite Artists</li>
+                        <li><span>@ViewBag.CommentsCount</span>Comments</li>
                     }
                 </ul>
 
@@ -126,7 +188,6 @@
             </div>
         </div>
     </main>
-
     <script type="text/javascript">
         function ShowModal() {
 

@@ -55,7 +55,7 @@
                 <span class="login100-form-title p-b-41">
                     Add Artist
                 </span>
-                <form class="login100-form validate-form p-b-33 p-t-5" id="pages" method="post" asp-action="AddArtist">
+                <form class="login100-form validate-form p-b-33 p-t-5" id="pages" method="post" asp-controller="Artists" asp-action="AddArtist">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
                         <input asp-for="Username" class="input100" placeholder="Username">
@@ -71,7 +71,7 @@
                         <span class="focus-input100"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Region">
-                        <label class="form-label" style="position:center">Genre</label>
+                        <label class="form-label" style="position:center">Region</label>
                         <select asp-for="RegionId" asp-items="@ViewBag.RegionId" class="input100" placeholder="Region"></select>
                         <span class="focus-input100"></span>
                     </div>

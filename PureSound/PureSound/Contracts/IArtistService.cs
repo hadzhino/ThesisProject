@@ -12,5 +12,7 @@ namespace PureSound.Contracts
         Task AddArtistAsync(AddArtistVM model);
         Task DeleteArtistAsync(Guid id);
         Task<List<Track>> GetArtistsTracksAsync(Guid id);
+        Task AddToFavouriteAsync(Guid userId, Guid artistId);
+        Task RemoveFromFavouriteAsync(Guid userId, Guid artistId);
     }
 }

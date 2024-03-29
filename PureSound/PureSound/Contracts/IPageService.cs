@@ -8,5 +8,7 @@ namespace PureSound.Contracts
         Task<List<TrackVM>> GetAllTracksAsync();
         Task<List<ArtistVM>> GetAllArtistsAsync();
         Task<List<User>> GetAllUsersAsync();
+        Task<List<TrackVM>> FavouriteTracksAsync(Guid id);
+        Task<List<ArtistVM>> FavouriteArtistsAsync(Guid id);
     }
 }

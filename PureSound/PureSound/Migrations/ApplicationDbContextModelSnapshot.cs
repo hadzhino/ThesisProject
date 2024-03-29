@@ -260,16 +260,16 @@ namespace PureSound.Migrations
                         {
                             Id = "389e650a-775f-4d7b-a9ac-30cfd960fa37",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "1a234d62-476d-4356-8760-07b6ec98dd77",
+                            ConcurrencyStamp = "9f0e291f-a132-4d6b-b68b-047c8b688cd7",
                             Email = "etaleksander411@gmail.com",
                             EmailConfirmed = false,
                             FavGenreId = new Guid("48d67181-5732-47a0-892b-6577fc688e00"),
                             LockoutEnabled = false,
                             NormalizedEmail = "ETALEKSANDER411@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHBIr0C7tuo/6BdbOYX1LKrOnq3+XF04F4r4DSITcljPZ9cPM7ogQYttYRLWlc0gQw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJN3V+MkOuOc+a6+saL8HprhLS3hPQXYaV5Wx9LiGqaH/mheOPGWOIK0vKcDParKXg==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "3b1b9e84-e507-47f5-99de-bd44f79f6e51",
+                            SecurityStamp = "09a18620-a033-4c07-8f2f-2abadfafc92e",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -443,37 +443,37 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6c9542b1-a92c-4890-995c-52fa7a564f57"),
+                            Id = new Guid("73d1d918-7b35-4861-81ad-3c9a5f1185b0"),
                             Name = "Rap"
                         },
                         new
                         {
-                            Id = new Guid("fd631f59-f404-4405-bbbd-6cc1356fe8c8"),
+                            Id = new Guid("3a85e018-105f-47fe-96ef-244fd8356e1b"),
                             Name = "Drill"
                         },
                         new
                         {
-                            Id = new Guid("f006b276-c46c-4a9b-8564-48e4bb0b624d"),
+                            Id = new Guid("81f892f4-bd93-46ab-86b8-59aa6f81c034"),
                             Name = "Raeggeton"
                         },
                         new
                         {
-                            Id = new Guid("0452eebe-7551-41a0-96ce-a512190c1e7e"),
+                            Id = new Guid("440fb91c-45eb-4b0d-9d7b-1c83f7968fda"),
                             Name = "House"
                         },
                         new
                         {
-                            Id = new Guid("4cc9fd7d-54a0-4d1a-a141-c8cb53d17b96"),
+                            Id = new Guid("568741be-2893-4c6a-81c4-dd9ad192878a"),
                             Name = "R&B"
                         },
                         new
                         {
-                            Id = new Guid("5f78d27a-7b20-490d-aba2-0e11567e7c9c"),
+                            Id = new Guid("583f22bc-649e-4436-88f2-69422d437893"),
                             Name = "Techno"
                         },
                         new
                         {
-                            Id = new Guid("0328d65b-e8e6-4e0b-9d8a-f2dec16e0d1b"),
+                            Id = new Guid("a593b3fa-c6c3-4376-9387-e8f377c7e20f"),
                             Name = "Phonk"
                         },
                         new
@@ -500,68 +500,73 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6bd44e28-d276-4771-a145-a36ac71ac033"),
+                            Id = new Guid("7e875cd6-9691-4e4c-b9cc-7d2c212e9206"),
                             Name = "West Coast (NORTH AMERICA)"
                         },
                         new
                         {
-                            Id = new Guid("75ce4605-bc0b-49eb-b9a0-67044f10a9bd"),
+                            Id = new Guid("c924b407-f8e8-457b-a4ac-fee86bd48be0"),
                             Name = "East Coast (NORTH AMERICA)"
                         },
                         new
                         {
-                            Id = new Guid("7ee5e286-d0a0-43e2-b9e9-2c4c2c9e7f74"),
+                            Id = new Guid("3b65e6ee-4b81-4068-ab30-bf3b5d4d3938"),
                             Name = "South America"
                         },
                         new
                         {
-                            Id = new Guid("02f79158-9c29-4004-8311-21b9ffc7e5b7"),
+                            Id = new Guid("91fc3822-bb39-4fe4-b1c4-5a393b6fe53e"),
                             Name = "Latin America"
                         },
                         new
                         {
-                            Id = new Guid("25f8227f-d677-4550-b919-16689b91df2b"),
+                            Id = new Guid("64d3f8a6-9df5-4d6c-9f58-803fd59c7d0f"),
                             Name = "Africa"
                         },
                         new
                         {
-                            Id = new Guid("d9e70643-d6c2-449a-aa90-263d5e4c2e2a"),
+                            Id = new Guid("1971d2ef-9c4f-4d5c-9cf4-10f805682a1a"),
                             Name = "Middle East (ASIA)"
                         },
                         new
                         {
-                            Id = new Guid("31b43aae-d9db-41e3-900e-58409c3ec3a9"),
+                            Id = new Guid("1684d000-a724-4fc2-b7e9-17134fa886e4"),
                             Name = "West Europe"
                         },
                         new
                         {
-                            Id = new Guid("58afc179-dbaa-46fa-8b19-d8d0823586f3"),
+                            Id = new Guid("10f8df1b-3393-4d1c-a717-cc114f1e2233"),
                             Name = "East Europe"
                         },
                         new
                         {
-                            Id = new Guid("1e1ef110-4dca-40d3-bee0-3af24fecfc42"),
+                            Id = new Guid("3e5e7ce5-f42e-4f09-9185-8a572e6b72fb"),
                             Name = "Balkans (EUROPE)"
                         },
                         new
                         {
-                            Id = new Guid("6fb2421e-6e33-4375-9168-b1ce36fd36f6"),
+                            Id = new Guid("3f65b233-08e9-4310-8c85-d908a28a2596"),
                             Name = "Oceania"
                         },
                         new
                         {
-                            Id = new Guid("c27527a9-5e86-4b17-b8dc-3fa1051702eb"),
+                            Id = new Guid("af4c47bb-61bf-46ca-97d2-fcf80cbeaecb"),
                             Name = "East Asia"
                         },
                         new
                         {
-                            Id = new Guid("bec4b45d-2fbf-452d-9577-db7a1601715b"),
+                            Id = new Guid("e4df2d39-77d7-42bb-8a16-6ed672705588"),
                             Name = "Middle Asia"
                         },
                         new
                         {
-                            Id = new Guid("4021a623-011f-4134-a6db-5a63f1823864"),
+                            Id = new Guid("a9c75c4b-fb6b-4af2-81eb-1ea4feea87fd"),
                             Name = "West Asia"
+                        },
+                        new
+                        {
+                            Id = new Guid("d07cd5fe-c2e6-46a7-87a0-2d427ea9d05a"),
+                            Name = "None"
                         });
                 });
 

@@ -1085,30 +1085,6 @@
       "PackagePath": "staticwebassets\\css\\__MACOSX\\Login_v16\\vendor\\select2\\._select2.min.js"
     },
     {
-      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\awesome-search-boxusing-only-html-css\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\css\\awesome-search-boxusing-only-html-css\\LICENSE.txt"
-    },
-    {
-      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\awesome-search-boxusing-only-html-css\\README.md",
-      "PackagePath": "staticwebassets\\css\\awesome-search-boxusing-only-html-css\\README.md"
-    },
-    {
-      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\awesome-search-boxusing-only-html-css\\dist\\index.html",
-      "PackagePath": "staticwebassets\\css\\awesome-search-boxusing-only-html-css\\dist\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\awesome-search-boxusing-only-html-css\\dist\\style.css",
-      "PackagePath": "staticwebassets\\css\\awesome-search-boxusing-only-html-css\\dist\\style.css"
-    },
-    {
-      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\awesome-search-boxusing-only-html-css\\src\\index.html",
-      "PackagePath": "staticwebassets\\css\\awesome-search-boxusing-only-html-css\\src\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\awesome-search-boxusing-only-html-css\\src\\style.css",
-      "PackagePath": "staticwebassets\\css\\awesome-search-boxusing-only-html-css\\src\\style.css"
-    },
-    {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\css\\musico-master\\.DS_Store",
       "PackagePath": "staticwebassets\\css\\musico-master\\.DS_Store"
     },
@@ -2323,6 +2299,10 @@
     {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\img\\profilePhoto.png",
       "PackagePath": "staticwebassets\\img\\profilePhoto.png"
+    },
+    {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\likeArtist.js",
+      "PackagePath": "staticwebassets\\js\\likeArtist.js"
     },
     {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\site.js",

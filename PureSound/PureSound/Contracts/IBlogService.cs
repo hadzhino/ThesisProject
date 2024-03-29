@@ -6,8 +6,9 @@ namespace PureSound.Contracts
 {
     public interface IBlogService
     {
-        Task<IEnumerable<ArticleVM>> GetAllArticlesAsync();
-        Task<IActionResult> AddArticlesAsync(AddArticleVM model);
-        Task<IActionResult> DeleteArticlesAsync(Guid id);
+        Task<List<ArticleVM>> GetAllArticlesAsync();
+        Task AddArticleAsync(AddArticleVM model);
+        Task DeleteArticleAsync(Guid id);
+        Task<List<ArticleVM>> RecentPostsAsync();
     }
 }

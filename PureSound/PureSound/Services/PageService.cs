@@ -72,5 +72,63 @@ namespace PureSound.Services
             var users = await context.Users.Include(x => x.FavGenre).Include(x => x.FavouriteArtists).Include(x => x.FavouriteTracks).ToListAsync();
             return users;
         }
+
+        public async Task<List<TrackVM>> FavouriteTracksAsync(Guid id)
+        {
+            var tracks = await context.Tracks.Include(x => x.FavoriteTracks.Where(x => x.UserId == id)).ToListAsync();
+            var toReturn = new List<TrackVM>();
+
+            foreach (var track in tracks)
+            {
+                var tr = new TrackVM()
+                {
+                    Id = track.Id,
+                    Title = track.Title,
+                    ArtistTrack = track.ArtistTrack!,
+                    FavoriteTracks = track.FavoriteTracks,
+                    Genre = track.Genre,
+                    GenreId = track.GenreId,
+                    ImageURL = track.ImageURL,
+                    Lyrics = track.Lyrics,
+                    Year = track.Year,
+                    YouTubeURL = track.YouTubeURL
+                };
+                toReturn.Add(tr);
+            }
+
+            return toReturn;
+        }
+
+        public async Task<List<ArtistVM>> FavouriteArtistsAsync(Guid id)
+        {
+            var artists = await context.FavouriteArtists
+                .Include(x=>x.Artist)
+                .Include(x=>x.Artist)
+                .ThenInclude(x=>x.Region)
+                .ToListAsync();
+
+            artists = artists.Where(x=>x.UserId == id).ToList();
+            var toReturn = new List<ArtistVM>();
+
+            foreach (var artist in artists)
+            {
+                var art = new ArtistVM()
+                {
+                    Id = artist.Artist.Id,
+                    Username = artist.Artist.Username,
+                    Region = artist.Artist.Region,
+                    RegionId = artist.Artist.RegionId,
+                    ImageURL = artist.Artist.ImageURL,
+                    GenreId = artist.Artist.GenreId,
+                    Age = artist.Artist.Age,
+                    ArtistTrack = artist.Artist.ArtistTrack,
+                    FavoriteArtists = artist.Artist.FavoriteArtists,
+                    Genre = artist.Artist.Genre
+                };
+                toReturn.Add(art);
+            }
+
+            return toReturn;
+        }
     }
 }

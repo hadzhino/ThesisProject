@@ -1,8 +1,10 @@
 ﻿@using PureSound.Data.Entities;
+@using PureSound.Data;
 @model PureSound.Models.ViewModels.ArtistVM
 @{
     Layout = "~/Views/Shared/_PagesLayout.cshtml";
     List<Track> songs = ViewBag.Songs;
+
 }
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -30,10 +32,24 @@
 <link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
 <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-<link rel="stylesheet" href="~/css/StyleSheet.css">
+<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js">
 
 
+<style>
+    .btn-heart {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 30px;
+        padding: 20px
+    }
 
+        .btn-heart.clicked {
+            background-color: #007bff;
+        }
+</style>
 
 <body>
     <!-- slider_area_start -->
@@ -45,23 +61,25 @@
     <!-- music_area  -->
     <div class="music_area music_gallery" style="margin-right:0px">
         <div class="container">
-            <div class="image" style="margin-left:460px; margin-right:0px">
+            <div class="image" style="display: flex; justify-content:center">
                 <img src=@Model.ImageURL style="height:200px; width:200px; border-radius:200px" />
             </div>
-            <div class="row">
+            <div class="row" style="display: flex; justify-content:center">
                 <div class="col-xl-12" style="margin-top:30px">
                     <div class="section_title text-center mb-65">
                         <h1>
                             @Model.Username
                         </h1>
-                        @if (this.User.IsInRole("Administrator"))
+
+                        @if (!this.User.IsInRole("Administrator"))
                         {
-                            <div style="position:center">
-                                <form method="post" asp-controller="Artists" asp-action="DeleteArtist" asp-route-id="@Model.Id">
-                                    <button type="submit">Delete</button>
-                                </form>
-                            </div>
+
+                            <button id="toggleButton" class="btn-heart">
+                                <i class="fa fa-heart" style="color:white" id="@Model.Id"></i>
+                            </button>
+
                         }
+
                     </div>
                 </div>
             </div>
@@ -70,7 +88,7 @@
                     <div class="section_title text-center mb-65">
                         <hr style="margin-left:430px; width:250px;" />
                         <br />
-                        <h4>Nationality: @Model.Region.Name</h4>
+                        <h4>Region: @Model.Region.Name</h4>
                         <h4>Main Genre: @Model.Genre.Name</h4>
                         <h4>Age: @Model.Age</h4>
                         <br />
@@ -85,7 +103,7 @@
                 @foreach (var item in songs)
                 {
 
-                    <div class="row align-items-center justify-content-center mb-20">
+                    <div class="row align-items-center justify-content-center mb-20" style="margin-left:130px">
                         <div class="col-xl-10">
                             <div class="row align-items-center">
                                 <div class="col-xl-9 col-md-9">
@@ -139,38 +157,13 @@
     <script src="~/css/musico-master/js/gijgo.min.js"></script>
     <script src="~/css/musico-master/js/slick.min.js"></script>
     <!--contact js-->
-    <script src="~/css/musico-master/js/contact.js"></script>
     <script src="~/css/musico-master/js/jquery.ajaxchimp.min.js"></script>
     <script src="~/css/musico-master/js/jquery.form.js"></script>
     <script src="~/css/musico-master/js/jquery.validate.min.js"></script>
     <script src="~/css/musico-master/js/mail-script.js"></script>
     <script src="~/css/musico-master/js/js/main.js"></script>
-    <style>
+    <link href="~/css/Like.css" rel="stylesheet" />
 
+    <script src="~/js/likeArtist.js" asp-append-version="true"></script>
 
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        select {
-            width: 150px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            padding: 5px 10px;
-            background-color: red;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-            button:hover {
-                background-color: darkred;
-            }
-    </style>
 </body>

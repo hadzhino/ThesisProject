@@ -6,28 +6,35 @@ using PureSound.Data;
 using Microsoft.EntityFrameworkCore;
 using PureSound.Models.ViewModels;
 using PureSound.Data.Entities;
+using PureSound.Contracts;
+using PureSound.Services;
 
 namespace PureSound.Controllers
 {
     public class BlogController : Controller
     {
         private readonly ApplicationDbContext context;
-        private readonly SignInManager<User> signInManager;
-        private readonly UserManager<User> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly IBlogService blogService;
 
-        public BlogController(SignInManager<User> _signInManager, UserManager<User> _userManager, ApplicationDbContext _context, RoleManager<IdentityRole> _roleManager)
+        public BlogController(ApplicationDbContext _context, IBlogService _blogService)
         {
-            this.signInManager = _signInManager;
-            this.userManager = _userManager;
             this.context = _context;
-            this.roleManager = _roleManager;
+            this.blogService = _blogService;
         }
 
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var articles = await context.Articles.Include(x => x.Comments).ToListAsync();
+            var artist = await context.Artists.ToListAsync();
+            var names = new List<string>();
+            foreach (var item in artist)
+            {
+                var name = item.Username;
+                names.Add(name);
+            }
+            ViewBag.Artists = names;
+
+            var articles = await blogService.GetAllArticlesAsync();
             return View(articles);
         }
 
@@ -40,18 +47,41 @@ namespace PureSound.Controllers
         [Authorize]
         public async Task<IActionResult> Add(AddArticleVM model)
         {
-            var article = new Article()
+            if (!ModelState.IsValid)
             {
-                Id = Guid.NewGuid(),
-                Title = model.Title,
-                Content = model.Content,
-                ImageURL = model.ImageURL,
-                Date = DateTime.Now,
-                Comments = null!
-            };
-            await context.Articles.AddAsync(article);
-            await context.SaveChangesAsync();
-            return RedirectToAction("Index", "Blog");
+                return View(model);
+            }
+
+            try
+            {
+                await blogService.AddArticleAsync(model);
+                return RedirectToAction("Index", "Blog");
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Something went wrong");
+                return View(model);
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+
+            try
+            {
+                await blogService.DeleteArticleAsync(id);
+                return RedirectToAction("Index", "Blog");
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Something went wrong");
+                return View();
+            }
         }
     }
 }

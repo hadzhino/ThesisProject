@@ -52,7 +52,7 @@ namespace PureSound.Services
                     var artistVM = new ArtistVM()
                     {
                         Id = Guid.NewGuid(),
-                        Username = artist.Username,
+                        Username = artist!.Username,
                         Age = artist.Age,
                         GenreId = artist.GenreId,
                         ImageURL = artist.ImageURL,
@@ -126,7 +126,7 @@ namespace PureSound.Services
         }
         public async Task DeleteTrackAsync(Guid id)
         {
-            var track = await context.Tracks.Include(x => x.ArtistTrack).ThenInclude(x => x.Artist).FirstOrDefaultAsync(x => x.Id == id);
+            var track = await context.Tracks.Include(x => x.ArtistTrack)!.ThenInclude(x => x.Artist).FirstOrDefaultAsync(x => x.Id == id);
             context.Tracks.Remove(track);
             var at = await context.ArtistTrack.Where(x => x.TrackId == track.Id).ToListAsync();
             foreach (var item in at)
@@ -143,7 +143,7 @@ namespace PureSound.Services
                 .ThenInclude(x => x.Artist)
                 .FirstOrDefaultAsync(x => x.Id == id);
 
-            TrackVM vm = null;
+            TrackVM vm = null!;
 
             if (track != null)
             {
@@ -162,6 +162,30 @@ namespace PureSound.Services
                 };
             }
             return vm;
+        }
+        public async Task AddToFavouriteAsync(Guid userId, Guid trackId)
+        {
+            var user = await context.Users.FindAsync(Convert.ToString(userId));
+            var track = await context.Users.FindAsync(trackId);
+
+            var favTrack = new FavouriteTracks()
+            {
+                Id = Guid.NewGuid(),
+                UserId = Guid.Parse(user!.Id),
+                TrackId = Guid.Parse(track!.Id)
+            };
+
+            await context.FavouriteTracks.AddAsync(favTrack);
+            await context.SaveChangesAsync();
+        }
+        public async Task RemoveFromFavouriteAsync(Guid userId, Guid trackId)
+        {
+            var user = await context.Users.FindAsync(Convert.ToString(userId));
+            var track = await context.Tracks.FindAsync(trackId);
+            var favTrack = await context.FavouriteTracks.FirstOrDefaultAsync(x => x.TrackId == track!.Id && x.UserId == Guid.Parse(user!.Id));
+
+            context.FavouriteTracks.Remove(favTrack!);
+            await context.SaveChangesAsync();
         }
     }
 }

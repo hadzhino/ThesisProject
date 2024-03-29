@@ -13,12 +13,14 @@ namespace PureSound.Controllers
     public class TracksController : Controller
     {
         private readonly ITrackService trackService;
-        public readonly ApplicationDbContext context;
+        private readonly ApplicationDbContext context;
+        private readonly UserManager<User> userManager;
 
-        public TracksController(ITrackService _trackService, ApplicationDbContext _context)
+        public TracksController(ITrackService _trackService, ApplicationDbContext _context, UserManager<User> _userManager)
         {
             this.trackService = _trackService;
             this.context = _context;
+            this.userManager = _userManager;
         }
 
 
@@ -102,5 +104,26 @@ namespace PureSound.Controllers
             }
         }
 
+        [HttpPost]
+        public async Task<IActionResult> AddToFavorite(Guid id)
+        {
+            var userId = userManager.GetUserId(this.User);
+            var track = await context.Tracks.FindAsync(id);
+
+            await trackService.AddToFavouriteAsync(Guid.Parse(userId!), track!.Id);
+
+            return RedirectToAction("EachTrack", "Tracks");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RemoveFromFavourite(Guid id)
+        {
+            var userId = userManager.GetUserId(this.User);
+            var track = await context.Tracks.FindAsync(id);
+
+            await trackService.RemoveFromFavouriteAsync(Guid.Parse(userId!), track!.Id);
+
+            return RedirectToAction("EachTrack", "Tracks");
+        }
     }
 }

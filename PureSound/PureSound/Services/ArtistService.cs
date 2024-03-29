@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PureSound.Contracts;
 using PureSound.Data;
+using PureSound.Data.Account;
 using PureSound.Data.Entities;
 using PureSound.Models.ViewModels;
 
@@ -131,6 +132,30 @@ namespace PureSound.Services
             }
 
             return songs;
+        }
+        public async Task AddToFavouriteAsync(Guid userId, Guid artistId)
+        {
+            var user = await context.Users.FindAsync(Convert.ToString(userId));
+            var artist = await context.Artists.FindAsync(artistId);
+
+            var favArtist = new FavouriteArtists()
+            {
+                Id = Guid.NewGuid(),
+                ArtistId = artist!.Id,
+                UserId = Guid.Parse(user!.Id)
+            };
+
+            context.FavouriteArtists.Add(favArtist);
+            await context.SaveChangesAsync();
+        }
+        public async Task RemoveFromFavouriteAsync(Guid userId, Guid artistId)
+        {
+            var user = await context.Users.FindAsync(Convert.ToString(userId));
+            var artist = await context.Artists.FindAsync(artistId);
+            var favArtist = await context.FavouriteArtists.FirstOrDefaultAsync(x => x.ArtistId == artist!.Id && x.UserId == Guid.Parse(user!.Id));
+
+            context.FavouriteArtists.Remove(favArtist!);
+            await context.SaveChangesAsync();
         }
     }
 }
