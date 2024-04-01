@@ -1,0 +1,116 @@
+﻿@using PureSound.Models.ViewModels;
+@model List<TrackVM>
+@{
+    Layout = "~/Views/Shared/_PagesLayout.cshtml";
+}
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>FavouriteTracks</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+
+
+
+<body>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="d-flex align-items-center slider_bg_1 overlay2" style="height:110px">
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <!-- music_area  -->
+    <div class="music_area music_gallery">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="section_title text-center mb-65">
+                        <h3>
+                            Your Favorite Tracks
+                        </h3>
+                        <br />
+                    </div>
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+                <div class="row align-items-center justify-content-center mb-20">
+                    <div class="row align-items-center">
+                        <div class="music_field" style="margin-bottom: 30px">
+                            <div class="thumb">
+                                <img src="@item.ImageURL" style="height:100px;width:140px">
+                            </div>
+                            <div class="audio_name">
+                                <div class="name">
+                                    <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id">
+                                        <h4>@string.Join(" & ", ViewBag.Artists) - @item.Title</h4>
+                                    </a>
+                                    <p>@item.Genre.Name</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+    <!-- music_area end  -->
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous">
+    </script>
+    <style>
+        /* Custom styles for select dropdown */
+        .custom-select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-color: #ffffff;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            padding: 8px 16px;
+            width: 200px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* Style for button */
+        .btn-primary {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 16px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+    </style>
+</body>

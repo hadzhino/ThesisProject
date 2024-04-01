@@ -15,7 +15,7 @@ namespace PureSound.Models.ViewModels
         public string? ImageURL { get; set; }
         public Guid RegionId { get; set; }
         public Region Region { get; set; }
-        public bool IsLikedByCurrentUser { get; set; }
+        public bool IsLikedByCurrentUser { get; set; } = false;
         public HashSet<FavouriteArtists>? FavoriteArtists { get;set; } = new HashSet<FavouriteArtists>();
     }
 }

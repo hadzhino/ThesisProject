@@ -260,16 +260,16 @@ namespace PureSound.Migrations
                         {
                             Id = "389e650a-775f-4d7b-a9ac-30cfd960fa37",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "9f0e291f-a132-4d6b-b68b-047c8b688cd7",
+                            ConcurrencyStamp = "2cbcd2ee-af73-408e-94b5-769230f3ae54",
                             Email = "etaleksander411@gmail.com",
                             EmailConfirmed = false,
                             FavGenreId = new Guid("48d67181-5732-47a0-892b-6577fc688e00"),
                             LockoutEnabled = false,
                             NormalizedEmail = "ETALEKSANDER411@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEJN3V+MkOuOc+a6+saL8HprhLS3hPQXYaV5Wx9LiGqaH/mheOPGWOIK0vKcDParKXg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAL1IbmRTm5tlT3KgESgIVyQWuuYuT1dkp0Tq8HWVjios4Blyle75ttmhHoh47NfWQ==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "09a18620-a033-4c07-8f2f-2abadfafc92e",
+                            SecurityStamp = "3f90bd3e-6a7c-433b-b142-236315336325",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -298,6 +298,27 @@ namespace PureSound.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Articles");
+                });
+
+            modelBuilder.Entity("PureSound.Data.Entities.ArticleCategory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ArticleId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CategoryId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ArticleId");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("ArticleCategories");
                 });
 
             modelBuilder.Entity("PureSound.Data.Entities.Artist", b =>
@@ -350,6 +371,43 @@ namespace PureSound.Migrations
                     b.HasIndex("TrackId");
 
                     b.ToTable("ArtistTrack");
+                });
+
+            modelBuilder.Entity("PureSound.Data.Entities.Category", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("59035821-4fcb-4315-a65e-f53407f33052"),
+                            Name = "Lifestyle"
+                        },
+                        new
+                        {
+                            Id = new Guid("99960bb8-53ca-495a-9be3-929e5f2becc8"),
+                            Name = "BREAKING"
+                        },
+                        new
+                        {
+                            Id = new Guid("2279afeb-9e86-478a-a14c-498677a1e0e5"),
+                            Name = "New production"
+                        },
+                        new
+                        {
+                            Id = new Guid("f81cb7ce-432f-49ee-82ab-e8b1790643c7"),
+                            Name = "Rising stars"
+                        });
                 });
 
             modelBuilder.Entity("PureSound.Data.Entities.Comment", b =>
@@ -443,37 +501,37 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("73d1d918-7b35-4861-81ad-3c9a5f1185b0"),
+                            Id = new Guid("081a1986-3e54-4bcd-b2b3-6617e5377059"),
                             Name = "Rap"
                         },
                         new
                         {
-                            Id = new Guid("3a85e018-105f-47fe-96ef-244fd8356e1b"),
+                            Id = new Guid("89da19e1-af14-457c-bedc-1a35a75a18cf"),
                             Name = "Drill"
                         },
                         new
                         {
-                            Id = new Guid("81f892f4-bd93-46ab-86b8-59aa6f81c034"),
+                            Id = new Guid("d663d434-7b2b-4eea-bda5-2540446305bd"),
                             Name = "Raeggeton"
                         },
                         new
                         {
-                            Id = new Guid("440fb91c-45eb-4b0d-9d7b-1c83f7968fda"),
+                            Id = new Guid("a1a76027-ad95-421c-9938-d8b7e189e5b0"),
                             Name = "House"
                         },
                         new
                         {
-                            Id = new Guid("568741be-2893-4c6a-81c4-dd9ad192878a"),
+                            Id = new Guid("ee1f87a0-cf4a-49df-8088-282b071a0466"),
                             Name = "R&B"
                         },
                         new
                         {
-                            Id = new Guid("583f22bc-649e-4436-88f2-69422d437893"),
+                            Id = new Guid("56e579c2-9f9f-4e77-a6c0-bda366ee16b0"),
                             Name = "Techno"
                         },
                         new
                         {
-                            Id = new Guid("a593b3fa-c6c3-4376-9387-e8f377c7e20f"),
+                            Id = new Guid("566fc94d-a901-40f6-990c-38c9d775bfea"),
                             Name = "Phonk"
                         },
                         new
@@ -500,67 +558,67 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7e875cd6-9691-4e4c-b9cc-7d2c212e9206"),
+                            Id = new Guid("ea8d1995-91c5-44ad-9dcf-8b3c3aa58153"),
                             Name = "West Coast (NORTH AMERICA)"
                         },
                         new
                         {
-                            Id = new Guid("c924b407-f8e8-457b-a4ac-fee86bd48be0"),
+                            Id = new Guid("1412664a-21c7-4b4b-b443-f36739bfca59"),
                             Name = "East Coast (NORTH AMERICA)"
                         },
                         new
                         {
-                            Id = new Guid("3b65e6ee-4b81-4068-ab30-bf3b5d4d3938"),
+                            Id = new Guid("5df0f3fd-ec78-4303-acff-a17982489555"),
                             Name = "South America"
                         },
                         new
                         {
-                            Id = new Guid("91fc3822-bb39-4fe4-b1c4-5a393b6fe53e"),
+                            Id = new Guid("2b3aa1ba-e141-4280-a397-97b96f85f90b"),
                             Name = "Latin America"
                         },
                         new
                         {
-                            Id = new Guid("64d3f8a6-9df5-4d6c-9f58-803fd59c7d0f"),
+                            Id = new Guid("3af96622-aee5-4e15-b7ec-d4621172738e"),
                             Name = "Africa"
                         },
                         new
                         {
-                            Id = new Guid("1971d2ef-9c4f-4d5c-9cf4-10f805682a1a"),
+                            Id = new Guid("f387d1f5-93ad-478c-8b9d-c4e688938ffd"),
                             Name = "Middle East (ASIA)"
                         },
                         new
                         {
-                            Id = new Guid("1684d000-a724-4fc2-b7e9-17134fa886e4"),
+                            Id = new Guid("ff66e5af-dc77-485a-b494-44f5bca586d4"),
                             Name = "West Europe"
                         },
                         new
                         {
-                            Id = new Guid("10f8df1b-3393-4d1c-a717-cc114f1e2233"),
+                            Id = new Guid("cdad4800-9eed-4755-8f4c-401efe494e4b"),
                             Name = "East Europe"
                         },
                         new
                         {
-                            Id = new Guid("3e5e7ce5-f42e-4f09-9185-8a572e6b72fb"),
+                            Id = new Guid("32a99cba-303a-4f5e-835e-6261dacfe390"),
                             Name = "Balkans (EUROPE)"
                         },
                         new
                         {
-                            Id = new Guid("3f65b233-08e9-4310-8c85-d908a28a2596"),
+                            Id = new Guid("3e96265e-29f6-4e0e-b7c9-d5668ce446be"),
                             Name = "Oceania"
                         },
                         new
                         {
-                            Id = new Guid("af4c47bb-61bf-46ca-97d2-fcf80cbeaecb"),
+                            Id = new Guid("43609c1a-b524-4920-a635-77160af801f1"),
                             Name = "East Asia"
                         },
                         new
                         {
-                            Id = new Guid("e4df2d39-77d7-42bb-8a16-6ed672705588"),
+                            Id = new Guid("d344a779-3aed-499f-a17a-46312b2afc1c"),
                             Name = "Middle Asia"
                         },
                         new
                         {
-                            Id = new Guid("a9c75c4b-fb6b-4af2-81eb-1ea4feea87fd"),
+                            Id = new Guid("c4feb616-ee63-4527-acae-d95381afdbe4"),
                             Name = "West Asia"
                         },
                         new
@@ -663,6 +721,25 @@ namespace PureSound.Migrations
                         .IsRequired();
 
                     b.Navigation("FavGenre");
+                });
+
+            modelBuilder.Entity("PureSound.Data.Entities.ArticleCategory", b =>
+                {
+                    b.HasOne("PureSound.Data.Entities.Article", "Article")
+                        .WithMany("ArticleCategory")
+                        .HasForeignKey("ArticleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("PureSound.Data.Entities.Category", "Category")
+                        .WithMany("ArticleCategory")
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Article");
+
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("PureSound.Data.Entities.Artist", b =>
@@ -778,6 +855,8 @@ namespace PureSound.Migrations
 
             modelBuilder.Entity("PureSound.Data.Entities.Article", b =>
                 {
+                    b.Navigation("ArticleCategory");
+
                     b.Navigation("Comments");
                 });
 
@@ -786,6 +865,11 @@ namespace PureSound.Migrations
                     b.Navigation("ArtistTrack");
 
                     b.Navigation("FavoriteArtists");
+                });
+
+            modelBuilder.Entity("PureSound.Data.Entities.Category", b =>
+                {
+                    b.Navigation("ArticleCategory");
                 });
 
             modelBuilder.Entity("PureSound.Data.Entities.Genre", b =>

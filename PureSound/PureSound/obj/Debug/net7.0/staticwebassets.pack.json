@@ -2305,6 +2305,10 @@
       "PackagePath": "staticwebassets\\js\\likeArtist.js"
     },
     {
+      "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\likeTrack.js",
+      "PackagePath": "staticwebassets\\js\\likeTrack.js"
+    },
+    {
       "Id": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

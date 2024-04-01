@@ -25,7 +25,7 @@ namespace PureSound.Controllers
 
 
         [HttpGet]
-        public async Task<IActionResult> Tracks( string sortOption)
+        public async Task<IActionResult> Tracks(string sortOption)
         {
             var tracks = await trackService.GetAllTracksAsync();
 
@@ -105,25 +105,36 @@ namespace PureSound.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddToFavorite(Guid id)
+        public async Task AddToFavourite(Guid id)
         {
             var userId = userManager.GetUserId(this.User);
             var track = await context.Tracks.FindAsync(id);
 
             await trackService.AddToFavouriteAsync(Guid.Parse(userId!), track!.Id);
 
-            return RedirectToAction("EachTrack", "Tracks");
+            var trackvm = new TrackVM()
+            {
+                Id = track.Id,
+                Title = track.Title,
+                ArtistTrack = track.ArtistTrack!,
+                IsLikedByCurrentUser = true,
+                FavoriteTracks = track.FavoriteTracks,
+                Genre = track.Genre,
+                GenreId = track.GenreId,
+                ImageURL = track.ImageURL,
+                Lyrics = track.Lyrics,
+                Year = track.Year,
+                YouTubeURL = track.YouTubeURL
+            };
         }
 
         [HttpPost]
-        public async Task<IActionResult> RemoveFromFavourite(Guid id)
+        public async Task RemoveFromFavourite(Guid id)
         {
             var userId = userManager.GetUserId(this.User);
             var track = await context.Tracks.FindAsync(id);
 
             await trackService.RemoveFromFavouriteAsync(Guid.Parse(userId!), track!.Id);
-
-            return RedirectToAction("EachTrack", "Tracks");
         }
     }
 }

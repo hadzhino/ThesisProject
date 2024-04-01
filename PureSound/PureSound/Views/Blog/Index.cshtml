@@ -134,7 +134,13 @@
                                 @foreach(var item in ViewBag.Artists)
                                 {
                                     <li>
-                                        <a asp-controller="Blog" asp-action="RecentPosts">@item</a>
+                                        <a asp-controller="Blog" asp-action="TagFilteredByArtistsPosts">@item</a>
+                                    </li>
+                                }
+                                @foreach (var item in ViewBag.Tracks)
+                                {
+                                    <li>
+                                        <a asp-controller="Blog" asp-action="TagFilteredByTracksPosts">@item</a>
                                     </li>
                                 }
                             </ul>

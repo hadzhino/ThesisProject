@@ -26,13 +26,21 @@ namespace PureSound.Controllers
         public async Task<IActionResult> Index()
         {
             var artist = await context.Artists.ToListAsync();
-            var names = new List<string>();
+            var artistsNames = new List<string>();
             foreach (var item in artist)
             {
                 var name = item.Username;
-                names.Add(name);
+                artistsNames.Add(name);
             }
-            ViewBag.Artists = names;
+            ViewBag.Artists = artistsNames;
+            var tracks = await context.Tracks.ToListAsync();
+            var tracksNames = new List<string>();
+            foreach (var item in tracks)
+            {
+                var name = item.Title;
+                tracksNames.Add(name);
+            }
+            ViewBag.Tracks = tracksNames;
 
             var articles = await blogService.GetAllArticlesAsync();
             return View(articles);

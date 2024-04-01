@@ -30,7 +30,23 @@
 <link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
 <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-<link rel="stylesheet" href="~/css/StyleSheet.css">
+<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js">
+
+<style>
+    .btn-heart {
+        background-color: #dc3545;
+        color: #fff;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        margin-top: 30px;
+        padding: 20px
+    }
+
+        .btn-heart.clicked {
+            background-color: #007bff;
+        }
+</style>
 
 <body>
     <!-- slider_area_start -->
@@ -51,6 +67,14 @@
                         <a href=@Model.YouTubeURL target="_blank">
                             <h1 style="color:black">@string.Join(" & ", ViewBag.Artists) - @Model.Title</h1>
                         </a>
+                        @if (!this.User.IsInRole("Administrator"))
+                        {
+
+                            <button id="toggleButton" class="btn-heart">
+                                <i class="fa fa-heart" style="color:white" id="@Model.Id"></i>
+                            </button>
+
+                        }
                     </div>
                 </div>
             </div>
@@ -74,44 +98,12 @@
             </div>
         </div>
     </div>
-    <!-- music_area end  -->
-    <!-- link that opens popup -->
-    <!-- JS here -->
+    
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous">
     </script>
-    <!-- Script JS -->
-    <script src="~/css/user-profile-page-template-in-html-css/js/script.js"></script>
-    <script src="~/css/site.css"></script>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/js/site.js"></script>
-    <style>
+    <script src="~/js/likeTrack.js" asp-append-version="true"></script>
 
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        select {
-            width: 150px;
-            padding: 5px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-
-        button {
-            padding: 5px 10px;
-            background-color: red;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-            button:hover {
-                background-color: darkred;
-            }
-    </style>
+    
 </body>

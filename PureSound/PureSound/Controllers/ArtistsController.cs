@@ -85,6 +85,7 @@ namespace PureSound.Controllers
                 return RedirectToAction("Artists", "Artists");
             }
         }
+
         [HttpPost]
         public async Task AddToFavourite( Guid id)
         {
@@ -116,22 +117,6 @@ namespace PureSound.Controllers
             var artist = await context.Artists.FindAsync(id);
 
             await artistService.RemoveFromFavouriteAsync(Guid.Parse(userId!), artist!.Id);
-
-            var artistvm = new ArtistVM()
-            {
-                Id = artist.Id,
-                Username = artist.Username,
-                Age = artist.Age,
-                ArtistTrack = artist.ArtistTrack,
-                FavoriteArtists = artist.FavoriteArtists,
-                Genre = artist.Genre,
-                GenreId = artist.GenreId,
-                ImageURL = artist.ImageURL,
-                IsLikedByCurrentUser = false,
-                Region = artist.Region,
-                RegionId = artist.RegionId
-            };
-            
         }
     }
 }

@@ -75,23 +75,29 @@ namespace PureSound.Services
 
         public async Task<List<TrackVM>> FavouriteTracksAsync(Guid id)
         {
-            var tracks = await context.Tracks.Include(x => x.FavoriteTracks.Where(x => x.UserId == id)).ToListAsync();
+            var tracks = await context.FavouriteTracks
+                 .Include(x => x.Track)
+                 .Include(x => x.Track)
+                 .ThenInclude(x => x.Genre)
+                 .ToListAsync();
+
+            tracks = tracks.Where(x => x.UserId == id).ToList();
             var toReturn = new List<TrackVM>();
 
             foreach (var track in tracks)
             {
                 var tr = new TrackVM()
                 {
-                    Id = track.Id,
-                    Title = track.Title,
-                    ArtistTrack = track.ArtistTrack!,
-                    FavoriteTracks = track.FavoriteTracks,
-                    Genre = track.Genre,
-                    GenreId = track.GenreId,
-                    ImageURL = track.ImageURL,
-                    Lyrics = track.Lyrics,
-                    Year = track.Year,
-                    YouTubeURL = track.YouTubeURL
+                    Id = track.Track.Id,
+                    Title = track.Track.Title,
+                    ArtistTrack = track.Track.ArtistTrack!,
+                    FavoriteTracks = track.Track.FavoriteTracks,
+                    Genre = track.Track.Genre,
+                    GenreId = track.Track.GenreId,
+                    ImageURL = track.Track.ImageURL,
+                    Lyrics = track.Track.Lyrics,
+                    Year = track.Track.Year,
+                    YouTubeURL = track.Track.YouTubeURL
                 };
                 toReturn.Add(tr);
             }
@@ -103,6 +109,8 @@ namespace PureSound.Services
         {
             var artists = await context.FavouriteArtists
                 .Include(x=>x.Artist)
+                .Include(x=>x.Artist)
+                .ThenInclude(x=>x.Genre)
                 .Include(x=>x.Artist)
                 .ThenInclude(x=>x.Region)
                 .ToListAsync();

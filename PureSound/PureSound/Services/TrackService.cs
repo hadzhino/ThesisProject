@@ -166,13 +166,13 @@ namespace PureSound.Services
         public async Task AddToFavouriteAsync(Guid userId, Guid trackId)
         {
             var user = await context.Users.FindAsync(Convert.ToString(userId));
-            var track = await context.Users.FindAsync(trackId);
+            var track = await context.Tracks.FindAsync(trackId);
 
             var favTrack = new FavouriteTracks()
             {
                 Id = Guid.NewGuid(),
                 UserId = Guid.Parse(user!.Id),
-                TrackId = Guid.Parse(track!.Id)
+                TrackId = track!.Id
             };
 
             await context.FavouriteTracks.AddAsync(favTrack);

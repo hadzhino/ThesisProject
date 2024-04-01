@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "S/KiF7yHLnVVL5WHsN+GeHqrmikW8oTaNj44+6Wanto=",
+  "Hash": "vmk2QhDcfb6QnKOHHUhStgWano1psX7TBuMaR3KFwcI=",
   "Source": "PureSound",
   "BasePath": "_content/PureSound",
   "Mode": "Default",
@@ -10844,6 +10844,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\likeArtist.js"
+    },
+    {
+      "Identity": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\likeTrack.js",
+      "SourceId": "PureSound",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\",
+      "BasePath": "_content/PureSound",
+      "RelativePath": "js/likeTrack.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\likeTrack.js"
     },
     {
       "Identity": "C:\\Users\\etale\\OneDrive\\Работен плот\\ThesisProject\\ThesisProject\\PureSound\\PureSound\\wwwroot\\js\\site.js",
