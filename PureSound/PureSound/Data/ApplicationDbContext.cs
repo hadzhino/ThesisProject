@@ -17,7 +17,6 @@ namespace PureSound.Data
         public DbSet<Article> Articles { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Category> Categories { get; set; }
-        public DbSet<ArticleCategory> ArticleCategories { get; set; }
         public DbSet<Track> Tracks { get; set; }
         public DbSet<Genre> Genres { get; set; }
         public DbSet<Region> Regions { get; set; }

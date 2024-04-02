@@ -4,6 +4,6 @@
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
-        public HashSet<ArticleCategory> ArticleCategory { get; set; } = new HashSet<ArticleCategory>();
+        public HashSet<Article> Articles { get; set; }
     }
 }

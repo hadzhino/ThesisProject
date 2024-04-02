@@ -9,7 +9,8 @@ namespace PureSound.Data.Entities
         [Required] public string Content { get; set; }
         public string? ImageURL { get; set; }
         public DateTime Date { get; set; }
-        public HashSet<ArticleCategory> ArticleCategory { get; set; }
+        public Guid CategoryId { get; set; }
+        public Category Category { get; set; }
         public HashSet<Comment>? Comments { get; set; } = new HashSet<Comment>();
     }
 }

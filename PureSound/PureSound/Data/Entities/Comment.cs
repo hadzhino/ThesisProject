@@ -12,5 +12,6 @@ namespace PureSound.Data.Entities
         public string Content { get; set; }
         [ForeignKey(nameof(Article))]public Guid ArticleId { get; set; }
         public Article Article { get; set; }
+        public DateTime Date = DateTime.Now;
     }
 }

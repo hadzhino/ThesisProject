@@ -1,0 +1,94 @@
+﻿@model PureSound.Models.ViewModels.AddArticleVM
+@{
+    Layout = "_LoginLayout";
+}
+<title>Add Article</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/animate/animate.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/css/util.css">
+<link rel="stylesheet" type="text/css" href="~/css/Login_v16/css/main.css">
+<!--===============================================================================================-->
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+
+<div class="single_slider  d-flex align-items-center slider_bg_1 overlay2">
+    <div class="limiter">
+        <div class="container-login100" style="background-image: url('slider_bg_1 overlay2');">
+            <div class="wrap-login100 p-t-30 p-b-50">
+                <br /><br />
+                <span class="login100-form-title p-b-41">
+                    Add Artist
+                </span>
+                <form class="login100-form validate-form p-b-33 p-t-5" id="pages" method="post" asp-controller="Blog" asp-action="Add">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter Title">
+                        <input asp-for="Title" class="input100" placeholder="Title">
+                        <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter Content">
+                        <input asp-for="Content" class="input100" placeholder="Content">
+                        <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Category">
+                        <label class="form-label" style="position:center">Category</label>
+                        <select asp-for="CategoryId" asp-items="@ViewBag.CategoryId" class="input100" placeholder="Category"></select>
+                        <span class="focus-input100"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate="Enter Image URL">
+                        <input asp-for="ImageURL" class="input100" placeholder="Image URL">
+                        <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+
+                    <div class="container-login100-form-btn m-t-32">
+                        <button class="login100-form-btn">
+                            Add Article
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

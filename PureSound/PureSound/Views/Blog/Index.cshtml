@@ -1,31 +1,32 @@
 ﻿@using PureSound.Models.ViewModels;
+@using System.Globalization;
 @model List<ArticleVM>
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Blog</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Blog</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="~/css/musico-master/css/style.css">
-    <link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/animate.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/slick.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
-    <link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
-    <link rel="stylesheet" href="~/css/StyleSheet.css">
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
 
 <body>
     <div class="bradcam_area breadcam_bg_2">
@@ -48,34 +49,51 @@
                         {
                             <article class="blog_item">
                                 <div class="blog_item_img">
-                                    <img class="card-img rounded-0" src="img/blog/single_blog_1.png" alt="">
-                                    <a href="#" class="blog_item_date">
-                                        <h3>15</h3>
-                                        <p>Jan</p>
+                                    <img class="card-img rounded-0" src="@item.ImageURL" style="height: 300px; width:350px" alt="">
+                                    <a class="blog_item_date">
+                                        <h3>@item.Date.Day</h3>
+                                        <p>@item.Date.ToString("MMM", new CultureInfo("en-GB"))</p>
                                     </a>
                                 </div>
 
                                 <div class="blog_details">
                                     <a class="d-inline-block" href="single-blog.html">
-                                        <h2>Google inks pact for new 35-storey office</h2>
+                                        <h2>@item.Title</h2>
                                     </a>
                                     <p>
-                                        That dominion stars lights dominion divide years for fourth have don't stars is that
-                                        he earth it first without heaven in place seed it second morning saying.
+                                        @item.Content
                                     </p>
                                     <ul class="blog-info-link">
-                                        <li><a href="#"><i class="fa fa-user"></i> Travel, Lifestyle</a></li>
-                                        <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li>
+                                        <li><a asp-controller="Blog" asp-action="SortByCategory" asp-route-id="@item.Category.Id">@item.Category.Name</a></li>
+                                        <li><a href="#"><i class="fa fa-comments"></i>@item.Comments!.Count Comments</a></li>
                                     </ul>
                                 </div>
+                                <aside>
+                                    @foreach (var comm in item.Comments)
+                                    {
+                                        <div>
+                                            <div class="row">
+                                                <img src="@comm.User.ImageUrl" style="height:30px;width:30px;border-radius:30px">
+                                                <h5>@comm.User.UserName</h5>
+                                            </div>
+                                            <div class="row">
+                                                <p>@comm.Content</p>
+                                            </div>
+                                            <div class="row">
+                                                <small>@comm.Date.ToString("MMM", new CultureInfo("en-GB"))</small>
+                                            </div>
+                                        </div>
+                                    }
+                                    
+                                </aside>
                             </article>
                         }
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="blog_right_sidebar">
-                       
-                       
+
+
                         <aside class="single_sidebar_widget search_widget" style="background-color: #ededed !important">
                             @if (this.User.IsInRole("Administrator"))
                             {
@@ -83,32 +101,30 @@
                                     Add Article
                                 </a>
                             }
-                            <form action="#">
-                                <div class="form-group">
-                                    <div class="input-group mb-3">
-                                        <input type="text" class="form-control" placeholder='Search Keyword'
-                                               onfocus="this.placeholder = ''"
-                                               onblur="this.placeholder = 'Search Keyword'">
-                                        <div class="input-group-append">
-                                            <button class="btn" type="button"><i class="ti-search"></i></button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class="button rounded-0 primary-bg text-black w-100 btn_1 boxed-btn"
-                                        type="submit">
-                                    Search
-                                </button>
-                            </form>
+                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names" />
+                            <ul id="myUL">
+                                @foreach (var item in Model)
+                                {
+                                    <li><a asp-controller="Blog" asp-action="EachArticle" asp-route-id="@item.Id">@item.Title</a></li>
+                                }
+                            </ul>
                         </aside>
 
                         <aside class="single_sidebar_widget post_category_widget" style="background-color: #ededed !important">
                             <h4 class="widget_title">Category</h4>
                             <ul class="list cat-list">
                                 <li>
-                                    <a href="#" class="d-flex">
-                                        <p>Resaurant food</p>
-                                        <p>(37)</p>
+                                    <a asp-controller="Blog" asp-action="Index" class="d-flex">
+                                        <p>All</p>
+                                        <p>(@Model.Count)</p>
                                     </a>
+                                    @foreach (var item in ViewBag.Categories)
+                                    {
+                                        <a asp-controller="Blog" asp-action="SortByCategory" asp-route-id="@item.Id" class="d-flex">
+                                            <p>@item.Name</p>
+                                            <p>(@item.Articles.Count)</p>
+                                        </a>
+                                    }
                                 </li>
                             </ul>
                         </aside>
@@ -118,20 +134,20 @@
                             @foreach (var item in Model)
                             {
                                 <div class="media post_item">
-                                <img src="img/post/post_1.png" alt="post">
-                                <div class="media-body">
-                                    <a href="single-blog.html">
-                                        <h3>From life was you fish...</h3>
-                                    </a>
-                                    <p>January 12, 2019</p>
+                                    <img src=@item.ImageURL style="height:50px;width:60px" alt="post">
+                                    <div class="media-body">
+                                        <a href="single-blog.html">
+                                            <h3>@item.Title</h3>
+                                        </a>
+                                        <p>@item.Date.ToString("dd.MM.yyyy")</p>
+                                    </div>
                                 </div>
-                            </div>
                             }
                         </aside>
                         <aside class="single_sidebar_widget tag_cloud_widget" style="background-color: #ededed !important">
                             <h4 class="widget_title">Tag Clouds</h4>
                             <ul class="list">
-                                @foreach(var item in ViewBag.Artists)
+                                @foreach (var item in ViewBag.Artists)
                                 {
                                     <li>
                                         <a asp-controller="Blog" asp-action="TagFilteredByArtistsPosts">@item</a>
@@ -150,7 +166,7 @@
             </div>
         </div>
     </section>
-    
+
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
@@ -166,6 +182,61 @@
 
         });
     </script>
+    <script>
+        function myFunction() {
+            // Declare variables
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('li');
+
+            // Loop through all list items, and hide those who don't match the search query
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <style>
+        #myInput {
+            background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+            background-position: 10px 12px; /* Position the search icon */
+            background-repeat: no-repeat; /* Do not repeat the icon image */
+            width: 100%; /* Full-width */
+            font-size: 16px; /* Increase font-size */
+            padding: 12px 20px 12px 40px; /* Add some padding */
+            border: 1px solid #ddd; /* Add a grey border */
+            margin-bottom: 12px; /* Add some space below the input */
+        }
+
+        #myUL {
+            /* Remove default list styling */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+            #myUL li a {
+                border: 1px solid #ddd; /* Add a border to all links */
+                margin-top: -1px; /* Prevent double borders */
+                background-color: #f6f6f6; /* Grey background color */
+                padding: 12px; /* Add some padding */
+                text-decoration: none; /* Remove default text underline */
+                font-size: 18px; /* Increase the font-size */
+                color: black; /* Add a black text color */
+                display: block; /* Make it into a block element to fill the whole list */
+            }
+
+                #myUL li a:hover:not(.header) {
+                    background-color: #eee; /* Add a hover effect to all links, except for headers */
+                }
+    </style>
     <script src="~/css/user-profile-page-template-in-html-css/css/StyleSheet.css"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

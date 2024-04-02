@@ -19,26 +19,22 @@ namespace PureSound.Data.Configurations
                 {
                     Id= Guid.NewGuid(),
                     Name = "Lifestyle",
-                    ArticleCategory = null!
                 },
                 new Category()
                 {
                     Id= Guid.NewGuid(),
                     Name = "BREAKING",
-                    ArticleCategory = null!
                 },
                 new Category()
                 {
                     Id= Guid.NewGuid(),
                     Name = "New production",
-                    ArticleCategory = null!
                 },
                 new Category()
                 {
                     Id= Guid.NewGuid(),
                     Name = "Rising stars",
-                    ArticleCategory = null!
-                },
+                }
             };
         }
     }
