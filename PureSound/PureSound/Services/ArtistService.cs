@@ -30,7 +30,8 @@ namespace PureSound.Services
                 Region = artist.Region,
                 RegionId = artist.RegionId,
                 FavoriteArtists = artist.FavoriteArtists,
-                ArtistTrack = artist.ArtistTrack
+                ArtistTrack = artist.ArtistTrack,
+                FavouriteCount = artist.FavouriteCount,
             };
 
             return vm;
@@ -92,7 +93,8 @@ namespace PureSound.Services
                 ImageURL = model.ImageURL,
                 Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!,
                 RegionId = model.RegionId,
-                Region = context.Regions.FirstOrDefault(x => x.Id == model.RegionId)!
+                Region = context.Regions.FirstOrDefault(x => x.Id == model.RegionId)!,
+                FavouriteCount = 0
             };
             await context.Artists.AddAsync(artist);
             await context.SaveChangesAsync();
@@ -113,7 +115,8 @@ namespace PureSound.Services
                     ArtistTrack = vm.ArtistTrack,
                     RegionId = vm.RegionId,
                     Region = context.Regions.FirstOrDefault(x => x.Id == vm.RegionId)!,
-                    FavoriteArtists = vm.FavoriteArtists
+                    FavoriteArtists = vm.FavoriteArtists,
+                    FavouriteCount = vm.FavouriteCount
                 };
 
                 context.Artists.Remove(artist);
@@ -144,8 +147,9 @@ namespace PureSound.Services
                 ArtistId = artist!.Id,
                 UserId = Guid.Parse(user!.Id)
             };
-
+           
             context.FavouriteArtists.Add(favArtist);
+            artist.FavouriteCount = artist.ArtistTrack!.Count;
             await context.SaveChangesAsync();
         }
         public async Task RemoveFromFavouriteAsync(Guid userId, Guid artistId)
@@ -155,6 +159,7 @@ namespace PureSound.Services
             var favArtist = await context.FavouriteArtists.FirstOrDefaultAsync(x => x.ArtistId == artist!.Id && x.UserId == Guid.Parse(user!.Id));
 
             context.FavouriteArtists.Remove(favArtist!);
+            artist.FavouriteCount = artist.ArtistTrack!.Count;
             await context.SaveChangesAsync();
         }
     }

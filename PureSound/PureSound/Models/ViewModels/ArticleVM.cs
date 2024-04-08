@@ -13,5 +13,6 @@ namespace PureSound.Models.ViewModels
         public string? ImageURL { get; set; }
         public DateTime Date { get; set; }
         public HashSet<Comment>? Comments { get; set; } = new HashSet<Comment>();
+        public CommentVM Comment { get; set; }
     }
 }

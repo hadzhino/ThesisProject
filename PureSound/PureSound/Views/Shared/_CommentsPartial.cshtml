@@ -1,0 +1,14 @@
+﻿@using PureSound.Models.ViewModels;
+@model List<CommentVM>
+
+@foreach (var comment in Model)
+{
+    <div class="row">
+        <img src="@comment.User.ImageUrl" style="height:30px;width:30px;border-radius:30px">
+        <h5>@comment.User.UserName</h5>
+    </div>
+    <div>
+        <p>@comment.Content</p>
+        <small>@comment.Date.ToString("MM/dd/yyyy hh:mm tt")</small>
+    </div>
+}

@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using PureSound.Data.Account;
-using PureSound.Data;
-using Microsoft.EntityFrameworkCore;
-using PureSound.Models.ViewModels;
-using PureSound.Data.Entities;
-using PureSound.Contracts;
-using PureSound.Services;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using PureSound.Contracts;
+using PureSound.Data;
+using PureSound.Data.Account;
+using PureSound.Data.Entities;
+using PureSound.Models.ViewModels;
 
 namespace PureSound.Controllers
 {
@@ -44,10 +42,12 @@ namespace PureSound.Controllers
                 tracksNames.Add(name!);
             }
             ViewBag.Tracks = tracksNames;
+
             var categories = await context.Categories.Include(x => x.Articles).ToListAsync();
             ViewBag.Categories = categories;
 
             var articles = await blogService.GetAllArticlesAsync();
+            var comments = await context.Comments.ToListAsync();
 
             return View(articles);
         }
@@ -147,22 +147,61 @@ namespace PureSound.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> AddComment(string content,Guid id)
+        public async Task<IActionResult> CreateComment(CommentVM commentVM)
         {
-            var userId = userManager.GetUserId(this.User);
-            var comm = new Comment()
+            if (ModelState.IsValid)
             {
-                ArticleId = id,
-                Article = context.Articles.FirstOrDefault(x => x.Id == id)!,
-                Content = content,
-                Date= DateTime.Now,
-                Id = Guid.NewGuid(),
-                UserId = userId!,
-                User = context.Users.FirstOrDefault(x=>x.Id == userId)!
-            };
-            context.Comments.Add(comm);
-            await context.SaveChangesAsync();
-            return RedirectToAction("Index");
+                Comment comment = new Comment()
+                {
+                    Id = Guid.NewGuid(),
+                    ArticleId = commentVM.ArticleID,
+                    UserId = userManager.GetUserId(this.User)!,
+                    Content = commentVM.Content,
+                    Date = DateTime.Now,
+                };
+
+                context.Comments.Add(comment);
+                await context.SaveChangesAsync();
+            }
+            return RedirectToAction("Index", "Blog");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> EachArticle(Guid id)
+        {
+            var article = await blogService.GetArticleByIdAsync(id);
+
+            return View(article);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> TagFilteredPosts(string tag)
+        {
+            var articles = await blogService.GetAllArticlesAsync();
+            articles = articles.Where(x=>x.Title.ToLower().Contains(tag.ToLower()) || x.Content.ToLower().Contains(tag.ToLower())).ToList();
+
+            var categories = await context.Categories.Include(x => x.Articles).ToListAsync();
+            ViewBag.Categories = categories;
+            var artist = await context.Artists.ToListAsync();
+            var artistsNames = new List<string>();
+            foreach (var item in artist)
+            {
+                var name = item.Username;
+                artistsNames.Add(name);
+            }
+            ViewBag.Artists = artistsNames;
+            var tracks = await context.Tracks.ToListAsync();
+            var tracksNames = new List<string>();
+            foreach (var item in tracks)
+            {
+                var name = item.Title;
+                tracksNames.Add(name!);
+            }
+            ViewBag.Tracks = tracksNames;
+            var all = await blogService.GetAllArticlesAsync();
+            ViewBag.Articles = all.Count;
+
+            return View(articles);
         }
     }
 }

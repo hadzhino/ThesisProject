@@ -16,5 +16,7 @@ namespace PureSound.Models.ViewModels
         public string YouTubeURL { get; set; }
         public bool IsLikedByCurrentUser { get; set; } = false;
         public HashSet<FavouriteTracks> FavoriteTracks { get; set;} = new HashSet<FavouriteTracks>();
+        public int FavouriteCount { get; set; }
+
     }
 }

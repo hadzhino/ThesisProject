@@ -1,0 +1,10 @@
+﻿@using PureSound.Models.ViewModels;
+@model CommentVM
+
+<form asp-controller="Blog" asp-action="CreateComment" asp-route-id="ArticleID" method="post">
+    <input type="hidden" asp-for="ArticleID" />
+    <div class="form-group">
+        <textarea class="form-control" asp-for="Content" placeholder="Enter comment"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Post comment</button>
+</form>

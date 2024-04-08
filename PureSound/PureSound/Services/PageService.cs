@@ -67,10 +67,29 @@ namespace PureSound.Services
             return toReturn;
         }
 
-        public async Task<List<User>> GetAllUsersAsync()
+        public async Task<List<UserVM>> GetAllUsersAsync()
         {
             var users = await context.Users.Include(x => x.FavGenre).Include(x => x.FavouriteArtists).Include(x => x.FavouriteTracks).ToListAsync();
-            return users;
+            var toReturn = new List<UserVM>();
+
+            foreach (var user in users)
+            {
+                var item = new UserVM()
+                {
+                    Id = Guid.Parse(user.Id),
+                    FavouriteArtists= user.FavouriteArtists,
+                    Comments = user.Comments,
+                    Email = user.Email!,
+                    FavGenre = user.FavGenre,
+                    FavGenreId = user.FavGenreId,
+                    FavouriteTracks= user.FavouriteTracks,
+                    ImageUrl = user.ImageUrl,
+                    Username = user.UserName!
+                };
+                toReturn.Add(item);
+            }
+
+            return toReturn;
         }
 
         public async Task<List<TrackVM>> FavouriteTracksAsync(Guid id)
@@ -97,7 +116,8 @@ namespace PureSound.Services
                     ImageURL = track.Track.ImageURL,
                     Lyrics = track.Track.Lyrics,
                     Year = track.Track.Year,
-                    YouTubeURL = track.Track.YouTubeURL
+                    YouTubeURL = track.Track.YouTubeURL,
+                    FavouriteCount = track.Track.FavoriteTracks.Count
                 };
                 toReturn.Add(tr);
             }
@@ -131,7 +151,8 @@ namespace PureSound.Services
                     Age = artist.Artist.Age,
                     ArtistTrack = artist.Artist.ArtistTrack,
                     FavoriteArtists = artist.Artist.FavoriteArtists,
-                    Genre = artist.Artist.Genre
+                    Genre = artist.Artist.Genre,
+                    FavouriteCount = artist.Artist.FavoriteArtists.Count,
                 };
                 toReturn.Add(art);
             }

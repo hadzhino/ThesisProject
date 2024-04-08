@@ -14,5 +14,6 @@ namespace PureSound.Data.Entities
         public Guid RegionId { get; set; }
         public Region Region { get; set; }
         public HashSet<FavouriteArtists> FavoriteArtists { get;set; } = new HashSet<FavouriteArtists>();
+        public int FavouriteCount { get; set; }
     }
 }

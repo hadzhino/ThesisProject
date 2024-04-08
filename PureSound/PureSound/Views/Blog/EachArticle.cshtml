@@ -1,0 +1,118 @@
+﻿@using PureSound.Data.Entities;
+@using PureSound.Data;
+@using PureSound.Models.ViewModels;
+@model ArticleVM
+@{
+    Layout = "~/Views/Shared/_PagesLayout.cshtml";
+}
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>@Model.Title</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="manifest" href="site.webmanifest">
+<link rel="shortcut icon" type="image/x-icon" href="~/img/icon.ico">
+<!-- Place favicon.ico in the root directory -->
+<!-- CSS here -->
+<link rel="stylesheet" href="~/css/musico-master/css/style.css">
+<link rel="stylesheet" href="~/css/user-profile-page-template-in-html-css/css/style.css">
+<link rel="stylesheet" href="~/css/musico-master/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/owl.carousel.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/magnific-popup.css">
+<link rel="stylesheet" href="~/css/musico-master/css/font-awesome.min.css">
+<link rel="stylesheet" href="~/css/musico-master/css/themify-icons.css">
+<link rel="stylesheet" href="~/css/musico-master/css/nice-select.css">
+<link rel="stylesheet" href="~/css/musico-master/css/audioplayer.css">
+<link rel="stylesheet" href="~/css/musico-master/css/flaticon.css">
+<link rel="stylesheet" href="~/css/musico-master/css/gijgo.css">
+<link rel="stylesheet" href="~/css/musico-master/css/animate.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slick.css">
+<link rel="stylesheet" href="~/css/musico-master/css/slicknav.css">
+<link rel="stylesheet" href="~/css/musico-master/css/responsive.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
+<link rel="stylesheet" href="~/lib/jquery/dist/jquery.min.js">
+
+<body>
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        <div class="d-flex align-items-center slider_bg_1 overlay2" style="height:110px">
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <!-- music_area  -->
+    <div class="music_area music_gallery" style="margin-right:0px">
+        <div class="container">
+            <div class="image" style="display: flex; justify-content:center">
+                <img src=@Model.ImageURL style="height:300px; width:450px" />
+            </div>
+            <div class="row" style="display: flex; justify-content:center">
+                <div class="col-xl-12" style="margin-top:30px">
+                    <div class="section_title text-center mb-65">
+                        <h1>
+                            @Model.Title
+                        </h1>
+                        <p>Posted on: @Model.Date.ToString("MM/dd/yyyy")</p>
+                        <br />
+                        <h5>Category: @Model.Category.Name</h5>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-top:-60px" class="row">
+                <div class="col-xl-12" style="margin-top:30px">
+                    <div class="section_title text-center mb-65">
+                        <hr style="margin-left:430px; width:250px;" />
+                        <br />
+
+                        <h4>@Model.Content</h4>
+                        <br />
+                        <hr style="margin-left:430px; width:250px;" />
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center justify-content-center mb-20">
+                <h2 style="color:dimgray">Comments (@Model.Comments!.Count)</h2>
+                <br />
+            </div>
+            <div>
+                @if (this.User.Identity!.IsAuthenticated)
+                {
+                    <div id="add-comment">
+                        <partial name="_AddCommentPartial" model="Model.Comment">
+                    </div>
+                }
+                else
+                {
+                    <div style="display: flex; justify-content:center; align-content:center">
+                        <h6>
+                            To be able to comment you have to be registered.
+                            If you do not have an account (<a asp-controller="Account" asp-action="Register" style="color:orangered">Register</a>).
+                            And if you already have an accont (<a asp-controller="Account" asp-action="Login" style="color:orangered">Log in</a>).
+                        </h6>
+                    </div>
+                }
+                @foreach (var item in Model.Comments!)
+                {
+
+                    <div class="row">
+                        <img src="@item.User.ImageUrl" style="height:30px;width:30px;border-radius:30px">
+                        <h5>@item.User.UserName</h5>
+                    </div>
+                    <div>
+                        <p>@item.Content</p>
+                        <small>@item.Date.ToString("MM/dd/yyyy hh:mm tt")</small>
+                    </div>
+                }
+                
+            </div>
+        </div>
+    </div>
+    <!-- music_area end  -->
+    <!-- link that opens popup -->
+    <!-- JS here -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous">
+    </script>
+
+</body>

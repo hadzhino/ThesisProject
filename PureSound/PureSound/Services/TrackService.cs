@@ -60,7 +60,8 @@ namespace PureSound.Services
                         ArtistTrack = artist.ArtistTrack,
                         FavoriteArtists = artist.FavoriteArtists,
                         RegionId = artist.RegionId,
-                        Region = context.Regions.FirstOrDefault(x => x.Id == artist.RegionId)!
+                        Region = context.Regions.FirstOrDefault(x => x.Id == artist.RegionId)!,
+                        FavouriteCount = artist.FavoriteArtists.Count(),
                     };
                     artists.Add(artistVM!);
                 }
@@ -106,7 +107,8 @@ namespace PureSound.Services
                 ImageURL = model.ImageURL,
                 GenreId = model.GenreId,
                 YouTubeURL = model.YouTubeURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!
+                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!,
+                FavouriteCount = 0
             };
             await context.Tracks.AddAsync(track);
 
@@ -127,7 +129,7 @@ namespace PureSound.Services
         public async Task DeleteTrackAsync(Guid id)
         {
             var track = await context.Tracks.Include(x => x.ArtistTrack)!.ThenInclude(x => x.Artist).FirstOrDefaultAsync(x => x.Id == id);
-            context.Tracks.Remove(track);
+            context.Tracks.Remove(track!);
             var at = await context.ArtistTrack.Where(x => x.TrackId == track.Id).ToListAsync();
             foreach (var item in at)
             {
@@ -158,7 +160,8 @@ namespace PureSound.Services
                     ArtistTrack = track.ArtistTrack!,
                     Lyrics = track.Lyrics,
                     YouTubeURL = track.YouTubeURL,
-                    FavoriteTracks = track.FavoriteTracks
+                    FavoriteTracks = track.FavoriteTracks,
+                    FavouriteCount = track.FavoriteTracks.Count
                 };
             }
             return vm;
@@ -176,6 +179,7 @@ namespace PureSound.Services
             };
 
             await context.FavouriteTracks.AddAsync(favTrack);
+            track.FavouriteCount = track.FavoriteTracks.Count;
             await context.SaveChangesAsync();
         }
         public async Task RemoveFromFavouriteAsync(Guid userId, Guid trackId)
@@ -185,6 +189,7 @@ namespace PureSound.Services
             var favTrack = await context.FavouriteTracks.FirstOrDefaultAsync(x => x.TrackId == track!.Id && x.UserId == Guid.Parse(user!.Id));
 
             context.FavouriteTracks.Remove(favTrack!);
+            track!.FavouriteCount = track.FavoriteTracks.Count;
             await context.SaveChangesAsync();
         }
     }

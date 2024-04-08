@@ -17,5 +17,6 @@ namespace PureSound.Data.Entities
         public string? ImageURL { get; set; }
         public string YouTubeURL { get; set; }
         public HashSet<FavouriteTracks> FavoriteTracks { get; set; } = new HashSet<FavouriteTracks>();
+        public int FavouriteCount { get; set; }
     }
 }

@@ -11,5 +11,6 @@ namespace PureSound.Contracts
         Task DeleteArticleAsync(Guid id);
         Task<List<ArticleVM>> RecentPostsAsync();
         Task<List<ArticleVM>> SortByCategoryAsync(Guid Id);
+        Task<ArticleVM> GetArticleByIdAsync(Guid Id);
     }
 }

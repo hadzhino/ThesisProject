@@ -62,12 +62,14 @@ namespace PureSound.Services
 
             return toReturn;
         }
+
         public async Task<List<ArticleVM>> RecentPostsAsync()
         {
             var posts = await GetAllArticlesAsync();
             posts = posts.OrderBy(x => x.Date).Take(5).ToList();
             return posts;
         }
+
         public async Task<List<ArticleVM>> SortByCategoryAsync(Guid id)
         {
             var articles = await context.Articles.Include(x => x.Category).Where(x => x.CategoryId == id).ToListAsync();
@@ -90,6 +92,26 @@ namespace PureSound.Services
             }
 
             return toReturn;
+        }
+
+        public async Task<ArticleVM> GetArticleByIdAsync(Guid id)
+        {
+            var article = await context.Articles.Include(x => x.Category).Include(x => x.Comments).FirstOrDefaultAsync(x => x.Id == id);
+
+            var vm = new ArticleVM()
+            {
+                Id = article!.Id,
+                Category = article.Category,
+                CategoryId = article.CategoryId,
+                Comments = article.Comments,
+                Content = article.Content,
+                Date = article.Date,
+                ImageURL = article.ImageURL,
+                Title = article.Title,
+                Comment = new CommentVM() { ArticleID = id }
+            };
+
+            return vm;
         }
     }
 }
