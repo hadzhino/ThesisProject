@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PureSound.Contracts;
 using PureSound.Data;
+using PureSound.Data.Account;
 using PureSound.Data.Entities;
 using PureSound.Models.ViewModels;
 
@@ -10,9 +12,11 @@ namespace PureSound.Services
     public class BlogService : IBlogService
     {
         private readonly ApplicationDbContext context;
-        public BlogService(ApplicationDbContext _context)
+        private readonly UserManager<User> userManager; 
+        public BlogService(ApplicationDbContext _context, UserManager<User> _userManager)
         {
             this.context = _context;
+            this.userManager = _userManager;
         }
 
         public async Task AddArticleAsync(AddArticleVM model)
@@ -112,6 +116,20 @@ namespace PureSound.Services
             };
 
             return vm;
+        }
+
+        public async Task CreateCommentAsync(CommentVM commentVM, string userId)
+        {
+            Comment comment = new Comment()
+            {
+                Id = Guid.NewGuid(),
+                ArticleId = commentVM.ArticleID,
+                UserId = userId,
+                Content = commentVM.Content,
+                Date = DateTime.Now,
+            };
+            context.Comments.Add(comment);
+            await context.SaveChangesAsync();
         }
     }
 }

@@ -6,7 +6,7 @@
 }
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Blog</title>
+<title>Home</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -69,24 +69,29 @@
             }
         </div>
     </div>
-    <br /><br /><br />
+    <br />
+    <br />
+    <br />
     <div style="width: 100%;">
         <div style="width: 30%; float: left; background-color: #ededed !important; margin-left:10%; border-radius:30px">
             <h4 style="justify-content:center; display:flex">Community Favourite Artists</h4><br />
             <ol>
                 @foreach (var item in Model.Artists)
                 {
-                    <li style="margin-bottom:30px">
+                    <li>
                         <div class="col-xl-9 col-md-9">
                             <div class="music_field">
-                                <div class="thumb">
+                                <div class="thumb" style="display:flex; align-items:center; justify-content:left">
+                                    <div class="col-1" style="margin-right: 40px !important;">
+                                        <h3>@item.Index.</h3>
+                                    </div>
                                     <img src=@item.ImageURL style="height:70px;width:70px; border-radius:70px">
                                     <a asp-controller="Artists" asp-action="EachArtist" asp-route-id="@item.Id">
-                                        <h4 style="margin-left: 120px; margin-top:-70px; color:black">@item.Username</h4>
+                                        <h4 style="margin-left: 30px; margin-top:-30px; color:black">@item.Username</h4>
                                     </a>
-                                    <div class="col-xl-3 col-md-3" style="margin-left:105px">
-                                        <i class="fa fa-heart" style="color:red; margin-top:15px"></i>
-                                        <p style="color:black; margin-left:23px; margin-top:-23px">@item.FavoriteArtists!.Count</p>
+                                    <div class="col-xl-3 col-md-3">
+                                        <i class="fa fa-heart" style="color:red; margin-top:40px; margin-left:-55px"></i>
+                                        <p style="color:black; margin-left:-32px; margin-top:-23px">@item.FavoriteArtists!.Count</p>
                                     </div>
                                 </div>
                             </div>
@@ -103,16 +108,20 @@
                     <li>
                         <div class="col-xl-9 col-md-9">
                             <div class="music_field">
-                                <div class="thumb">
-                                    <img src=@item.ImageURL style="height:70px;width:110px; border-radius:10px">
-                                    <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id">
-                                        <h4 style="margin-left: 120px; margin-top:-70px; color:black">@item.Title</h4>
-                                    </a>
-                                    <div class="col-xl-3 col-md-3" style="margin-left:105px">
-                                        <i class="fa fa-heart" style="color:red; margin-top:15px"></i>
-                                        <p style="color:black; margin-left:23px; margin-top:-23px">@item.FavoriteTracks.Count</p>
+                                <div class="thumb" style="display:flex; align-items:center; justify-content:left">
+                                    <div class="col-1" style="margin-right: 40px !important;">
+                                        <h3>@item.Index.</h3>
                                     </div>
-                                    <br/>
+                                    <img src="@item.ImageURL" style="height:70px;width:110px; border-radius:10px; margin-right: 10px;">
+                                    <div style="margin-left: 20px;">
+                                        <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id">
+                                            <h4 style="margin-top: 20px; color:black">@item.Title</h4>
+                                        </a>
+                                        <div class="col-xl-3 col-md-3">
+                                            <i class="fa fa-heart" style="color:red;"></i>
+                                            <p style="color:black; margin-left:23px; margin-top:-23px">@item.FavoriteTracks.Count</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -120,6 +129,7 @@
                 }
             </ol>
         </div>
+
     </div>
 
 

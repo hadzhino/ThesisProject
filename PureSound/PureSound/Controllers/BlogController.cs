@@ -149,21 +149,21 @@ namespace PureSound.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateComment(CommentVM commentVM)
         {
+            var userId = userManager.GetUserId(this.User);
             if (ModelState.IsValid)
             {
-                Comment comment = new Comment()
-                {
-                    Id = Guid.NewGuid(),
-                    ArticleId = commentVM.ArticleID,
-                    UserId = userManager.GetUserId(this.User)!,
-                    Content = commentVM.Content,
-                    Date = DateTime.Now,
-                };
-
-                context.Comments.Add(comment);
-                await context.SaveChangesAsync();
+                return View();
             }
-            return RedirectToAction("Index", "Blog");
+            try
+            {
+                await blogService.CreateCommentAsync(commentVM, userId!.ToString());
+                return RedirectToAction();
+            }
+            catch (Exception)
+            {
+                ModelState.AddModelError("", "Something went wrong");
+                return View();
+            }
         }
 
         [HttpGet]

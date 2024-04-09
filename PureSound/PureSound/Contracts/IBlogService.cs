@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PureSound.Data;
+using PureSound.Data.Entities;
 using PureSound.Models.ViewModels;
 
 namespace PureSound.Contracts
@@ -12,5 +13,6 @@ namespace PureSound.Contracts
         Task<List<ArticleVM>> RecentPostsAsync();
         Task<List<ArticleVM>> SortByCategoryAsync(Guid Id);
         Task<ArticleVM> GetArticleByIdAsync(Guid Id);
+        Task CreateCommentAsync(CommentVM commentVM, string userId);
     }
 }

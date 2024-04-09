@@ -116,8 +116,7 @@ namespace PureSound.Services
                     ImageURL = track.Track.ImageURL,
                     Lyrics = track.Track.Lyrics,
                     Year = track.Track.Year,
-                    YouTubeURL = track.Track.YouTubeURL,
-                    FavouriteCount = track.Track.FavoriteTracks.Count
+                    YouTubeURL = track.Track.YouTubeURL
                 };
                 toReturn.Add(tr);
             }
@@ -151,8 +150,7 @@ namespace PureSound.Services
                     Age = artist.Artist.Age,
                     ArtistTrack = artist.Artist.ArtistTrack,
                     FavoriteArtists = artist.Artist.FavoriteArtists,
-                    Genre = artist.Artist.Genre,
-                    FavouriteCount = artist.Artist.FavoriteArtists.Count,
+                    Genre = artist.Artist.Genre
                 };
                 toReturn.Add(art);
             }

@@ -27,8 +27,8 @@ namespace PureSound.Controllers
             var artists = await context.Artists.Include(x => x.ArtistTrack).Include(x => x.FavoriteArtists).Include(x => x.Genre).ToListAsync();
             var tracks = await context.Tracks.Include(x => x.ArtistTrack).Include(x => x.FavoriteTracks).Include(x => x.Genre).ToListAsync();
             var toReturnArticles = new List<ArticleVM>();
-            var toReturnTracks = new List<TrackVM>();
-            var toReturnArtists = new List<ArtistVM>();
+            var toReturnTracks = new List<TrackIndexVM>();
+            var toReturnArtists = new List<ArtistIndexVM>();
 
             foreach (var item in articles)
             {
@@ -47,49 +47,58 @@ namespace PureSound.Controllers
             }
             foreach (var item in artists)
             {
-                var artist = new ArtistVM()
+                var artist = new ArtistIndexVM()
                 {
                     Id = item.Id,
                     Age = item.Age,
                     ArtistTrack = item.ArtistTrack,
                     FavoriteArtists = item.FavoriteArtists,
                     Genre = item.Genre,
-                    FavouriteCount = item.FavouriteCount,
                     GenreId = item.GenreId,
                     ImageURL = item.ImageURL,
                     Region = item.Region,
                     RegionId = item.RegionId,
-                    Username = item.Username
+                    Username = item.Username,
+                    Index = 0
                 };
                 toReturnArtists.Add(artist);
             }
+
             foreach (var item in tracks)
             {
-                var track = new TrackVM()
+                var track = new TrackIndexVM()
                 {
                     Id = item.Id,
                     ArtistTrack = item.ArtistTrack,
                     FavoriteTracks = item.FavoriteTracks,
-                    FavouriteCount = item.FavouriteCount,
                     Genre = item.Genre,
                     GenreId = item.GenreId,
                     ImageURL = item.ImageURL,
                     Lyrics = item.Lyrics,
                     Title = item.Title,
                     Year = item.Year,
-                    YouTubeURL = item.YouTubeURL
+                    YouTubeURL = item.YouTubeURL,
+                    Index = 0
                 };
                 toReturnTracks.Add(track);
             }
 
             var tracksViewBag = await context.Tracks.Include(x => x.Genre).Include(x => x.FavoriteTracks).Include(x => x.ArtistTrack)!.ThenInclude(x => x.Artist).ToListAsync();
-
+            
+            for (int i = 0; i < toReturnArtists.Count; i++)
+            {
+                toReturnArtists[i].Index = i+1;
+            }
+            for (int i = 0; i < toReturnTracks.Count; i++)
+            {
+                toReturnTracks[i].Index = i+1;
+            }
 
             var toreturn = new IndexVM()
             {
                 Articles = toReturnArticles.OrderByDescending(x => x.Date).Take(5).ToList(),
-                Artists = toReturnArtists.OrderByDescending(x => x.FavouriteCount).Take(10).ToList(),
-                Tracks = toReturnTracks.OrderByDescending(x => x.FavouriteCount).Take(10).ToList()
+                Artists = toReturnArtists.OrderByDescending(x => x.FavoriteArtists.Count).Take(10).ToList(),
+                Tracks = toReturnTracks.OrderByDescending(x => x.FavoriteTracks.Count).Take(10).ToList()
             };
             return View(toreturn);
         }

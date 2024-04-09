@@ -70,10 +70,19 @@
                     </div>
                 </div>
             </div>
+
+            @if (this.User.IsInRole("Administrator"))
+            {
+                <div style="display: flex; justify-content:center">
+                    <a asp-controller="Blog" asp-action="Delete" asp-route-id="@Model.Id" class="genric-btn danger circle" style="margin-top:-20px; margin-bottom:20px">Delete Article</a>
+                </div>
+            }
+
             <div class="row align-items-center justify-content-center mb-20">
                 <h2 style="color:dimgray">Comments (@Model.Comments!.Count)</h2>
                 <br />
             </div>
+
             <div>
                 @if (this.User.Identity!.IsAuthenticated)
                 {

@@ -60,8 +60,7 @@ namespace PureSound.Services
                         ArtistTrack = artist.ArtistTrack,
                         FavoriteArtists = artist.FavoriteArtists,
                         RegionId = artist.RegionId,
-                        Region = context.Regions.FirstOrDefault(x => x.Id == artist.RegionId)!,
-                        FavouriteCount = artist.FavoriteArtists.Count(),
+                        Region = context.Regions.FirstOrDefault(x => x.Id == artist.RegionId)!
                     };
                     artists.Add(artistVM!);
                 }
@@ -160,8 +159,7 @@ namespace PureSound.Services
                     ArtistTrack = track.ArtistTrack!,
                     Lyrics = track.Lyrics,
                     YouTubeURL = track.YouTubeURL,
-                    FavoriteTracks = track.FavoriteTracks,
-                    FavouriteCount = track.FavoriteTracks.Count
+                    FavoriteTracks = track.FavoriteTracks
                 };
             }
             return vm;

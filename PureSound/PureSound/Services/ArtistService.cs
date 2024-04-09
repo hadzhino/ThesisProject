@@ -30,8 +30,7 @@ namespace PureSound.Services
                 Region = artist.Region,
                 RegionId = artist.RegionId,
                 FavoriteArtists = artist.FavoriteArtists,
-                ArtistTrack = artist.ArtistTrack,
-                FavouriteCount = artist.FavouriteCount,
+                ArtistTrack = artist.ArtistTrack
             };
 
             return vm;
