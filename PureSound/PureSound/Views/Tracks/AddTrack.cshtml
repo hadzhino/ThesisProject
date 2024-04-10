@@ -64,43 +64,51 @@
                 <form class="login100-form validate-form p-b-33 p-t-5" method="post" asp-controller="Tracks" asp-action="AddTrack">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="wrap-input100 validate-input" data-validate="Enter title">
-                        <input asp-for="Title" class="input100" placeholder="Title">
+                        <input asp-for="Title" class="input100" placeholder="Title" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter year">
-                        <input asp-for="Year" class="input100" placeholder="Year">
+                        <input asp-for="Year" class="input100" placeholder="Year" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Year" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Artists">
                         <label for="artists" style="position:center">Artists</label>
-                        <select asp-items="@ViewBag.Artists" asp-for="ArtistsIds" multiple class="input100">
+                        <select id="artists" asp-items="@ViewBag.Artists" asp-for="ArtistsIds" multiple class="input100" required>
                         </select>
+                        <span class="focus-input100"></span>
+                        <span asp-validation-for="ArtistsIds" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Genre">
                         <label class="form-label" style="position:center">Genre</label>
-                        <select asp-for="GenreId" asp-items="@ViewBag.GenreId" class="input100" placeholder="Genre"></select>
+                        <select asp-for="GenreId" asp-items="@ViewBag.GenreId" class="input100" placeholder="Genre" required></select>
                         <span class="focus-input100"></span>
+                        <span asp-validation-for="GenreId" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter Image URL">
-                        <input asp-for="ImageURL" class="input100" placeholder="Image URL">
+                        <input asp-for="ImageURL" class="input100" placeholder="Image URL" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="ImageURL" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter lyrics">
-                        <input asp-for="Lyrics" class="input100" placeholder="Lyrics">
+                        <input asp-for="Lyrics" class="input100" placeholder="Lyrics" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Lyrics" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter YouTube URL">
-                        <input asp-for="YouTubeURL" class="input100" placeholder="YouTube URL">
+                        <input asp-for="YouTubeURL" class="input100" placeholder="YouTube URL" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="YouTubeURL" class="text-danger"></span>
                     </div>
 
                     <div class="container-login100-form-btn m-t-32">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Add Track
                         </button>
                     </div>
-
                 </form>
+
             </div>
         </div>
     </div>

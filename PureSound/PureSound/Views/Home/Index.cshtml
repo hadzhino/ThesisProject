@@ -52,16 +52,14 @@
                     <div class="card text-center">
                         <img class="img-top" src="@item.ImageURL" style="height:220px; width:445px; border-top-left-radius:20px; border-top-right-radius:20px">
                         <div class="card-body">
-                            <h5>
-                                @item.Title<br />
-                                <span> Category: @item.Category.Name </span>
-                            </h5>
-                            <div class="music_btn">
-                                <a asp-controller="Blog" asp-action="EachArticle" asp-route-id="@item.Id" class="boxed-btn" style="height:30px; justify-content:center; align-content:center">See More</a>
-                            </div>
-                            <p class="card-text">
+                            <h5>@item.Title<br /></h5>
+                            <p style="color:black;">Category: @item.Category.Name</p>
+                            <p class="card-text" style="font-size:small; margin-top:-25px">
                                 @item.Date.ToString("M/dd/yyyy", new CultureInfo("en-GB"))
                             </p>
+                            <div class="music_btn">
+                                <a asp-controller="Blog" asp-action="EachArticle" asp-route-id="@item.Id" class="genric-btn primary" style="height:30px; justify-content:center; align-content:center">See More</a>
+                            </div>
                         </div>
                     </div>
 
@@ -90,12 +88,13 @@
                                         <h4 style="margin-left: 30px; margin-top:-30px; color:black">@item.Username</h4>
                                     </a>
                                     <div class="col-xl-3 col-md-3">
-                                        <i class="fa fa-heart" style="color:red; margin-top:40px; margin-left:-55px"></i>
+                                        <i class="fa fa-heart" style="color:red; margin-top:60px; margin-left:-55px"></i>
                                         <p style="color:black; margin-left:-32px; margin-top:-23px">@item.FavoriteArtists!.Count</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <br>
                     </li>
                 }
             </ol>
@@ -125,6 +124,7 @@
                                 </div>
                             </div>
                         </div>
+                        <br>
                     </li>
                 }
             </ol>

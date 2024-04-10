@@ -106,8 +106,7 @@ namespace PureSound.Services
                 ImageURL = model.ImageURL,
                 GenreId = model.GenreId,
                 YouTubeURL = model.YouTubeURL,
-                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!,
-                FavouriteCount = 0
+                Genre = context.Genres.FirstOrDefault(x => x.Id == model.GenreId)!
             };
             await context.Tracks.AddAsync(track);
 

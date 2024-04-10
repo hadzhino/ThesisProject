@@ -58,35 +58,40 @@
                 <form class="login100-form validate-form p-b-33 p-t-5" id="pages" method="post" asp-controller="Artists" asp-action="AddArtist">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <input asp-for="Username" class="input100" placeholder="Username">
+                        <input asp-for="Username" class="input100" placeholder="Username" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Username" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter age">
-                        <input asp-for="Age" class="input100" placeholder="Age">
+                        <input asp-for="Age" class="input100" placeholder="Age" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Age" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Genre">
                         <label class="form-label" style="position:center">Genre</label>
-                        <select asp-for="GenreId" asp-items="@ViewBag.GenreId" class="input100" placeholder="Genre"></select>
+                        <select asp-for="GenreId" asp-items="@ViewBag.GenreId" class="input100" placeholder="Genre" required></select>
                         <span class="focus-input100"></span>
+                        <span asp-validation-for="GenreId" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Region">
                         <label class="form-label" style="position:center">Region</label>
-                        <select asp-for="RegionId" asp-items="@ViewBag.RegionId" class="input100" placeholder="Region"></select>
+                        <select asp-for="RegionId" asp-items="@ViewBag.RegionId" class="input100" placeholder="Region" required></select>
                         <span class="focus-input100"></span>
+                        <span asp-validation-for="RegionId" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter Image URL">
-                        <input asp-for="ImageURL" class="input100" placeholder="Image URL">
+                        <input asp-for="ImageURL" class="input100" placeholder="Image URL" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="ImageURL" class="text-danger"></span>
                     </div>
 
                     <div class="container-login100-form-btn m-t-32">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Add Artist
                         </button>
                     </div>
-
                 </form>
+
             </div>
         </div>
     </div>

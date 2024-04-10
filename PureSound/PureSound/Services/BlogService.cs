@@ -12,7 +12,7 @@ namespace PureSound.Services
     public class BlogService : IBlogService
     {
         private readonly ApplicationDbContext context;
-        private readonly UserManager<User> userManager; 
+        private readonly UserManager<User> userManager;
         public BlogService(ApplicationDbContext _context, UserManager<User> _userManager)
         {
             this.context = _context;
@@ -98,16 +98,38 @@ namespace PureSound.Services
             return toReturn;
         }
 
+        public async Task<List<CommentVM>> GetCommentsAsync(Guid id)
+        {
+            var comments = await context.Comments.Include(x => x.User).Where(x => x.ArticleId == id).ToListAsync();
+            var toReturn = new List<CommentVM>();
+
+            foreach (var item in comments)
+            {
+                var com = new CommentVM()
+                {
+                    Id = item.Id,
+                    ArticleID = item.ArticleId,
+                    Content = item.Content!,
+                    Date = item.Date,
+                    UserId = item.UserId
+                };
+                toReturn.Add(com);
+            }
+
+            return toReturn;
+        }
+
         public async Task<ArticleVM> GetArticleByIdAsync(Guid id)
         {
             var article = await context.Articles.Include(x => x.Category).Include(x => x.Comments).FirstOrDefaultAsync(x => x.Id == id);
+            var comments = await context.Comments.Include(x => x.User).Where(x => x.ArticleId == id).ToListAsync();
 
             var vm = new ArticleVM()
             {
                 Id = article!.Id,
                 Category = article.Category,
                 CategoryId = article.CategoryId,
-                Comments = article.Comments,
+                Comments = comments.ToHashSet(),
                 Content = article.Content,
                 Date = article.Date,
                 ImageURL = article.ImageURL,

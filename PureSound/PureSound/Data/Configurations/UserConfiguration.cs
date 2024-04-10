@@ -24,7 +24,8 @@ namespace PureSound.Data.Configurations
                 NormalizedUserName = "ADMIN",
                 Email = "etaleksander411@gmail.com",
                 NormalizedEmail = "ETALEKSANDER411@GMAIL.COM",
-                FavGenreId = Guid.Parse("48d67181-5732-47a0-892b-6577fc688e00")
+                FavGenreId = Guid.Parse("48d67181-5732-47a0-892b-6577fc688e00"),
+                ImageUrl = "https://www.iprcenter.gov/image-repository/blank-profile-picture.png/@@images/image.png"
             };
             user.PasswordHash = hasher.HashPassword(user, "@Aleks005");
 

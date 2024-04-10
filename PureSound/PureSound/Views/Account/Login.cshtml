@@ -57,22 +57,22 @@
                 <form class="login100-form validate-form p-b-33 p-t-5" id="account" method="post" asp-action="Login">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="wrap-input100 validate-input" data-validate="Enter username">
-                        <input asp-for="UserName" class="input100"  placeholder="Username">
+                        <input asp-for="UserName" class="input100" placeholder="Username" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
                     </div>
-
                     <div class="wrap-input100 validate-input" data-validate="Enter password">
-                        <input asp-for="Password" class="input100" placeholder="Password">
+                        <input asp-for="Password" class="input100" placeholder="Password" type="password" required>
                         <span class="focus-input100" data-placeholder="&#xe80f;"></span>
+                        <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
-
                     <div class="container-login100-form-btn m-t-32">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Login
                         </button>
                     </div>
-
                 </form>
+
             </div>
         </div>
     </div>

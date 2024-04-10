@@ -53,34 +53,37 @@
             <div class="wrap-login100 p-t-30 p-b-50">
                 <br /><br />
                 <span class="login100-form-title p-b-41">
-                    Add Artist
+                    Add Article
                 </span>
-                <form class="login100-form validate-form p-b-33 p-t-5" id="pages" method="post" asp-controller="Blog" asp-action="Add">
+                <form class="login100-form validate-form p-b-33 p-t-5" id="pages" method="post" asp-controller="Blog" asp-action="Add" enctype="multipart/form-data">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="wrap-input100 validate-input" data-validate="Enter Title">
-                        <input asp-for="Title" class="input100" placeholder="Title">
+                        <input asp-for="Title" class="input100" placeholder="Title" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Title" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter Content">
-                        <input asp-for="Content" class="input100" placeholder="Content">
+                        <textarea asp-for="Content" class="input100" placeholder="Content" required></textarea>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="Content" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Category">
                         <label class="form-label" style="position:center">Category</label>
-                        <select asp-for="CategoryId" asp-items="@ViewBag.CategoryId" class="input100" placeholder="Category"></select>
+                        <select asp-for="CategoryId" asp-items="@ViewBag.CategoryId" class="input100" placeholder="Category" required></select>
                         <span class="focus-input100"></span>
+                        <span asp-validation-for="CategoryId" class="text-danger"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Enter Image URL">
-                        <input asp-for="ImageURL" class="input100" placeholder="Image URL">
+                        <input asp-for="ImageURL" class="input100" placeholder="Image URL" required>
                         <span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                        <span asp-validation-for="ImageURL" class="text-danger"></span>
                     </div>
 
                     <div class="container-login100-form-btn m-t-32">
-                        <button class="login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
                             Add Article
                         </button>
                     </div>
-
                 </form>
             </div>
         </div>

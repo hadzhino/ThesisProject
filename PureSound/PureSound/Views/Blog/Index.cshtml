@@ -114,16 +114,17 @@
                             <h3 class="widget_title">Recent Post</h3>
                             @foreach (var item in Model)
                             {
-                                <a asp-controller="Blog" asp-action="EachArticle" asp-route-id="@item.Id">
-                                    <div class="media post_item">
-                                        <img src=@item.ImageURL style="height:50px;width:60px" alt="post">
-                                        <div class="media-body">
 
+                                <div class="media post_item">
+                                    <img src=@item.ImageURL style="height:50px;width:60px" alt="post">
+                                    <div class="media-body">
+                                        <a asp-controller="Blog" asp-action="EachArticle" asp-route-id="@item.Id">
                                             <h3>@item.Title</h3>
-                                            <p>@item.Date.ToString("dd.MM.yyyy")</p>
-                                        </div>
+                                        </a>
+                                        <p>@item.Date.ToString("dd.MM.yyyy")</p>
                                     </div>
-                                </a>
+                                </div>
+
                                 <br />
                             }
                         </aside>

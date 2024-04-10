@@ -78,7 +78,6 @@ namespace PureSound.Controllers
             }
         }
 
-        [HttpPost]
         public async Task<IActionResult> Delete(Guid id)
         {
             if (!ModelState.IsValid)
@@ -89,6 +88,7 @@ namespace PureSound.Controllers
             try
             {
                 await blogService.DeleteArticleAsync(id);
+                await context.SaveChangesAsync();
                 return RedirectToAction("Index", "Blog");
             }
             catch (Exception)
@@ -150,27 +150,17 @@ namespace PureSound.Controllers
         public async Task<IActionResult> CreateComment(CommentVM commentVM)
         {
             var userId = userManager.GetUserId(this.User);
-            if (ModelState.IsValid)
-            {
-                return View();
-            }
-            try
-            {
-                await blogService.CreateCommentAsync(commentVM, userId!.ToString());
-                return RedirectToAction();
-            }
-            catch (Exception)
-            {
-                ModelState.AddModelError("", "Something went wrong");
-                return View();
-            }
+            await blogService.CreateCommentAsync(commentVM, userId!.ToString());
+            var comments = await blogService.GetCommentsAsync(commentVM.ArticleID);
+            var articleId = commentVM.ArticleID;
+            return RedirectToAction("EachArticle", new { id = articleId });
         }
 
         [HttpGet]
         public async Task<IActionResult> EachArticle(Guid id)
         {
             var article = await blogService.GetArticleByIdAsync(id);
-
+            ViewBag.UserID = userManager.GetUserId(this.User);
             return View(article);
         }
 
@@ -178,7 +168,7 @@ namespace PureSound.Controllers
         public async Task<IActionResult> TagFilteredPosts(string tag)
         {
             var articles = await blogService.GetAllArticlesAsync();
-            articles = articles.Where(x=>x.Title.ToLower().Contains(tag.ToLower()) || x.Content.ToLower().Contains(tag.ToLower())).ToList();
+            articles = articles.Where(x => x.Title.ToLower().Contains(tag.ToLower()) || x.Content.ToLower().Contains(tag.ToLower())).ToList();
 
             var categories = await context.Categories.Include(x => x.Articles).ToListAsync();
             ViewBag.Categories = categories;

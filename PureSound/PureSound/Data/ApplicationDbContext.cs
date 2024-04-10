@@ -74,7 +74,10 @@ namespace PureSound.Data
             builder.ApplyConfiguration(new RegionConfiguration());
             builder.ApplyConfiguration(new GenresConfiguration());
             builder.ApplyConfiguration(new CategoryConfiguration());
-
+            builder.ApplyConfiguration(new ArtistsConfiguration());
+            builder.ApplyConfiguration(new ArticlesConfiguration());
+            builder.ApplyConfiguration(new TracksConfiguration());
+            builder.ApplyConfiguration(new ArtistsTracksConfiguration());
 
             base.OnModelCreating(builder);
         }

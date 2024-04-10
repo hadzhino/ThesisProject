@@ -64,7 +64,7 @@
                         <hr style="margin-left:430px; width:250px;" />
                         <br />
 
-                        <h4>@Model.Content</h4>
+                        <h4><em>@Model.Content</em></h4>
                         <br />
                         <hr style="margin-left:430px; width:250px;" />
                     </div>
@@ -105,14 +105,15 @@
 
                     <div class="row">
                         <img src="@item.User.ImageUrl" style="height:30px;width:30px;border-radius:30px">
-                        <h5>@item.User.UserName</h5>
+                        <h5 style="margin-left:15px">@item.User.UserName</h5>
                     </div>
                     <div>
-                        <p>@item.Content</p>
+                        <p style="margin-top: 15px">@item.Content</p>
                         <small>@item.Date.ToString("MM/dd/yyyy hh:mm tt")</small>
                     </div>
+                    <hr />
                 }
-                
+
             </div>
         </div>
     </div>
@@ -123,5 +124,5 @@
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
             crossorigin="anonymous">
     </script>
-
+    
 </body>

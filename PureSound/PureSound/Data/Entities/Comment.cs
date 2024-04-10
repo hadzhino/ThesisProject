@@ -9,7 +9,7 @@ namespace PureSound.Data.Entities
         [Key] public Guid Id { get; set; }
         [ForeignKey(nameof(User))]public string UserId { get; set; }
         public User User { get; set; }
-        public string Content { get; set; }
+        public string? Content { get; set; }
         [ForeignKey(nameof(Article))]public Guid ArticleId { get; set; }
         public Article Article { get; set; }
         public DateTime Date = DateTime.Now;

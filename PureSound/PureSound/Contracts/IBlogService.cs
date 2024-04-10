@@ -14,5 +14,6 @@ namespace PureSound.Contracts
         Task<List<ArticleVM>> SortByCategoryAsync(Guid Id);
         Task<ArticleVM> GetArticleByIdAsync(Guid Id);
         Task CreateCommentAsync(CommentVM commentVM, string userId);
+        Task<List<CommentVM>> GetCommentsAsync(Guid articleID);
     }
 }
