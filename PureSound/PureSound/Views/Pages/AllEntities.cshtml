@@ -124,7 +124,7 @@
                                                             </div>
                                                             <div class="track_name">
                                                                 <div class="name">
-                                                                    <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@string.Join(" & ", ViewBag.ArtistsNames) - @item.Title</a>
+                                                                    <a asp-controller="Tracks" asp-action="EachTrack" asp-route-id="@item.Id" style="color:black">@item.Title</a>
                                                                     <p>Genre: @item.Genre.Name</p>
                                                                     <p style="margin-top:-20px; margin-left:160px">Year: @item.Year</p>
                                                                 </div>

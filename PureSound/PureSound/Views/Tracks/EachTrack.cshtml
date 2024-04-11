@@ -67,7 +67,7 @@
                         <a href=@Model.YouTubeURL target="_blank">
                             <h1 style="color:black">@string.Join(" & ", ViewBag.Artists) - @Model.Title</h1>
                         </a>
-                        @if (!this.User.IsInRole("Administrator"))
+                        @if (!this.User.IsInRole("Administrator") && this.User.Identity!.IsAuthenticated)
                         {
 
                             <button id="toggleButton" class="btn-heart">

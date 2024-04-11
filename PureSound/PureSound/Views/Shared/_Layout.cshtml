@@ -49,8 +49,6 @@
                                             <partial name="_LoginPartial" />
                                             <ul id="navigation">
                                                 <li><a asp-controller="Blog" asp-action="Index">blog</a></li>
-                                                @if (this.User.Identity.IsAuthenticated)
-                                                {
                                                     <li>
                                                         <a href="#">pages <i class="ti-angle-down"></i></a>
                                                         <ul class="submenu">
@@ -58,7 +56,6 @@
                                                             <li><a asp-controller="Tracks" asp-action="Tracks">Tracks</a></li>
                                                         </ul>
                                                     </li>
-                                                }
                                                 <li>
                                                     <a href="#"> Profile <i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">

@@ -71,7 +71,7 @@
                             @Model.Username
                         </h1>
 
-                        @if (!this.User.IsInRole("Administrator"))
+                        @if (!this.User.IsInRole("Administrator") && this.User.Identity!.IsAuthenticated)
                         {
 
                             <button id="toggleButton" class="btn-heart">
