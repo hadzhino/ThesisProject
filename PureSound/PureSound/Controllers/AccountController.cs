@@ -51,7 +51,8 @@ namespace PureSound.Controllers
                 Email = model.Email,
                 UserName = model.UserName,
                 FavGenreId = model.GenreId,
-                FavGenre = context.Genres.Where(x => x.Id == model.GenreId).FirstOrDefault()!
+                FavGenre = context.Genres.Where(x => x.Id == model.GenreId).FirstOrDefault()!,
+                ImageUrl = "https://www.iprcenter.gov/image-repository/blank-profile-picture.png/@@images/image.png"
             };
             var result = await userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
