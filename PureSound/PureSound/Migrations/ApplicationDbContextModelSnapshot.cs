@@ -260,7 +260,7 @@ namespace PureSound.Migrations
                         {
                             Id = "389e650a-775f-4d7b-a9ac-30cfd960fa37",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "8152a766-fdcc-4244-9192-d47ea7bd2c7f",
+                            ConcurrencyStamp = "e374d140-0a3c-4cad-a6c2-ba8ba433fb5e",
                             Email = "etaleksander411@gmail.com",
                             EmailConfirmed = false,
                             FavGenreId = new Guid("48d67181-5732-47a0-892b-6577fc688e00"),
@@ -268,9 +268,9 @@ namespace PureSound.Migrations
                             LockoutEnabled = false,
                             NormalizedEmail = "ETALEKSANDER411@GMAIL.COM",
                             NormalizedUserName = "ADMIN",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPULS8g2OBgcxSGe2HE5wnlmTbEacHNJgSwWYv4fswXxNWCn6nLf6+pNuqAAW/bUvA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEG7NGvDPVMx/aYevR0xgNEu5+8OEtPq0pg/EzkEhOdbdUejCXU0EsMvpj74Hjk9/Og==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "5b562117-8003-4bd5-822d-c3f9daa486f1",
+                            SecurityStamp = "df6fe90e-ebb2-4b19-9bea-248c8f51e79c",
                             TwoFactorEnabled = false,
                             UserName = "Admin"
                         });
@@ -311,7 +311,7 @@ namespace PureSound.Migrations
                             Id = new Guid("fef49f2e-ae2b-4769-a10b-1ea542db6526"),
                             CategoryId = new Guid("2817198f-8092-4127-901c-75474ec9cdae"),
                             Content = "PureSound was finally launched and ready for users",
-                            Date = new DateTime(2024, 4, 10, 12, 35, 50, 732, DateTimeKind.Local).AddTicks(6958),
+                            Date = new DateTime(2024, 4, 16, 9, 18, 55, 950, DateTimeKind.Local).AddTicks(8911),
                             ImageURL = "https://img.freepik.com/free-photo/vivid-blurred-colorful-wallpaper-background_58702-3176.jpg?size=626&ext=jpg&ga=GA1.1.1700460183.1712620800&semt=ais",
                             Title = "PureSound is finally launched"
                         },
@@ -320,7 +320,7 @@ namespace PureSound.Migrations
                             Id = new Guid("9c28287a-0179-441f-802d-85f55ee7d03b"),
                             CategoryId = new Guid("6c9731cc-a682-48a7-bcdf-8133a5aa1423"),
                             Content = "The rising star I.N.I. dropped collaboration with Dim4ou for the people from the seaside's hoods.",
-                            Date = new DateTime(2024, 4, 10, 12, 35, 50, 732, DateTimeKind.Local).AddTicks(7045),
+                            Date = new DateTime(2024, 4, 16, 9, 18, 55, 950, DateTimeKind.Local).AddTicks(8971),
                             ImageURL = "data:image/jpeg;base64,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",
                             Title = "I.N.I. dropped collaboration with Dim4ou"
                         },
@@ -329,7 +329,7 @@ namespace PureSound.Migrations
                             Id = new Guid("a68766f8-da87-4672-a3d0-8cf8bd49ab60"),
                             CategoryId = new Guid("8bca1029-e8ba-4fba-ae63-fc09bf636c93"),
                             Content = "Luciano is taking a well-deserved brake in Dubai's dessert driving Lamborghinis.",
-                            Date = new DateTime(2024, 4, 10, 12, 35, 50, 732, DateTimeKind.Local).AddTicks(7052),
+                            Date = new DateTime(2024, 4, 16, 9, 18, 55, 950, DateTimeKind.Local).AddTicks(8976),
                             ImageURL = "https://www.magdeburg-klickt.de/wp-content/uploads/2023/04/Unbenannt-2.jpgmusik3-2.jpg",
                             Title = "Luciano showing off in Dubai"
                         },
@@ -338,7 +338,7 @@ namespace PureSound.Migrations
                             Id = new Guid("4d1215aa-20bb-400b-bdbe-bb0bb13a9f2b"),
                             CategoryId = new Guid("5dd094e7-07eb-4d1b-be10-b6351f554183"),
                             Content = "Nucci and Zera linked up for 'Frauen' which is the most listened track in Serbia for this week.",
-                            Date = new DateTime(2024, 4, 10, 12, 35, 50, 732, DateTimeKind.Local).AddTicks(7061),
+                            Date = new DateTime(2024, 4, 16, 9, 18, 55, 950, DateTimeKind.Local).AddTicks(8981),
                             ImageURL = "https://i.ytimg.com/vi/5wkf9wFV-Xk/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AHSBYAC0AWKAgwIABABGHIgWShBMA8=&rs=AOn4CLBsie4n3IJYeHeG31dw8TZbw01g3w",
                             Title = "'Frauen' is flying high in Serbia"
                         },
@@ -347,7 +347,7 @@ namespace PureSound.Migrations
                             Id = new Guid("bf78f1bc-6246-4ebb-ade4-5361f6686e41"),
                             CategoryId = new Guid("2817198f-8092-4127-901c-75474ec9cdae"),
                             Content = "'The man - voice' dropped collab with Alisia and Kiril Kirilov which is tearing up the Bulgarian stage right now.",
-                            Date = new DateTime(2024, 4, 10, 12, 35, 50, 732, DateTimeKind.Local).AddTicks(7067),
+                            Date = new DateTime(2024, 4, 16, 9, 18, 55, 950, DateTimeKind.Local).AddTicks(8986),
                             ImageURL = "https://signal.bg/wp-content/uploads/2024/03/Toni-StoraroxKiril-Kirilov%D1%85Alisia-Top-Top-Top-01.jpg",
                             Title = "Toni Storaro destroyed the Bulgarian stage"
                         });
@@ -472,37 +472,37 @@ namespace PureSound.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("42262c94-95a0-4e87-a4db-697c4582f1b2"),
+                            Id = new Guid("bf90a765-b3c1-4714-927d-f2458e7502d7"),
                             ArtistId = new Guid("231ff15f-d918-4aa4-8eb7-ad056f6130af"),
                             TrackId = new Guid("788944dc-fe8a-4c72-95a0-f2e7242a8a24")
                         },
                         new
                         {
-                            Id = new Guid("66081109-7f77-4d4f-a978-11775e2b0cb7"),
+                            Id = new Guid("25a56057-160d-4393-a7e4-dcfcb0471b9b"),
                             ArtistId = new Guid("e6bed5b4-70e9-48d4-b887-5c8339e088bd"),
                             TrackId = new Guid("2f725c58-72d6-4201-848c-b3cb521dfa9d")
                         },
                         new
                         {
-                            Id = new Guid("a4253423-6233-4c4f-8702-088285dc6d5b"),
+                            Id = new Guid("694666b7-8d77-4323-b15d-dfa13119be2a"),
                             ArtistId = new Guid("fccdb498-2db4-4d0a-a7ee-85b61398a2cb"),
                             TrackId = new Guid("2f725c58-72d6-4201-848c-b3cb521dfa9d")
                         },
                         new
                         {
-                            Id = new Guid("1dd13004-b65e-4c81-90ff-bc37ae8f1c7f"),
+                            Id = new Guid("7be1e508-0f45-47c8-9529-f933378a62eb"),
                             ArtistId = new Guid("1189c2f4-96b9-41fa-aead-2de6e8f2b4b5"),
                             TrackId = new Guid("ebf7c421-7148-4f78-9c53-1600572c441f")
                         },
                         new
                         {
-                            Id = new Guid("33b0dbfc-9317-4fd4-87b8-3fd3f0803d70"),
+                            Id = new Guid("e35d03b1-94d5-4b27-a3e1-9eba3b427943"),
                             ArtistId = new Guid("3032d205-1ade-4e21-91f7-d15845cbeff5"),
                             TrackId = new Guid("29edf751-e100-41b2-97eb-c517b0ba806f")
                         },
                         new
                         {
-                            Id = new Guid("9801f3e4-2cc6-462f-acc0-12c0a2de4f0c"),
+                            Id = new Guid("847cc722-2fcd-427c-8de5-408ac203ef21"),
                             ArtistId = new Guid("1e0677d5-29af-4ba5-b535-312c2b377d46"),
                             TrackId = new Guid("140931b6-1b86-4203-92fa-8e6c8558bbfa")
                         });
