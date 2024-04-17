@@ -29,7 +29,7 @@ namespace PureSound.Services
                 Content = model.Content,
                 CategoryId = model.CategoryId,
                 Category = context.Categories.FirstOrDefault(x => x.Id == model.CategoryId)!,
-                Date = DateTime.Today,
+                Date = DateTime.UtcNow,
                 ImageURL = model.ImageURL
             };
             await context.Articles.AddAsync(article);
@@ -57,7 +57,7 @@ namespace PureSound.Services
                     Content = article.Content,
                     ImageURL = article.ImageURL,
                     Comments = article.Comments,
-                    Date = DateTime.Now,
+                    Date = article.Date,
                     CategoryId = article.CategoryId,
                     Category = context.Categories.FirstOrDefault(x => x.Id == article.CategoryId)!
                 };
@@ -88,7 +88,7 @@ namespace PureSound.Services
                     Content = item.Content,
                     ImageURL = item.ImageURL,
                     Comments = item.Comments,
-                    Date = DateTime.Now,
+                    Date = item.Date,
                     CategoryId = item.CategoryId,
                     Category = context.Categories.FirstOrDefault(x => x.Id == item.CategoryId)!
                 };
@@ -148,7 +148,7 @@ namespace PureSound.Services
                 ArticleId = commentVM.ArticleID,
                 UserId = userId,
                 Content = commentVM.Content,
-                Date = DateTime.Now,
+                Date = DateTime.UtcNow,
             };
             context.Comments.Add(comment);
             await context.SaveChangesAsync();

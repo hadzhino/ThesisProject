@@ -24,7 +24,7 @@ namespace PureSound.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(string catName)
+        public async Task<IActionResult> Index()
         {
             var artist = await context.Artists.ToListAsync();
             var artistsNames = new List<string>();
@@ -45,6 +45,9 @@ namespace PureSound.Controllers
 
             var categories = await context.Categories.Include(x => x.Articles).ToListAsync();
             ViewBag.Categories = categories;
+
+            var recent = await blogService.RecentPostsAsync();
+            ViewBag.Recent = recent;
 
             var articles = await blogService.GetAllArticlesAsync();
             var comments = await context.Comments.ToListAsync();
@@ -123,27 +126,6 @@ namespace PureSound.Controllers
             var all = await blogService.GetAllArticlesAsync();
             ViewBag.Articles = all.Count;
             return View(articles);
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Search(string keyword)
-        {
-            var articles = await blogService.GetAllArticlesAsync();
-            var result = new List<string>();
-            if (articles.Find(x => x.Title.Contains(keyword)) != null)
-            {
-                foreach (var item in articles)
-                {
-                    var name = item.Title;
-                    result.Add(name);
-                }
-            }
-            else
-            {
-                result.Add("Nothing found");
-            }
-
-            return Json(result);
         }
 
         [HttpPost]

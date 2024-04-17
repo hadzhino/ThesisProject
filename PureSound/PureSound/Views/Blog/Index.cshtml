@@ -168,14 +168,11 @@
     </script>
     <script>
         function myFunction() {
-            // Declare variables
             var input, filter, ul, li, a, i, txtValue;
             input = document.getElementById('myInput');
             filter = input.value.toUpperCase();
             ul = document.getElementById("myUL");
             li = ul.getElementsByTagName('li');
-
-            // Loop through all list items, and hide those who don't match the search query
             for (i = 0; i < li.length; i++) {
                 a = li[i].getElementsByTagName("a")[0];
                 txtValue = a.textContent || a.innerText;
@@ -187,37 +184,7 @@
             }
         }
     </script>
-    <script>
-        // JavaScript to handle comment submission using AJAX
-        $(function () {
-            $('form').submit(function (e) {
-                e.preventDefault();
-                var form = $(this);
-                $.ajax({
-                    url: form.attr('action'),
-                    type: 'POST',
-                    data: form.serialize(),
-                    success: function (result) {
-                        $('#comments').load(location.href + ' #comments');
-                        $('#add-comment').load(location.href + ' #add-comment');
-                    },
-                    error: function () {
-                        alert('An error occurred while adding the comment.');
-                    }
-                });
-            });
-        });
-    </script>
-    <script>
-        // Get reference to the submit button
-        var submitBtn = document.getElementById('submitBtn');
 
-        // Add click event l    istener to the but    ton
-        submitBtn.addEventLis    tener('click', function () {
-            //     Disable the button to prevent m    ultiple submissions
-            submitBtn.disabled = true;
-        });
-    </script>
     <style>
         #myInput {
             background-image: url('/css/searchicon.png'); /* Add a search icon to input */
