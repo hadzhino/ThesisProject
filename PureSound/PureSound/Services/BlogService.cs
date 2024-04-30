@@ -12,11 +12,9 @@ namespace PureSound.Services
     public class BlogService : IBlogService
     {
         private readonly ApplicationDbContext context;
-        private readonly UserManager<User> userManager;
-        public BlogService(ApplicationDbContext _context, UserManager<User> _userManager)
+        public BlogService(ApplicationDbContext _context)
         {
             this.context = _context;
-            this.userManager = _userManager;
         }
 
         public async Task AddArticleAsync(AddArticleVM model)
